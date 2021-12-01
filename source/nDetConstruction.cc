@@ -38,6 +38,7 @@ nDetConstruction &nDetConstruction::getInstance(){
 
 nDetConstruction::nDetConstruction(){
 	currentDetector = NULL;
+	currentImplant = NULL;
 
 	fDetectorMessenger = new nDetConstructionMessenger(this);
 
@@ -57,8 +58,10 @@ nDetConstruction::~nDetConstruction(){
 }
 
 G4VPhysicalVolume* nDetConstruction::Construct(){
-	if(!expHall->getPhysicalVolume())
+	if(!expHall->getPhysicalVolume()){
 		this->ConstructDetector();
+		this->ConstructImplant();
+	}
 	
 	return expHall->getPhysicalVolume();
 }
@@ -70,14 +73,44 @@ G4VPhysicalVolume* nDetConstruction::ConstructDetector(){
 	// Build experiment hall.
 	expHall->buildExpHall(&materials);
 
-	// Place all detectors.
 	for(auto det : userDetectors){
 		currentDetector = det;
-
 		// Build the detector
 		det->construct();
+		// Place all detectors.
+		det->placeDetector(expHall->getLogicalVolume());
+	}
 
+	for(auto imp : userImplants){
+		currentImplant = imp;
+		imp->construct();
+		imp->placeImplant(expHall->getLogicalVolume());
+	}
+	
+	return expHall->getPhysicalVolume();
+}
+
+G4VPhysicalVolume* nDetConstruction::ConstructImplant(){
+	if(!materials.materialsAreDefined())
+		materials.initialize();
+
+	// Build experiment hall.
+	expHall->buildExpHall(&materials);
+
+	// Place all detectors.
+	for(auto imp : userImplants){
+		currentImplant = imp;
+
+		// Build the detector
+		imp->construct();
 		// Place the detector into the world.
+		imp->placeImplant(expHall->getLogicalVolume());
+	}
+	for(auto det : userDetectors){
+		currentDetector = det;
+		// Build the detector
+		det->construct();
+		// Place all detectors.
 		det->placeDetector(expHall->getLogicalVolume());
 	}
 
@@ -103,6 +136,36 @@ void nDetConstruction::ClearGeometry(){
 	for(auto det : userDetectors)
 		delete det;
 	userDetectors.clear();
+	for(auto imp : userImplants)
+		delete imp;
+	userImplants.clear();
+	
+	// Reset the scintillator copy number.
+	params.SetScintillatorCopyNumber(1);
+}
+
+void nDetConstruction::ClearImplantGeometry(){
+	// Clean-up previous geometry
+    G4GeometryManager::GetInstance()->OpenGeometry();
+    G4PhysicalVolumeStore::GetInstance()->Clean();
+    G4LogicalVolumeStore::GetInstance()->Clean();
+    G4SolidStore::GetInstance()->Clean();
+    G4LogicalSkinSurface::CleanSurfaceTable();
+    G4LogicalBorderSurface::CleanSurfaceTable();
+	G4SolidStore::GetInstance()->Clean();
+	G4LogicalVolumeStore::GetInstance()->Clean();
+	G4PhysicalVolumeStore::GetInstance()->Clean();
+	
+	// Reset the world volume. Why is this needed? CRT
+	expHall->reset();
+	
+	// Clear previous construction.
+	for(auto det : userDetectors)
+		delete det;
+	userDetectors.clear();
+	for(auto imp : userImplants)
+		delete imp;
+	userImplants.clear();
 	
 	// Reset the scintillator copy number.
 	params.SetScintillatorCopyNumber(1);
@@ -111,12 +174,15 @@ void nDetConstruction::ClearGeometry(){
 void nDetConstruction::UpdateGeometry(){
 	// Define new one
 	G4RunManager::GetRunManager()->DefineWorldVolume(ConstructDetector());
+	G4RunManager::GetRunManager()->DefineWorldVolume(ConstructImplant());
 	G4RunManager::GetRunManager()->GeometryHasBeenModified();
 	G4RunManager::GetRunManager()->ReinitializeGeometry();
 
 	// Update the particle source
 	if(currentDetector)
 		nDetParticleSource::getInstance().SetDetector(currentDetector);
+	else if(currentImplant)
+		nDetParticleSource::getInstance().SetImplant(currentImplant);
 
 	// Update the detector lists of all user run actions
 	nDetThreadContainer *container = &nDetThreadContainer::getInstance();
@@ -183,6 +249,67 @@ bool nDetConstruction::AddGeometry(const G4String &geom){
 	// Set true isotropic source mode for multiple detectors
 	if(userDetectors.size() > 1)
 		nDetParticleSource::getInstance().SetRealIsotropicMode(true);
+
+	// Set true isotropic source mode for multiple detectors
+	if(userImplants.size() > 1)
+		nDetParticleSource::getInstance().SetRealIsotropicMode(true);
+	
+	return true;
+}
+
+bool nDetConstruction::AddImplantGeometry(const G4String &geom){
+	// Define a new detector of the specified type
+	nDetImplant *newImplant = nDetDetectorTypes::getImplantType(geom, this, &materials);
+	
+	if(!newImplant){ // Invalid detector type
+		std::cout << Display::ErrorStr("nDetConstruction") << "User specified un-recognized detector type (" << geom << ")!" << Display::ResetStr() << std::endl;
+		return false;
+	}
+	
+	// Set the current detector to the new one
+	currentImplant = newImplant;
+
+	// Segment the PMT photo-sensitive surface
+	if(params.PmtIsSegmented()){
+		setSegmentedPmt();
+		if(!gainMatrixFilename.empty()){
+			loadPmtGainMatrix();
+		}
+	}
+	
+	// Load the anode quantum efficiency
+	if(!spectralResponseFilename.empty()){
+		loadPmtSpectralResponse();
+	}
+
+	// Copy the center-of-mass calculators to the new detector
+	centerOfMass *cmI = currentImplant->getCenterOfMass();
+	currentImplant->copyCenterOfMass(center[0]);
+
+	// Segment the PMT anodes
+	if(params.PmtIsSegmented()){
+		cmI->setSegmentedPmt(&params);
+
+		// Copy the PMT anode gain matrix
+		cmI->copyGainMatrix(&center[0]);
+	}
+
+	// Copy the PMT anode quantum efficiency curve
+	if(center[0].getPmtResponse()->getSpectralResponseEnabled())
+		cmI->copySpectralResponse(&center[0]);
+
+	// Add the new detector assembly to the vector of detectors
+	userImplants.push_back(currentImplant);
+	
+	// Enable/disable overlap checking
+	currentImplant->setCheckOverlaps(fCheckOverlaps);
+
+	// Update the detector's copy numbers.
+	currentImplant->setParentCopyNumber(userImplants.size()-1);
+
+	// Set true isotropic source mode for multiple detectors
+	if(userImplants.size() > 1)
+		nDetParticleSource::getInstance().SetRealIsotropicMode(true);
 	
 	return true;
 }
@@ -204,7 +331,7 @@ bool nDetConstruction::loadPmtSpectralResponse(){
 }
 
 bool nDetConstruction::loadPmtGainMatrix(){
-	if(!(center[0].loadGainMatrix(gainMatrixFilename.c_str()) && center[1].loadGainMatrix(gainMatrixFilename.c_str()))){
+	if(!(center[1].loadGainMatrix(gainMatrixFilename.c_str()) && center[0].loadGainMatrix(gainMatrixFilename.c_str()))){
 		Display::ErrorPrint("Failed to load PMT anode gain matrix from file!", "nDetConstruction");
 		return false;
 	}
@@ -216,6 +343,8 @@ bool nDetConstruction::loadPmtGainMatrix(){
 void nDetConstruction::AddLightGuideGDML(const G4String &input){
 	if(currentDetector)
 		currentDetector->addLightGuideGDML(input);
+	else if(currentImplant)
+		currentImplant->addLightGuideGDML(input);
 	else
 		Display::ErrorPrint("Cannot add GDML light-guide before a detector is defined!", "nDetConstruction");
 }
@@ -223,6 +352,8 @@ void nDetConstruction::AddLightGuideGDML(const G4String &input){
 void nDetConstruction::AddGrease(const G4String &input){
 	if(currentDetector)
 		currentDetector->addGreaseLayer(input);
+	else if(currentImplant)
+		currentImplant->addGreaseLayer(input);
 	else
 		Display::ErrorPrint("Cannot add grease layer before a detector is defined!", "nDetConstruction");
 }
@@ -230,6 +361,8 @@ void nDetConstruction::AddGrease(const G4String &input){
 void nDetConstruction::AddDiffuser(const G4String &input){
 	if(currentDetector)
 		currentDetector->addDiffuserLayer(input);
+	else if(currentImplant)
+		currentImplant->addDiffuserLayer(input);
 	else
 		Display::ErrorPrint("Cannot add diffuser layer before a detector is defined!", "nDetConstruction");
 }
@@ -237,6 +370,8 @@ void nDetConstruction::AddDiffuser(const G4String &input){
 void nDetConstruction::AddLightGuide(const G4String &input){
 	if(currentDetector)
 		currentDetector->addLightGuideLayer(input);
+	else if(currentImplant)
+		currentImplant->addLightGuideLayer(input);
 	else
 		Display::ErrorPrint("Cannot add light-guide before a detector is defined!", "nDetConstruction");
 }
@@ -288,4 +423,9 @@ void nDetConstruction::PrintAllDetectors() const {
 void nDetConstruction::GetCopiesOfDetectors(std::vector<nDetDetector> &detectors) const {
 	for(auto det : userDetectors)
 		detectors.push_back(det->clone());
+}
+
+void nDetConstruction::GetCopiesOfImplants(std::vector<nDetImplant> &implants) const {
+	for(auto imp : userImplants)
+		implants.push_back(imp->clone());
 }

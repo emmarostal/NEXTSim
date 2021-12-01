@@ -34,8 +34,8 @@
 /nDet/detector/setDetectorLength 25.4
 /nDet/detector/setDetectorWidth 5.08
 /nDet/detector/setDetectorThickness 50.8
-/nDet/detector/setNumColumns 8
-/nDet/detector/setNumRows 4
+/nDet/detector/setNumColumns 5
+/nDet/detector/setNumRows 5
 
 # NEXT 3x3x10 in^3
 #/nDet/detector/setDetectorLength 25.4
@@ -123,4 +123,4 @@
 # RUN CONTROL #
 ###############
 
-#/run/beamOn 10000
+#/run/beamOn 100
