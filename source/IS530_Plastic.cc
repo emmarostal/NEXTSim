@@ -104,9 +104,8 @@ G4VPhysicalVolume* IS530_Plastic::Construct()
     // Detector Construction
     //
     vector<char* > IS530_Plastic_name;
-
     IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic.stl");
-    IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic_back.stl");
+    //IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic_back.stl");
     IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic_holders.stl");
     IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Tape.stl");
     
