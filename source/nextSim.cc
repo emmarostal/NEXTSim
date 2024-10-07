@@ -7,13 +7,10 @@
 #include "G4RunManager.hh"
 #endif
 
-#ifdef G4VIS_USE
-#include "G4VisExecutive.hh"
-#endif
 
-#ifdef G4UI_USE
+#include "G4VisExecutive.hh"
+
 #include "G4UIExecutive.hh"
-#endif
 
 // using the modular physics list
 #include "G4VModularPhysicsList.hh"
@@ -172,15 +169,15 @@ int main(int argc, char** argv){
 	G4VModularPhysicsList* physics = new QGSP_BERT_HP();
 
 	G4OpticalPhysics *theOpticalPhysics=new G4OpticalPhysics();
-	theOpticalPhysics->SetScintillationByParticleType(true);
+	//theOpticalPhysics->SetScintillationByParticleType(true);
 	physics->ReplacePhysics(theOpticalPhysics);
 	runManager->SetUserInitialization(physics);
 
-#ifdef G4VIS_USE
+
 	// add visulization manager
 	G4VisManager *visManager = new G4VisExecutive;
 	visManager->Initialize();
-#endif
+
 
 	// 
 	nDetActionInitialization *runAction = new nDetActionInitialization(verboseMode);
@@ -201,7 +198,7 @@ int main(int argc, char** argv){
 		output->setDisplayTimeInterval(userTimeDelay);
 
 	if(!batchMode){	 // Define UI session for interactive mode
-#ifdef G4UI_USE
+
 		// Set root output to a single output file.
 		output->setPersistentMode(true); // The master output file is a singleton class.
 
@@ -220,7 +217,7 @@ int main(int argc, char** argv){
 		// start interactive session
 		ui->SessionStart();		
 		delete ui;
-#endif
+
 	}
 	else{ // Batch mode
 		G4String command = "/control/execute ";
@@ -240,9 +237,9 @@ int main(int argc, char** argv){
 	output->closeRootFile();
 
 	// Job termination
-#ifdef G4VIS_USE
+
 	delete visManager;
-#endif
+
 	// We MUST set detector initialization to NULL because the run manager does not
 	// own the detector and will cause a seg-fault when its destructor is called.
 	runManager->SetUserInitialization((detector = NULL)); 

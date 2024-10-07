@@ -10,12 +10,16 @@
  *                            Christophe.Sotty@fys.kuleuven.be
  *
  *************************************************************************/
-
+#include <TText.h>
 #include "IS530_Chamber.hh"
-#include "CADMesh.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "G4VisAttributes.hh"
+#include "CADMesh.hh"
+
+#ifdef Error
+#undef Error
+#endif
 
 using namespace std;
 
@@ -108,20 +112,39 @@ G4VPhysicalVolume* IS530_Chamber::Construct()
     // Detector Construction
     //
     vector<char* > IS530_Chamber_name;
-    IS530_Chamber_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Chamber/Bucharest_Chamber_IS530_capac_leon.stl");
-    IS530_Chamber_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Chamber/Bucharest_Chamber_IS530_incinta_leon.stl");
+    IS530_Chamber_name.push_back("../stl/isolde/Bucharest_Chamber/Bucharest_Chamber_IS530_capac_leon.stl");
+    IS530_Chamber_name.push_back("../stl/isolde/Bucharest_Chamber/Bucharest_Chamber_IS530_incinta_leon.stl");
 
     // Meshing and Logical Volumes
     for(int i = 0; i<IS530_Chamber_name.size(); i++){ 
-      G4cout<< IS530_Chamber_name.at(i) << G4endl;
-      mesh_IS530_Chamber_current.push_back( new CADMesh(IS530_Chamber_name.at(i), mm, G4ThreeVector(0*cm, 0*cm, 0*cm), false));
+      //G4cout<<i<< G4endl;
+      //G4cout<< IS530_Chamber_name.at(i) << G4endl;
+      //mesh_IS530_Chamber_current.push_back( new CADMesh(IS530_Chamber_name.at(i), mm, G4ThreeVector(0*cm, 0*cm, 0*cm), false));
       //G4cout << "mesh_IS530_Chamber_current" << G4endl;
-      IS530_Chamber_current_sol.push_back( mesh_IS530_Chamber_current.at(i)->TessellatedMesh());
-      //G4cout << "IS530_Chamber_current_sol" << G4endl;
-      IS530_Chamber_current_log.push_back( new G4LogicalVolume(IS530_Chamber_current_sol.at(i), Mat.at(i), name+Form("IS530_Chamber_%i_log", i )));
-      //G4cout << "IS530_Chamber_current_log" << G4endl;
+      //IS530_Chamber_current_sol.push_back( mesh_IS530_Chamber_current.at(i)->TessellatedMesh());
+
+      //tesselated mesh
+      auto IS530TessMesh = CADMesh::TessellatedMesh::FromSTL(IS530_Chamber_name.at(i));
+      
+      //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+      
+      //offset
+      IS530TessMesh->SetOffset(G4ThreeVector(0*cm, 0*cm, 0*cm));
+
+      //Solid
+      auto IS530Solid = IS530TessMesh->GetSolid();
+
+      //push into vector
+      IS530TessMesh_current.push_back(IS530Solid);
+
+
+
+
+      G4cout << "IS530_Chamber_current_sol" << G4endl;
+      IS530_Chamber_current_log.push_back( new G4LogicalVolume(IS530TessMesh_current.at(i), Mat.at(i), name+Form("IS530_Chamber_%i_log", i )));
+      G4cout << "IS530_Chamber_current_log" << G4endl;
       IS530_Chamber_current_log.at(i)	->SetVisAttributes(VisAttM.at(i));
-      //G4cout << "SetVisAttributes" << G4endl;
+      G4cout << "SetVisAttributes" << G4endl;
       //IS530_Chamber_current_phys.push_back( new G4PVPlacement(0, G4ThreeVector(0, 0, 0), name+Form("/IS530_Chamber_%i_phys",i), IS530_Chamber_current_log.at(i), det_env, false, 0));
       IS530_Chamber_current_phys.push_back( new G4PVPlacement(transformation, name+Form("/IS530_Chamber_%i_phys",i), IS530_Chamber_current_log.at(i), mother, false, 0));
       //IS530_Chamber_current_phys.push_back( new G4PVPlacement(0, G4ThreeVector(0, 0, 0), name+Form("/IS530_Chamber_%i_phys",i), IS530_Chamber_current_log.at(i), mother, false, 0));

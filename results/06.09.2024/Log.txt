@@ -1,0 +1,11 @@
+PIsoFull is "pseudo isotropic" with test.mac and full isolde setup. The actual direction for
+the 10e4 1MeV neutrons was directly upwards. Almost 20% of these neutrons were detected, meaning
+that all detected neutrons were scattered at least once, leading to the higher TOF values.
+
+IsoFull is true isotropic, but otherwise the same as PIsoFull.Same tendency with mainly scattered
+low energy neutrons. However, the truly isotropic source means that only 7% of the 10e4 neutrons were
+detected.
+
+IsoFullLong is same as IsoFull, but with 10e5 neutrons. Same behaviour as IsoFull is observed.
+
+It seems like iso=0 and iso=1do not work as intended.

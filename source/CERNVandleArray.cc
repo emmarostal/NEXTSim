@@ -8,6 +8,7 @@
 #include "CERNVandleArray.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4Transform3D.hh"
+#include "CADMesh.hh"
 
 CERNVandleArray::CERNVandleArray()
 {

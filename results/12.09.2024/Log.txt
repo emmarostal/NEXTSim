@@ -1,0 +1,47 @@
+TODO
+Implement geometrical correction (13.5 cm/ns)
+Consider what this means for scattered neutrons, which take a different path...
+Look at Jeppe's code
+look at 49K data (compare to simulation)
+Change pseudoiso (make new?) to include entire array
+Make the simulation work for a single detector
+Include frame
+Look for outputs relevant for detecting false two-neutron events
+implement realistic two-neutron source
+
+------------------------------------------------------
+
+Since a large part (about 1/3) of the total amount of observed neutrons are definitely scattered, but likely more (with full setup rather 
+than just detectors - see 10.09.2024), the brute force method of implementing a geometrical correction could lead to overcorrections 
+when done on a setup more complicated than a single detector and a source. Scattering takes place in the isolde-setup itself but also 
+from one detector in the array to another. Maybe a different strategy should be utilized? But this is the method used to treat the actual 
+experimental data, so perhaps the correction is not too large? It is at least worth considering.
+Possible explanation: The problem arises from scattered neutrons, meaning that the detected energies are lower than the ones
+defining the peaks - if we know which energies to expect, this is not a problem, as energies other than the peak can be ignored.
+For neutrons scattered from one detector into another, these events can possibly be filtered out as false two-neutron events.
+
+However, the geometrical correction still poses a potential problem if many different neutron energies are expected
+especially if both higher and lower neutron energies are interesting for an experiment, since scattered high energy neutrons
+can distort the readout for lower energy neutrons.
+
+Used data Full_2MeV from 11.09.2024 and looked for events where a neutron was scattered from one detector into another (or more)
+
+about 2.64%% of the detected events had mult=3 251/9506 
+about 18.47% of the detected events had mult=2 1756/9506 
+about 78.42% of the detected events had mult=1 7455/9506 
+
+Used data Full_500keV from 11.09.2024 and looked for events where a neutron was scattered from one detector into another (or more)
+
+about 1.16% of the detected events had mult=3 158/13675  
+about 16.97% of the detected events had mult=2 2320/13675 
+about 81.85% of the detected events had mult=1 11193/13675
+
+Used data Full_300keV from 11.09.2024 and looked for events where a neutron was scattered from one detector into another (or more)
+
+about 0.65%% of the detected events had mult=3 91/14044
+about 15.81%% of the detected events had mult=2 2220/14044
+about 83.54% of the detected events had mult=1 11733/14044
+
+A general tendency seems to be more events with higher multiplicity for higher energies, which makes sense:D
+
+Saw some entries with negative TOF (thus, the filter) Why? Not related to multiplicity, perhaps it is fine to simply filter out?

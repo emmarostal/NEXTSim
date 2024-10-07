@@ -5,7 +5,6 @@
 #ifdef USE_GDML
 #include "G4GDMLParser.hh"
 #endif
-
 #include "gdmlSolid.hh"
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -139,7 +138,8 @@ G4LogicalVolume *gdmlSolid::read(const char *fname, const G4String &materialName
 	// Define the parent object.
 	parent = new G4Box("assembly", size[0], size[1], size[2]);
 	parent_logV = new G4LogicalVolume(parent, manNist->FindOrBuildMaterial("G4_AIR"), "assembly_logV");
-	parent_logV->SetVisAttributes(G4VisAttributes::Invisible);
+	parent_logV->SetVisAttributes(G4VisAttributes::GetInvisible());
+	
 	
 	for(std::vector<gdmlSegment>::iterator iter = daughters.begin(); iter != daughters.end(); iter++){ // Place the daughters within the parent.
 		G4RotationMatrix *r = iter->getRotationMatrix();

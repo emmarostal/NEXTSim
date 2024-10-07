@@ -24,6 +24,7 @@
 #include "termColors.hh"
 #include "optionHandler.hh" // split_str
 
+
 ///////////////////////////////////////////////////////////////////////////////
 // class nDetConstruction
 ///////////////////////////////////////////////////////////////////////////////
@@ -59,9 +60,10 @@ nDetConstruction::~nDetConstruction(){
 
 G4VPhysicalVolume* nDetConstruction::Construct(){
 	if(!expHall->getPhysicalVolume()){
-		this->ConstructDetector();
-		this->ConstructImplant();
+		expHall->buildExpHall(&materials);
 	}
+	this->ConstructDetector();
+	this->ConstructImplant();
 	
 	return expHall->getPhysicalVolume();
 }
@@ -71,7 +73,9 @@ G4VPhysicalVolume* nDetConstruction::ConstructDetector(){
 		materials.initialize();
 
 	// Build experiment hall.
-	expHall->buildExpHall(&materials);
+	if(!expHall->getPhysicalVolume()){
+		expHall->buildExpHall(&materials);
+	}
 
 	for(auto det : userDetectors){
 		currentDetector = det;
@@ -94,8 +98,8 @@ G4VPhysicalVolume* nDetConstruction::ConstructImplant(){
 	if(!materials.materialsAreDefined())
 		materials.initialize();
 
-	// Build experiment hall.
-	expHall->buildExpHall(&materials);
+	// Build experiment hall. Already done in contruct detector? 
+	//expHall->buildExpHall(&materials);
 
 	// Place all detectors.
 	for(auto imp : userImplants){

@@ -9,15 +9,21 @@
  *
  *************************************************************************/
 //R. Lica on 01.03.2016 - Fixed the G4Transform3D bug, removed det_env
-
+#include <TText.h>
 #include "CloverSingleDetector.hh"
 //#include "CloverSingleHit.hh"
 #include "CloverQuadDetector.hh"
 //#include "CloverSingleSD.hh"
-#include "CADMesh.hh"
+#include "G4VisAttributes.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "CADMesh.hh"
+
+#ifdef Error
+#undef Error
+#endif
+
+
 
 using namespace std;
 
@@ -90,15 +96,26 @@ G4VPhysicalVolume* CloverQuadDetector::Construct()
     //
     // Meshing
  
-    mesh_Capsule	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_capsule2_1.stl"),       mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
-    mesh_CapsuleCap	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Capsule_cap_2.stl"),    mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
-    mesh_CarboneWindow	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Carbone_window_3.stl"), mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
+    //mesh_Capsule	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_capsule2_1.stl"),       mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
+    //mesh_CapsuleCap	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Capsule_cap_2.stl"),    mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
+    //mesh_CarboneWindow	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Carbone_window_3.stl"), mm,  G4ThreeVector(0*cm, 0*cm, 0*cm), false); // back to 08122015 
 
-	
-	
-    Capsule_sol		= mesh_Capsule->TessellatedMesh();
-    CapsuleCap_sol	= mesh_CapsuleCap->TessellatedMesh();
-    CarboneWindow_sol	= mesh_CarboneWindow->TessellatedMesh();
+    //Capsule_sol		= mesh_Capsule->TessellatedMesh();
+    //CapsuleCap_sol	= mesh_CapsuleCap->TessellatedMesh();
+    //CarboneWindow_sol	= mesh_CarboneWindow->TessellatedMesh();
+    
+
+    //tesselated mesh
+    auto mesh_Capsule = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_capsule2_1.stl");
+    auto mesh_CapsuleCap = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Capsule_cap_2.stl");
+    auto mesh_CarboneWindow = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/Clover_KULeuven_RefFace/Clover_Assembly_RefModif_Carbone_window_3.stl");
+    //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+
+    //// Solid
+    auto Capsule_sol = mesh_Capsule->GetSolid();
+    auto CapsuleCap_sol = mesh_CapsuleCap->GetSolid();
+    auto CarboneWindow_sol = mesh_CarboneWindow->GetSolid();
+
 
     // Logical Volume
     Capsule_log		= new G4LogicalVolume(Capsule_sol       , Al_mat, name+"/Capsule_log"           );

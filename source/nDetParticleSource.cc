@@ -151,6 +151,8 @@ bool nDetParticleSource::SetSourceType(const G4String &str){
 		Set90Sr();
 	else if(typeName == "252Cf")
 		Set252Cf();
+	else if(typeName == "49K")
+		Set49K();
 	else if(typeName == "neutron")
 		SetNeutronBeam(beamEnergy);
 	else if(typeName == "gamma")
@@ -306,6 +308,27 @@ void nDetParticleSource::Set90Sr(){
 	Reset();
 	AddDiscreteEnergy(195.8, 100, false, G4Electron::ElectronDefinition());
 }
+
+void nDetParticleSource::Set49K(){
+	Reset();
+	AddDiscreteEnergy(150, 6.4, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(330, 12, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(570, 8.8, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1170, 8.5, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1210, 8.5, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1380, 16.6, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1510, 13, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1720, 1.8, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(1870, 10.3, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(2090, 3.2, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(2210, 1.6, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(2370, 0.53, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(2580, 0.68, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(2940, 0.55, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(3180, 1, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(3460, 0.37, false, G4Neutron::NeutronDefinition());
+}
+
 
 void nDetParticleSource::SetNeutronBeam(const double &energy_){
 	Reset();

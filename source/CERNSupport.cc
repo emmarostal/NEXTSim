@@ -5,7 +5,7 @@
 /// \brief Implementation of the ArgoneVandleArray class
 //
 //
-
+#include "CADMesh.hh"
 #include "G4PVPlacement.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4UnionSolid.hh"
@@ -13,7 +13,7 @@
 #include "G4Box.hh"
 #include "G4Tubs.hh"
 #include "CERNSupport.hh"
-#include "CADMesh.hh"
+
 
 CERNSupport::CERNSupport()
 {
@@ -89,12 +89,12 @@ void CERNSupport::Place(G4RotationMatrix *pRot,
 	                   0, 
 	                   0 ); 
    //G4ThreeVector offset = G4ThreeVector(0, 0, 0);
-   std::string file1 = "/ARCHIVE/Ddata/geant4_stl/vandle/isolde/VerticalFrame.stl";
-   CADMesh * rebMesh = new CADMesh((char*)file1.c_str());
+   std::string file1 = "../stl/isolde/VerticalFrame.stl";
+   auto rebMesh = CADMesh::TessellatedMesh::FromSTL(file1.c_str());
    rebMesh->SetScale(cm);
 
    //CADMesh* rebMesh = new CADMesh("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/VerticalFrame.stl", cm, offset, false);
-   G4VSolid* ribSolid =  rebMesh->TessellatedMesh();
+   G4VSolid* ribSolid =  rebMesh->GetSolid();
    G4LogicalVolume* ribLogic = new G4LogicalVolume(ribSolid, frameMaterial, "CERNRrameRib");
    ribLogic->SetVisAttributes(argSupportVisAtt);
    

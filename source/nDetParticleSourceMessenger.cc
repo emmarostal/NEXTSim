@@ -23,7 +23,7 @@ void nDetParticleSourceMessenger::addAllCommands(){
 	
 	addCommand(new G4UIcmdWithAString("/nDet/source/type", this)); // type of source (252Cf, 137Cs, etc)
 	addGuidance("Set a pre-defined isotropic particle source");
-	addGuidance("252Cf 137Cs 60Co 133Ba 241Am 90Sr neutron gamma electron laser");
+	addGuidance("252Cf 137Cs 60Co 133Ba 241Am 90Sr 49K neutron gamma electron laser");
 	
 	addCommand(new G4UIcmdWithADouble("/nDet/source/spot", this)); // beamspot radius (mm)
 	addGuidance("Set the radius of the beam (in mm)");

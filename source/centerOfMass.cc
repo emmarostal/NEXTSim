@@ -7,6 +7,7 @@
 #include "centerOfMass.hh"
 #include "vertilon.hh"
 
+
 const double coeff = 1.23984193E-3; // hc = Mev * nm
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -117,6 +118,7 @@ void centerOfMass::setSegmentedPmt(const nDetDetectorParams *params){
 		gainMatrix.push_back(std::vector<double>(Nrow, 100));
 		countMatrix.push_back(std::vector<int>(Nrow, 0));
 	}
+	
 }
 
 bool centerOfMass::loadSpectralResponse(const char *fname){
@@ -176,7 +178,8 @@ void centerOfMass::clear(){
 	}
 	for(short i = 0; i < Ncol; i++){
 		for(short j = 0; j < Nrow; j++){
-			countMatrix[i][j] = 0;
+			//G4cout << "Count matrix " << i << " " << j << " " << "ncol is " << Ncol << " nrow is " << Nrow << G4endl; 
+			//countMatrix[i][j] = 0;
 		}
 	}
 }

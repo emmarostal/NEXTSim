@@ -362,7 +362,7 @@ double pmtResponse::analyzePolyCFD(const double &F_){
 		if(pulseArray[cfdIndex-1] < threshold && pulseArray[cfdIndex] >= threshold){
 			if(false){
 			calculateP2(cfdIndex-1, &pulseArray[cfdIndex-1], &cfdPar[4]);
-			// Calculate the phase of the trace.
+			//Calculate the phase of the trace.
 			if(cfdPar[6] != 0)
 				phase = (-cfdPar[5]+std::sqrt(cfdPar[5]*cfdPar[5] - 4*cfdPar[6]*(cfdPar[4] - threshold)))/(2*cfdPar[6]);
 			else
@@ -376,6 +376,9 @@ double pmtResponse::analyzePolyCFD(const double &F_){
 				phase = ( threshold - p0 ) / p1;
 			}
 			break;
+
+
+		
 		}
 	}
 

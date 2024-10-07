@@ -17,6 +17,7 @@
 #include "G4SystemOfUnits.hh"
 #include "G4VisAttributes.hh"
 
+
 CERNTapeBox::CERNTapeBox()
 {
 	SetBasicSizes();	

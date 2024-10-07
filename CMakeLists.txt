@@ -8,7 +8,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
             ${CMAKE_CXX_COMPILER_VERSION} VERSION_LESS "4.7")
             set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
     elseif(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER "4.6")
-        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
     else()
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
     endif(${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER "4.3" AND
@@ -51,7 +51,7 @@ endif(CMAKE_BUILD_TYPE MATCHES "Debug")
 #option(BUILD_SHARED "Build and install shared libraries." OFF)
 option(BUILD_TOOLS "Build and install tool programs." OFF)
 option(GEANT4_MT "Enable multi-threading support (if available)." OFF)
-option(GEANT4_GDML "Enable support for G4GDMLParser." OFF)
+option(GEANT4_GDML "Enable support for G4GDMLParser." ON)
 option(GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
 
 #------------------------------------------------------------------------------
@@ -68,11 +68,12 @@ mark_as_advanced(FORCE GENREFLEX_EXECUTABLE ROOTCINT_EXECUTABLE ROOT_CONFIG_EXEC
 include_directories(${ROOT_INCLUDE_DIR})
 link_directories(${ROOT_LIBRARY_DIR})
 
+
 #Find CADMesh
-find_package (cadmesh)
-message(${CADMESH_INCLUDE_DIRS})
+#find_package (cadmesh)
+#message(${CADMESH_INCLUDE_DIRS})
 include_directories(${CADMESH_INCLUDE_DIRS})
-#link_directories(${cadmesh_LIBRARIES})
+link_directories(${cadmesh_LIBRARIES})
 
 #Inform the user about the Geant4 install version
 message(STATUS "Found ROOT install: v${ROOT_VERSION}")
@@ -83,6 +84,7 @@ if(GEANT4_UIVIS)
 else()
 	find_package(Geant4 REQUIRED)
 endif()
+include_directories(${Geant4_INCLUDE_DIRS})
 
 #Inform the user about the Geant4 install version
 message(STATUS "Found Geant4 install: v${Geant4_VERSION}")

@@ -58,11 +58,13 @@ class CloverSingleBuchDetector : public G4VUserDetectorConstruction
       //
       G4VSolid* CloverSingle_sol;
 
-      CADMesh* mesh_CloverSingle;
+      Mesh* mesh_CloverSingle;
 
       G4VPhysicalVolume* CloverSingle_phys;
 
       G4LogicalVolume* CloverSingle_log;
+
+    
 
       //CloverSingleBuchSD* cloverSingleBuchSD;
   

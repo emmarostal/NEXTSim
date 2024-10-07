@@ -1,0 +1,42 @@
+Testing mylar wrapping instead of esr - which one is correct?
+Main result seems to be way faster simulations...
+
+mylar:
+10e4 (001) 30s simulation time
+10e5 (002) 350s simulation time
+
+esr:
+See IsoFull and IsoFullLong from 06.09.2024 (short simulation time 600s)
+
+
+Discovered new warnings during construction of frame:
+*** G4Exception : GeomSolids1001
+      issued by : G4TriangularFacet::G4TriangularFacet()
+Facet is too small or too narrow.
+Triangle area = 0
+P0 = (-635.839,91.3651,282)
+P1 = (-635.839,91.3651,266)
+P2 = (-635.839,91.3651,250)
+Side1 length (P0->P1) = 16
+Side2 length (P1->P2) = 16
+Side3 length (P2->P0) = 32
+*** This is just a warning message. ***
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomSolids1002
+      issued by : G4TessellatedSolid::AddFacet()
+Attempt to add facet not properly defined.
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Polyhedron::SetReferences: List 27395 is not empty
+
+Testing simulations without large frame, since most warnings are about "frameRibs"
+(003) No warnings about geometries - we still see the heavily reduced energies and 7% detection.
+
+(004) Without isolde setup - Same behaviour as with full setup. Detection lower, about 4%. WHY??
+
+(005) Just one detector, no isolde, 10 mil neutrons - Every entry is TOF = 0. Odd.
+
+(006) Resized detectors in array and set pmt values to correspond with vandle.mac 
+- generally higher energies (max TOF is now 400ns rather than 600ns).

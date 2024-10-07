@@ -1,0 +1,8 @@
+tree->Draw("1/2*939/900*10000/barTOF**2:nInitEnergy","barTOF>0&& goodEvent&&barTOF>50")
+
+Doing runs with gaussian energydistribution and plotting initial energy vs calculated kinetic energy for the neutrons. 
+Removing negative TOF and also removing un-physically high energies. What causes these very high energies (low TOF)?
+
+Maybe look only at multiplicity ==1?
+
+It is not due to geometric correction, since we correct to slightly higher energies (or not at all)

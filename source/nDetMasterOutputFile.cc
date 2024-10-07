@@ -1,6 +1,6 @@
 #include <vector>
 #include <fstream>
-
+#include "../dict/include/nDetStructures.hpp"
 #include "G4Run.hh"
 #include "G4Timer.hh"
 #include "G4MTRunManager.hh"
@@ -19,6 +19,7 @@
 #include "nDetThreadContainer.hh"
 #include "photonCounter.hh"
 #include "termColors.hh"
+
 
 nDetMasterOutputFile &nDetMasterOutputFile::getInstance(){
 	// The only instance

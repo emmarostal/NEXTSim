@@ -14,6 +14,7 @@
 #include "nDetTrackingAction.hh"
 #include "nDetThreadContainer.hh"
 
+
 userActionManager::userActionManager(const nDetActionInitialization* init, bool verboseMode/*=false*/) : threadID(0), runAction(NULL), eventAction(NULL), steppingAction(NULL), stackingAction(NULL), trackingAction(NULL), actionInit(init) {
 	threadID = G4Threading::G4GetThreadId();
 

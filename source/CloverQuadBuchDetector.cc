@@ -10,15 +10,20 @@
  *************************************************************************/
 //R. Lica on 01.03.2016 - Fixed the G4Transform3D bug, removed det_env
 
-
+#include <TText.h>
 #include "CloverSingleBuchDetector.hh"
 #include "CloverSingleBuchHit.hh"
 #include "CloverQuadBuchDetector.hh"
 #include "CloverSingleBuchSD.hh"
-#include "CADMesh.hh"
+#include "G4VisAttributes.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "CADMesh.hh"
+
+#ifdef Error
+#undef Error
+#endif
+
 
 using namespace std;
 
@@ -74,8 +79,20 @@ G4VPhysicalVolume* CloverQuadBuchDetector::Construct()
     // Detector Construction
     //
     // Meshing
-    mesh_Capsule	= new CADMesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Capsule_Bucharest_redesigned_1.stl"),       mm,  G4ThreeVector( 0*cm, 0*cm, 0*cm), false);
-    Capsule_sol		= mesh_Capsule->TessellatedMesh();
+    //mesh_Capsule	= new Mesh(const_cast<char*>("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Capsule_Bucharest_redesigned_1.stl"),       mm,  G4ThreeVector( 0*cm, 0*cm, 0*cm), false);
+    //Capsule_sol		= mesh_Capsule->TessellatedMesh();
+
+
+    //tesselated mesh
+    auto CapsuleTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Capsule_Bucharest_redesigned_1.stl");
+      
+    //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+      
+    //offset
+    CapsuleTessMesh->SetOffset(G4ThreeVector(0*cm, 0*cm, 0*cm));
+
+    //Solid
+    auto Capsule_sol = CapsuleTessMesh->GetSolid();
 
     // Logical Volume
     Capsule_log		= new G4LogicalVolume(Capsule_sol       , Al_mat, name+"/Capsule_log"           );

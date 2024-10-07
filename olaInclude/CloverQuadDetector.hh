@@ -69,9 +69,9 @@ class CloverQuadDetector : public G4VUserDetectorConstruction
       G4VSolid* CapsuleCap_sol;
       G4VSolid* CarboneWindow_sol; 
 
-      CADMesh* mesh_Capsule;
-      CADMesh* mesh_CapsuleCap;
-      CADMesh* mesh_CarboneWindow;
+      Mesh* mesh_Capsule;
+      Mesh* mesh_CapsuleCap;
+      Mesh* mesh_CarboneWindow;
 
       G4VPhysicalVolume* Capsule_phys;
       G4VPhysicalVolume* CapsuleCap_phys;

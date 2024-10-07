@@ -1,0 +1,33 @@
+Goal for today: Make simulation TOF work with a single detector (multioutput vs single)
+Also: Understand why the energies are so low with only detectors and a source.
+Also: Understand physics of "two-neutron"-event.
+Also: Figure out correct pmt values and wrapping material
+Also: repair frame stl file?
+Maybe: Look ar real data
+
+
+
+Removed random offset for bar variables in nDetRunAction.cc. Resulting TOF spectrum
+looks more homogenous, but the values are still shifted too high.
+
+Changed energy threshold in nDetRunAction.cc. No major difference.
+
+analyzePolyCFD has been changed. Trying the old version. No difference.
+
+The problem was the forced segmentation of the pmts!!!!!!!
+I forced it to not be segmented.
+(011) Full isolde setup
+(012) Just detector array
+
+Removed unnessecary changes and print statements again
+
+(001) Long run with full setup
+(002) Long run with only detector array
+
+
+TODO
+Try different energies
+Fix pseudoiso
+implement geometric correction (which speed?) 13.5 cm/ns
+See if it works with just one detector
+implement new source

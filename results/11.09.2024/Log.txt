@@ -1,0 +1,31 @@
+Code stil does not work correctly with a single detector after implementing
+/nDet/detector/setPmtColumns 1
+/nDet/detector/setPmtRows 1
+and thus forcing the pmt to not be segmented.(Technically to be 1 segment).
+
+Tested with an array of one and two detectors. The problem persisted for one detector, but was not present 
+as soon as there were more than one detector present.
+
+
+Made 10e5 neutron runs with the full setup and at different energies (not geometrically corrected) iso = 2
+(001) 2MeV
+(002) 500keV
+(003) 300keV
+
+Implemented 49K as a viable neutron source.
+
+Looked at the direction of the beam.
+with iso = 0 and /nDet/source/direction 90 270 0,
+the beam points directly at the center of the middle array-detector. It takes angles (in deg) rather than distances.
+
+Changing the iso value to 1 overwrites this. It seems like iso = 0 can be set correctly now, iso = 2 works as expected
+and iso = 1 shoots pseudoisotropically only in the vicinity of one detector in the array (first or last).
+
+
+TODO
+Implement geometrical correction (13.5 cm/ns)
+Look at Jeppes code
+look at 49K data (compare to simulation)
+Change pseudoiso (make new?) to include entire array
+Make the simulation work for a single detector
+Include frame

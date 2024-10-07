@@ -8,14 +8,19 @@
  *                            Christophe.Sotty@fys.kuleuven.be
  * 
  *************************************************************************/
-
+#include <TText.h>
 #include "CloverSingleBuchDetector.hh"
 //#include "CloverSingleBuchHit.hh"
 //#include "CloverSingleBuchSD.hh"
-#include "CADMesh.hh"
-#include <TText.h>
 #include "G4NistManager.hh"
 #include "G4SystemOfUnits.hh"
+#include "CADMesh.hh"
+
+
+#ifdef Error
+#undef Error
+#endif
+
 
 using namespace std;
 
@@ -46,9 +51,22 @@ G4VPhysicalVolume* CloverSingleBuchDetector::Construct()
     // Detector Construction
     //
     // Meshing
-    mesh_CloverSingle =  new CADMesh(const_cast<char*>(Form("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Crystal2_%i.stl",cr_nb+2)), mm,  G4ThreeVector( 0*cm, 0*cm, 0*cm), false);
+    //mesh_CloverSingle =  new CADMesh(const_cast<char*>(Form("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Crystal2_%i.stl",cr_nb+2)), mm,  G4ThreeVector( 0*cm, 0*cm, 0*cm), false);
     //G4cout << Form("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Crystal2_%i.stl",cr_nb+1) << G4endl; 
-    CloverSingle_sol = mesh_CloverSingle->TessellatedMesh();
+    //CloverSingle_sol = mesh_CloverSingle->TessellatedMesh();
+
+    //tesselated mesh
+    auto CloverSingleTessMesh = CADMesh::TessellatedMesh::FromSTL(Form("../stl/isolde/Clover_Bucharest_RefFace/Clover_Assembly_Bucharest_RefModif_Crystal2_%i.stl",cr_nb+2));
+      
+    //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+      
+    //offset
+    CloverSingleTessMesh->SetOffset(G4ThreeVector(0*cm, 0*cm, 0*cm));
+
+    
+    auto CloverSingle_sol = CloverSingleTessMesh->GetSolid();
+
+
     CloverSingle_log = new G4LogicalVolume(CloverSingle_sol, HPGe, Form("/Clover%i_Crystal%i_Buch_log",cl_nb ,cr_nb));
     CloverSingle_log -> SetVisAttributes(det_vis_att);
 

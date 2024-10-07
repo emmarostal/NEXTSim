@@ -1,6 +1,5 @@
 #ifndef NDET_RUN_ACTION_HH
 #define NDET_RUN_ACTION_HH
-
 #include "globals.hh"
 #include "G4UserRunAction.hh"
 #include "G4Step.hh"

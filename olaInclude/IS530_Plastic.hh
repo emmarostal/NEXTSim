@@ -60,9 +60,12 @@ class IS530_Plastic : public G4VUserDetectorConstruction
       // Solid, Physical, Logical and CADMesh  volumes of the Capsules and Carbon window
       //
       vector<G4VSolid* >		IS530_Plastic_current_sol;
-      vector<CADMesh* >			mesh_IS530_Plastic_current;
+      vector<Mesh* >			mesh_IS530_Plastic_current;
       vector<G4VPhysicalVolume* >	IS530_Plastic_current_phys;
       vector<G4LogicalVolume* >		IS530_Plastic_current_log;
+
+      //Emmas addition
+      vector<G4VSolid* > IS530PlasticTessMesh_current;
 
       // Physical and Logical volumes of the environnement   
       //

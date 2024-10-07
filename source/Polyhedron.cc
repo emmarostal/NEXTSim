@@ -8,12 +8,17 @@
  *                            Christophe.Sotty@fys.kuleuven.be
  *
  *************************************************************************/
+#include <TText.h>
 
 #include "Polyhedron.hh"
-#include "CADMesh.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "G4VisAttributes.hh"
+
+#include "CADMesh.hh"
+#ifdef Error
+#undef Error
+#endif
 
 using namespace std;
 
@@ -94,21 +99,22 @@ G4VPhysicalVolume* Polyhedron::Construct()
 
     // Detector Construction
     //org 64 66 70 72 76 79 82 83
-    vector<char* > Polyhedron_name;
+    //vector<char* > Polyhedron_name;
+    std::vector<std::string> Polyhedron_name;
     
     /*  */
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_64.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_64.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_65.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_66.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_70.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_66.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_70.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_71.stl");
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_72.stl");
     
     
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_74.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_75.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_76.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_79.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_76.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_79.stl");
     
     
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_80.stl");
@@ -117,7 +123,7 @@ G4VPhysicalVolume* Polyhedron::Construct()
     
     
     
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_83.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_hexagon_83.stl");
     
     
     //**************************************
@@ -129,45 +135,45 @@ G4VPhysicalVolume* Polyhedron::Construct()
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_89.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_91.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_hexagon_92.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_66.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_octogon_66.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_67.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_69.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_octogon_69.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_70.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_73.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_octogon_73.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_74.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_76.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_77.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_octogon_77.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_78.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_79.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_83.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_87.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_88.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_octogon_88.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_octogon_97.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_63.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_63.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_64.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_67.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_67.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_68.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_69.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_72.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_73.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_74.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_75.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_76.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_75.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_76.stl");
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_77.stl");
 
 
 //****************************************************************
 
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_78.stl");   
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_79.stl"); 
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_79.stl"); 
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_80.stl");   
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_81.stl");
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_82.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_83.stl");   
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_83.stl");   
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_84.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_85.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_85.stl");
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_86.stl");    
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_patrat_87.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_patrat_87.stl");
     
  
  
@@ -197,13 +203,13 @@ G4VPhysicalVolume* Polyhedron::Construct()
 
     //front cap
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_93.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_94.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_95.stl");
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_96.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_capac_circular_94.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_capac_circular_95.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_capac_circular_96.stl");
     
     
     
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_98.stl"); 
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_capac_circular_98.stl"); 
     
     //front cap   
     //Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_capac_circular_99.stl");
@@ -240,12 +246,12 @@ G4VPhysicalVolume* Polyhedron::Construct()
 
 
 
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_114.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_114.stl");
     
    
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_115.stl");
 
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_118.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_118.stl");
     
     
     
@@ -261,8 +267,8 @@ G4VPhysicalVolume* Polyhedron::Construct()
 
 
     //pices around Ge
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_132.stl");  
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_136.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_132.stl");  
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_flansa_fixa_pe_prisma_2_136.stl");
     
     
     
@@ -276,7 +282,7 @@ G4VPhysicalVolume* Polyhedron::Construct()
 
 
 
-    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/IDS_5_Placa_suport_polietru1_4.stl");
+    Polyhedron_name.push_back("../stl/isolde/IDS_5/IDS_5_Placa_suport_polietru1_4.stl");
     
     
     
@@ -296,21 +302,40 @@ G4VPhysicalVolume* Polyhedron::Construct()
 //    Polyhedron_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/IDS_5/");
 
     // Meshing and Logical Volumes
-    for(int i = 0; i<Polyhedron_name.size(); i++){ 
+    for(size_t i = 0; i<Polyhedron_name.size(); i++){ 
     //for(int i = 0; i<1; i++){ 
       //G4cout<< Polyhedron_name.at(i) << G4endl;
       //mesh_Polyhedron_current.push_back( new CADMesh(const_cast<char*>(Polyhedron_name.at(i)), mm, G4ThreeVector(109.41*cm, 42.58*cm, -50.305*cm), false));
-      mesh_Polyhedron_current.push_back( new CADMesh(Polyhedron_name.at(i), mm, G4ThreeVector(109.41*cm, 42.58*cm, -50.305*cm), false));
+      //Line below outdated
+      //mesh_Polyhedron_current.push_back( new Mesh*(Polyhedron_name.at(i), mm, G4ThreeVector(109.41*cm, 42.58*cm, -50.305*cm), false));
       //G4cout << "mesh_Polyhedron_current" << G4endl;
-      Polyhedron_current_sol.push_back( mesh_Polyhedron_current.at(i)->TessellatedMesh());
+      //Line below outdated
+      //Polyhedron_current_sol.push_back( mesh_Polyhedron_current.at(i)->TessellatedMesh());
       //G4cout << "Polyhedron_current_sol" << G4endl;
-      Polyhedron_current_log.push_back( new G4LogicalVolume(Polyhedron_current_sol.at(i), Al_mat, name+Form("Poly_%i_log", i )));
+
+      //tesselated mesh
+      auto TessMesh = CADMesh::TessellatedMesh::FromSTL(Polyhedron_name.at(i));
+      
+      //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+      
+      //offset
+      TessMesh->SetOffset(G4ThreeVector(109.41*cm, 42.58*cm, -50.305*cm));
+
+      //Solid
+      auto TessMeshSol = TessMesh->GetSolid();
+
+      //push into vector
+      PolyhedronTessMesh_current_sol.push_back(TessMeshSol);
+
+
+
+      Polyhedron_current_log.push_back( new G4LogicalVolume(PolyhedronTessMesh_current_sol.at(i), Al_mat, name+Form("Poly_%zu_log", i )));
       //G4cout << "Polyhedron_current_log" << G4endl;
       Polyhedron_current_log.at(i)	->SetVisAttributes(Polyhedron_vis_att);
       if(i==(Polyhedron_name.size()-1))	Polyhedron_current_log.at(i)->SetVisAttributes(Al_vis_att);
       //G4cout << "SetVisAttributes" << G4endl;
       //Polyhedron_current_phys.push_back( new G4PVPlacement(0, G4ThreeVector(0, 0, 0), name+Form("/Poly_%i_phys",i), Polyhedron_current_log.at(i), det_env, false, 0));
-      Polyhedron_current_phys.push_back( new G4PVPlacement(transformation, name+Form("/Poly_%i_phys",i), Polyhedron_current_log.at(i), mother, false, 0));
+      Polyhedron_current_phys.push_back( new G4PVPlacement(transformation, name+Form("/Poly_%zu_phys", i), Polyhedron_current_log.at(i), mother, false, 0));
       //Polyhedron_current_phys.push_back( new G4PVPlacement(0, G4ThreeVector(0, 0, 0), name+Form("/Poly_%i_phys",i), Polyhedron_current_log.at(i), mother, false, 0));
       //G4cout << "Polyhedron_current_phys" << G4endl;
     }

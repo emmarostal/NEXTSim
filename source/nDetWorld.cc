@@ -8,6 +8,7 @@
 #include "optionHandler.hh" // split_str
 #include "termColors.hh"
 
+
 #include "G4Box.hh"
 #include "G4LogicalVolume.hh"
 #include "G4PVPlacement.hh"
@@ -61,7 +62,7 @@ bool nDetWorld::setWorldFloor(const G4String &input){
 
 void nDetWorld::buildExpHall(nDetMaterials *materials){
 	solidV = new G4Box("solidV", hallSize.getX()/2, hallSize.getY()/2, hallSize.getZ()/2);
-
+	materials->initialize();
 	G4Material *expHallFill = materials->getMaterial(fillMaterial);
 	if(!expHallFill){ // Use the default material, if
 		std::cout << Display::WarningStr("nDetWorld") << "Failed to find user-specified world material (" << fillMaterial << ")!" << Display::ResetStr() << std::endl;
@@ -70,7 +71,7 @@ void nDetWorld::buildExpHall(nDetMaterials *materials){
 	}
 
 	logV = new G4LogicalVolume(solidV, expHallFill, "expHallLogV", 0, 0, 0);
-	logV->SetVisAttributes(G4VisAttributes::Invisible);
+	logV->SetVisAttributes(G4VisAttributes::GetInvisible());
 
 	// Add a floor to the experimental hall (disabled by default)
 	if(!floorMaterial.empty() && floorThickness > 0){
@@ -108,19 +109,19 @@ void nDetWorld::buildExpHall(nDetMaterials *materials){
 		cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n" <<
 				"<<<<<<<<<<<<<<<<<<<<<<<<< Unrecognizable expriment name. Please check for appropriate naming schemes. >>>>>>>>>>>>>>>>>>>>>>>>>\n" <<
 				"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n";
-			
+	G4cout << "buildExpHall" << G4endl; 
 	if(expName=="isolde") BuildCERNStructures();
 
 	// Place the experimental hall into the world
 	physV = new G4PVPlacement(0, G4ThreeVector(0, 0, 0), logV, "expHallPhysV", 0, false, 0);
 	
 	if(expName=="isolde") BuildCERNElements();
-
+	G4cout << "buildExpHallEnd" << G4endl; 
 	return;
 }
 
 void nDetWorld::BuildCERNStructures(){
-
+	G4cout << "BuildCERNStructures" << G4endl; 
    CERNFloor* cernFloor = new CERNFloor();
    G4RotationMatrix* floorRot = new G4RotationMatrix();
    G4double floorXPos = -126.5*cm;
@@ -141,16 +142,18 @@ void nDetWorld::BuildCERNStructures(){
    G4ThreeVector tapeBoxPosition = G4ThreeVector(tapeBoxXPos, 0, 0);
    tapeBox->Place(rotTapeBox, tapeBoxPosition, "cernTapeBox", logV);                 
     
-   CERNSupport* cernSupport = new CERNSupport();
-   G4RotationMatrix* rotSupport = new G4RotationMatrix(); 
-   G4ThreeVector supportPos(0.0,0.0, 5.7*cm);  
-   cernSupport->Place(rotSupport, supportPos, "cernSupport", logV);        
+   //CERNSupport* cernSupport = new CERNSupport();
+   //G4RotationMatrix* rotSupport = new G4RotationMatrix(); 
+   //G4ThreeVector supportPos(0.0,0.0, 5.7*cm);  
+   //cernSupport->Place(rotSupport, supportPos, "cernSupport", logV);        
 
-   
+   	G4cout << "BuildCERNStructuresEnd" << G4endl; 
 	return;
 }
 
 void nDetWorld::BuildCERNElements(){
+		G4cout << "BuildCERNElements start" << G4endl; 
+
   vector<CloverQuadDetector*> 		clquad_array;
   vector<CloverQuadBuchDetector*> 	clquadbuch_array;
   vector<Tape*>						tape_array;
@@ -224,21 +227,21 @@ void nDetWorld::BuildCERNElements(){
   //Construction
 
   // 1. Clover KU Leuven
-  for (int clq=0; clq<clquad_array.size(); clq++){
+  for (size_t clq=0; clq<clquad_array.size(); clq++){
     clquad_array.at(clq)->Construct();
   }
   // 2. Clover Bucharest
-  for (int clq=0; clq<clquadbuch_array.size(); clq++){
+  for (size_t clq=0; clq<clquadbuch_array.size(); clq++){
     clquadbuch_array.at(clq)->Construct();
   }
 
   // 8. Tape
-  for (int t=0; t<tape_array.size(); t++){
+  for (size_t t=0; t<tape_array.size(); t++){
     tape_array.at(t)->Construct();
   }
 
   // 10. OSIRIS chamber
-  for (int pl=0; pl<poly_array.size(); pl++){
+  for (size_t pl=0; pl<poly_array.size(); pl++){
     poly_array.at(pl)->Construct();
   }
   /*
@@ -247,11 +250,11 @@ void nDetWorld::BuildCERNElements(){
     cubic_chamber_array.at(cc)->Construct();
   }*/
   // 12. IS530 chamber
-  for (int is=0; is<IS530_chamber_array.size(); is++){
+  for (size_t is=0; is<IS530_chamber_array.size(); is++){
     IS530_chamber_array.at(is)->Construct();
   }
   // 13. IS530 plastic - non sensitive detector
-  for (int is=0; is<IS530_plastic_array.size(); is++){
+  for (size_t is=0; is<IS530_plastic_array.size(); is++){
     IS530_plastic_array.at(is)->Construct();
   }
  

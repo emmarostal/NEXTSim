@@ -60,7 +60,11 @@ class Polyhedron : public G4VUserDetectorConstruction
       // Solid, Physical, Logical and CADMesh  volumes of the Capsules and Carbon window
       //
       vector<G4VSolid* >		Polyhedron_current_sol;
-      vector<CADMesh* >			mesh_Polyhedron_current;
+      vector<Mesh* >			mesh_Polyhedron_current;
+      //Emmas addition
+      vector<G4VSolid* > PolyhedronTessMesh_current_sol;
+
+ 
       vector<G4VPhysicalVolume* >	Polyhedron_current_phys;
       vector<G4LogicalVolume* >		Polyhedron_current_log;
 
@@ -75,8 +79,8 @@ class Polyhedron : public G4VUserDetectorConstruction
       // Position and Orientation
       //
       G4double	rho;
-      G4double	phi;
       G4double	theta;
+      G4double	phi;
       G4double	spin;
       G4RotationMatrix	Polyhedron_rotation;
       G4Transform3D*	Polyhedron_transformation;

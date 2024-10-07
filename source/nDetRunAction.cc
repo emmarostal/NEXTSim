@@ -1,8 +1,9 @@
 #include "time.h"
-
 #include "Randomize.hh"
+#include <random>
 #include "G4Timer.hh"
 #include "G4Run.hh"
+#include "../dict/include/nDetStructures.hpp"
 
 #include "nDetDataPack.hh"
 #include "nDetThreadContainer.hh"
@@ -16,8 +17,9 @@
 #include "nDetDetector.hh"
 #include "termColors.hh"
 
-const double KINETIC_ENERGY_THRESHOLD = 0.03; // MeV
 
+const double KINETIC_ENERGY_THRESHOLD = 0.03; // MeV
+//const double KINETIC_ENERGY_THRESHOLD = 0.001; // MeV
 std::default_random_engine generator;
 std::normal_distribution<double> distribution(6.551,0.7);
 
@@ -328,7 +330,9 @@ bool nDetRunAction::processDetector(nDetDetector* det){
 		pmtL->copyTrace(traceData.left);
 		pmtR->copyTrace(traceData.right);
 		traceData.mult++;
-	}		
+	}	
+
+
 	
 	// Do some light pulse analysis
 	debugData.pulsePhase[0] = pmtL->analyzePolyCFD() + targetTimeOffset;
@@ -426,7 +430,7 @@ bool nDetRunAction::processDetector(nDetDetector* det){
 	
 	// Compute "bar" variables.
 	double offset = distribution(generator);
-	outData.barTOF = (debugData.pulsePhase[0]+debugData.pulsePhase[1])/2-offset;
+	outData.barTOF = ((debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset)/(sqrt(1+pow(abs(debugData.pulsePhase[0]-debugData.pulsePhase[1])*13.5/2,2)/pow(100,2)));
 	outData.barQDC = std::sqrt(debugData.pulseQDC[0]*debugData.pulseQDC[1]);
 	outData.barMaxADC = std::sqrt(abs(debugData.pulseMax[0])*abs(debugData.pulseMax[1]));
 	outData.barTrig = Ftrigger;
@@ -644,6 +648,7 @@ void nDetRunAction::process(){
 			debugData.photonsProd.push_back(counter->getPhotonCount(i));
 	}
 
+
 	short detID = 0;
 	double startTime;
 	if(processStartDetector(startDetector, startTime)){ // Check for valid start signal
@@ -713,16 +718,21 @@ void nDetRunAction::process(){
 	
 	// Write the data (mutex protected, thread safe).
 	nDetMasterOutputFile::getInstance().fillBranch(data); // The master output file is a singleton class.
-
 	// Clear all data structures.
 	data.clear();
 
-	// Clear all statistics.
-	for(std::vector<nDetDetector>::iterator iter = userDetectors.begin(); iter != userDetectors.end(); iter++)
+	for(int i = 0; i < userDetectors.size(); i++){
+		userDetectors[i].clear();
+	}
+	for(int i = 0; i < userImplants.size(); i++){
+		userImplants[i].clear();
+	}
+	/*for(std::vector<nDetDetector>::iterator iter = userDetectors.begin(); iter != userDetectors.end(); iter++)
 		iter->clear();
 
 	for(std::vector<nDetImplant>::iterator iter = userImplants.begin(); iter != userImplants.end(); iter++)
-		iter->clear();
+		iter->clear();*/
+
 	
 	if(stacking) stacking->Reset();
 	if(tracking) tracking->Reset();

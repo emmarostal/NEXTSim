@@ -32,7 +32,8 @@
 #include "globals.hh"
 #include "MaterialsManager.hh"
 #include "G4SystemOfUnits.hh"
-#include "G4NistManager.hh"    
+#include "G4NistManager.hh"   
+
 
 MaterialsManager::MaterialsManager()
 {
@@ -186,12 +187,12 @@ G4Material* MaterialsManager::GetBC408()
             
      G4double* scintilSlow = scintilFast;//for now
      BC408LightProperties->AddProperty("FASTCOMPONENT",photonEnergy, 
-                                        scintilFast, scintEntries)->SetSpline(true);
+                                        scintilFast, scintEntries);
      BC408LightProperties->AddConstProperty("FASTTIMECONSTANT", 2.1*ns);
     
      //slow component - do we have any?    
      BC408LightProperties->AddProperty("SLOWCOMPONENT",photonEnergy, 
-                                       scintilSlow,scintEntries)->SetSpline(true);
+                                       scintilSlow,scintEntries);
                                     
      BC408LightProperties->AddConstProperty("SLOWTIMECONSTANT", 10.*ns);
      BC408LightProperties->AddConstProperty("YIELDRATIO",1.0); //TODO!!!!! find the value
@@ -215,7 +216,7 @@ G4Material* MaterialsManager::GetBC408()
              
      BC408LightProperties->AddProperty("ELECTRONSCINTILLATIONYIELD",
                                        particleEnergy, electronYield, 
-                                       energyPoints)->SetSpline(true);
+                                       energyPoints);
      G4double psF = protonScalingFact;
      G4double protonYield[] = { 0.6*pEF*psF, 67.1*pEF*psF, 88.6*pEF*psF,
 		                        120.7*pEF*psF, 
@@ -228,7 +229,7 @@ G4Material* MaterialsManager::GetBC408()
 
      BC408LightProperties->AddProperty("PROTONSCINTILLATIONYIELD",
                                        particleEnergy, protonYield, 
-                                       energyPoints)->SetSpline(true);
+                                       energyPoints);
   
      G4double ionYield[] = { 0.2*pEF, 10.4*pEF, 12.7*pEF, 15.7*pEF, 
 		                     17.9*pEF, 20.8*pEF, 25.1*pEF, 27.9*pEF, 
@@ -240,7 +241,7 @@ G4Material* MaterialsManager::GetBC408()
 
      BC408LightProperties->AddProperty("IONSCINTILLATIONYIELD",
                                        particleEnergy, ionYield, 
-                                       energyPoints)->SetSpline(true);
+                                       energyPoints);
                                     
            
      BC408->SetMaterialPropertiesTable(BC408LightProperties);

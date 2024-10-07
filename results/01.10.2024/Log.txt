@@ -1,0 +1,7 @@
+Plotting energies for two-neutron detections. Compare with detector IDs 
+(Be aware of geometric corrections)
+
+Number of entries is 0, when using Draw function in root...
+
+Trace data is not supported for multiple detectors - look at traces for a single detector?
+

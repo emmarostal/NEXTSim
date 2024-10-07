@@ -9,7 +9,6 @@
 #include "G4UnionSolid.hh"
 #include "G4Trd.hh"
 #include "G4Tubs.hh"
-
 #include "nDetDetectorTypes.hh"
 
 using namespace nDetDetectorTypes;

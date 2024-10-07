@@ -16,6 +16,7 @@
 #include "G4SystemOfUnits.hh"
 #include "G4VisAttributes.hh"
 
+
 CERNFrame::CERNFrame()
 {
 	SetBasicSizes();	

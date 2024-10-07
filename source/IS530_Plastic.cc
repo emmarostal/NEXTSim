@@ -8,12 +8,16 @@
  *************************************************************************/
 // It is not implemented as a sensitive detector
 
-
+#include <TText.h>
 #include "IS530_Plastic.hh"
-#include "CADMesh.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "G4VisAttributes.hh"
+#include "CADMesh.hh"
+
+#ifdef Error
+#undef Error
+#endif
 
 using namespace std;
 
@@ -104,19 +108,38 @@ G4VPhysicalVolume* IS530_Plastic::Construct()
     // Detector Construction
     //
     vector<char* > IS530_Plastic_name;
-    IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic.stl");
+    IS530_Plastic_name.push_back("../stl/isolde/Bucharest_Plastic/Bucharest_Plastic.stl");
     //IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic_back.stl");
-    IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Bucharest_Plastic_holders.stl");
-    IS530_Plastic_name.push_back("/ARCHIVE/Ddata/geant4_stl/vandle/isolde/Bucharest_Plastic/Tape.stl");
+    IS530_Plastic_name.push_back("../stl/isolde/Bucharest_Plastic/Bucharest_Plastic_holders.stl");
+    IS530_Plastic_name.push_back("../stl/isolde/Bucharest_Plastic/Tape.stl");
     
     // Meshing and Logical Volumes
     for(int i = 0; i<IS530_Plastic_name.size(); i++){ 
       G4cout<< IS530_Plastic_name.at(i) << G4endl;
-      mesh_IS530_Plastic_current.push_back( new CADMesh(IS530_Plastic_name.at(i), mm, G4ThreeVector(0*cm, 0*cm, 0*cm), false));
+      //mesh_IS530_Plastic_current.push_back( new CADMesh(IS530_Plastic_name.at(i), mm, G4ThreeVector(0*cm, 0*cm, 0*cm), false));
       //G4cout << "mesh_IS530_Plastic_current" << G4endl;
-      IS530_Plastic_current_sol.push_back( mesh_IS530_Plastic_current.at(i)->TessellatedMesh());
+      //IS530_Plastic_current_sol.push_back( mesh_IS530_Plastic_current.at(i)->TessellatedMesh());
+
+      //tesselated mesh
+      auto IS530PlasticTessMesh = CADMesh::TessellatedMesh::FromSTL(IS530_Plastic_name.at(i));
+      
+      //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
+      
+      //offset
+      IS530PlasticTessMesh->SetOffset(G4ThreeVector(0*cm, 0*cm, 0*cm));
+
+      //Solid
+      auto IS530PlasticSolid = IS530PlasticTessMesh->GetSolid();
+      
+      //push into vector
+      IS530PlasticTessMesh_current.push_back(IS530PlasticSolid);
+
+
+
+
+
       //G4cout << "IS530_Plastic_current_sol" << G4endl;
-      IS530_Plastic_current_log.push_back( new G4LogicalVolume(IS530_Plastic_current_sol.at(i), Mat.at(i), name+Form("IS530_Plastic_%i_log", i )));
+      IS530_Plastic_current_log.push_back( new G4LogicalVolume(IS530PlasticTessMesh_current.at(i), Mat.at(i), name+Form("IS530_Plastic_%i_log", i )));
       //G4cout << "IS530_Plastic_current_log" << G4endl;
       IS530_Plastic_current_log.at(i)	->SetVisAttributes(VisAttM.at(i));
       //G4cout << "SetVisAttributes" << G4endl;

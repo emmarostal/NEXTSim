@@ -15,7 +15,7 @@
 /nDet/output/trace/setRisetime 2
 /nDet/output/trace/setFalltime 20
 /nDet/output/trace/setTimeSpread 0.35
-/nDet/output/trace/setGain 1E3
+/nDet/output/trace/setGain 0.5E3
 /nDet/output/trace/setBaseline 7.5
 /nDet/output/trace/setJitter 0.15
 
@@ -56,6 +56,9 @@
 #/nDet/detector/setDetectorThickness 50.0
 #/nDet/detector/setPmtDimensions 50.0
 
+/nDet/detector/setPmtColumns 1
+/nDet/detector/setPmtRows 1
+
 # Set the position and rotation of the detector in the lab frame.
 /nDet/detector/setPosition 100 0 0 cm
 /nDet/detector/setRotation 0 0 0
@@ -85,5 +88,5 @@
 # RUN CONTROL #
 ###############
 
-#/run/beamOn 50000
+#/run/beamOn 5000
 

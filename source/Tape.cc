@@ -8,12 +8,14 @@
  *                            Christophe.Sotty@fys.kuleuven.be
  *
  *************************************************************************/
-
+#include <TText.h>
 #include "Tape.hh"
-#include "CADMesh.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
-#include <TText.h>
+#include "G4VisAttributes.hh"
+
+
+
 
 using namespace std;
 

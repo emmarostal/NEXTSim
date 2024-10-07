@@ -67,11 +67,15 @@ class CloverQuadBuchDetector : public G4VUserDetectorConstruction
       //
       G4VSolid* Capsule_sol;
 
-      CADMesh* mesh_Capsule;
+      Mesh* mesh_Capsule;
 
       G4VPhysicalVolume* Capsule_phys;
 
       G4LogicalVolume* Capsule_log;
+
+
+    
+      
 
       // Physical and Logical volumes of the environnement   
       //

@@ -191,6 +191,8 @@ class nDetParticleSource : public G4GeneralParticleSource {
 	  */	
 	void Set90Sr();
 
+	void Set49K();
+
 	/** Set a beam of mono-energetic neutrons
 	  * @param energy_ Energy of the beam (in MeV)
 	  */	

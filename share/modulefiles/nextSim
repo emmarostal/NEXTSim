@@ -5,15 +5,33 @@
 ## modulefiles/nextSim
 ##
 proc ModulesHelp {} {
-	global version modroot
+    global version modroot
 
-	puts stderr "nextSim - NExT detector simulation program using Geant4"
+    puts stderr "nextSim - NExT detector simulation program using Geant4"
 }
 module-whatis "NExT detector simulation program using Geant4"
 
-set topdir 	@CMAKE_INSTALL_PREFIX@
+set topdir  /home/emma/devel/resources/Clone/NEXTSim
+set rootdir /home/emma/devel/resources/root/root
+set builddir /home/emma/devel/resources/Clone/NEXTSim/build
 
-prepend-path PATH	$topdir/bin
-prepend-path LD_LIBRARY_PATH	$topdir/lib
-prepend-path CPLUS_INCLUDE_PATH	$topdir/include
-prepend-path LIBRARY_PATH	$topdir/lib
+# Set paths for binaries
+prepend-path PATH $builddir/dict
+prepend-path PATH $topdir/install/bin
+
+# Set paths for shared libraries at runtime (dynamic linking)
+prepend-path LD_LIBRARY_PATH $rootdir/lib
+prepend-path LD_LIBRARY_PATH $builddir/dict
+
+# Set paths for libraries during linking (static and shared)
+prepend-path LIBRARY_PATH $rootdir/lib
+prepend-path LIBRARY_PATH $builddir/dict
+
+# Set paths for include files
+prepend-path CPLUS_INCLUDE_PATH $topdir/include
+prepend-path CPLUS_INCLUDE_PATH $topdir/olainclude
+prepend-path CPLUS_INCLUDE_PATH $builddir/dict
+
+# Set ROOT include path for PCM files
+prepend-path ROOT_INCLUDE_PATH $builddir/dict
+prepend-path ROOT_INCLUDE_PATH $rootdir/lib

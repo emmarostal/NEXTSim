@@ -5,6 +5,7 @@
 #include "G4SystemOfUnits.hh"
 #include "G4VisAttributes.hh"
 
+
 #include "termColors.hh"
 #include "nDetMaterials.hh"
 #include "nDetMaterialsMessenger.hh"
@@ -276,23 +277,50 @@ void nDetMaterials::printMaterial(const G4String &name){
 #ifndef GEANT_OLDER_VERSION
 			std::vector<G4String> propNames = MPT->GetMaterialPropertyNames(); // Ugh...
 			std::vector<G4String> cpropNames = MPT->GetMaterialConstPropertyNames(); // UGH... WHY, GEANT???
-			for(auto prop : (*MPT->GetPropertyMap())){ // Iterate over variable properties
-				G4PhysicsVector *vec = prop.second;
-				G4String propertyName = propNames[prop.first];
-				std::cout << std::string(propertyName.length(), '-') << std::endl;
-				std::cout << propertyName << std::endl;
-				std::cout << std::string(propertyName.length(), '-') << std::endl;
-				if(vec != NULL){
-					// Now I re-write G4PhysicsVector::DumpValues() for the same reason
-					for (size_t i = 0; i < vec->GetVectorLength(); i++) // Iterate over all values in the vectors
-						std::cout << vec->Energy(i) << "\t" << (*vec)[i] << std::endl;
+			
+			std::vector<G4MaterialPropertyVector*> propVecs = MPT->GetProperties(); // nye kald - taget fra https://geant4-forum.web.cern.ch/t/ow-to-replace-calls-to-g4materialpropertiestable-getpropertiesmap-and-getpropertiescmap-in-version-11-0/8124
+			std::vector<std::pair<G4double, G4bool>> cpropVecs = MPT->GetConstProperties();
+			
+			// Vi skal lave nyt for-loop her med de nye funktioner... måske behøver vi ikke nestede for-løkker
+			for (size_t i = 0; i < propVecs.size(); ++i) {
+    				G4PhysicsVector *vec = propVecs[i];
+    				G4String propertyName = propNames[i];
+    				std::cout << std::string(propertyName.length(), '-') << std::endl;
+    				std::cout << propertyName << std::endl;
+    				std::cout << std::string(propertyName.length(), '-') << std::endl;
+					if(vec != NULL){
+						// Now I re-write G4PhysicsVector::DumpValues() for the same reason
+						for (size_t i = 0; i < vec->GetVectorLength(); i++) // Iterate over all values in the vectors
+							std::cout << vec->Energy(i) << "\t" << (*vec)[i] << std::endl;
+					}
 				}
-			}
+    				
+    				
+			//
+			//for(auto prop : (MPT->GetProperties())){ // Iterate over variable properties - old version
+			//	G4PhysicsVector *vec = prop.second;
+			//	G4String propertyName = propNames[prop.first];
+			//	std::cout << std::string(propertyName.length(), '-') << std::endl;
+			//	std::cout << propertyName << std::endl;
+			//	std::cout << std::string(propertyName.length(), '-') << std::endl;
+			//	if(vec != NULL){
+			//		// Now I re-write G4PhysicsVector::DumpValues() for the same reason
+			//		for (size_t i = 0; i < vec->GetVectorLength(); i++) // Iterate over all values in the vectors
+			//			std::cout << vec->Energy(i) << "\t" << (*vec)[i] << std::endl;
+			//	}
+			//}
+			//
 			std::cout << "\n/////////////////////////////\n";
 			std::cout << "// Constant Properties\n";
 			std::cout << "/////////////////////////////\n\n";
-			for(auto cprop : (*MPT->GetConstPropertyMap())) // Iterate over constant properties
-				std::cout << cpropNames[cprop.first] << " = " << cprop.second << std::endl;
+
+			for (size_t i = 0; i < cpropVecs.size(); i++){
+				std::cout << cpropNames[i] << "=" << std::endl;
+			}
+
+			//for(auto cprop : (MPT->GetConstProperties())) {// Iterate over constant properties
+			//	std::cout << cpropNames[cprop.first] << " = " << cprop.second << std::endl;
+			//}
 #else
 			const std::map<G4String, G4MaterialPropertyVector*, std::less< G4String > >* pMap = MPT->GetPropertiesMap();
 			const std::map<G4String, G4double, std::less< G4String > >* cpMap = MPT->GetPropertiesCMap();
@@ -484,6 +512,10 @@ void nDetMaterials::defineMaterials(){
 	// Refractive index
 	G4double RINDEX_ACRYLIC[11] = {1.57237, 1.54724, 1.5286, 1.51533, 1.50629, 1.50033, 1.49633, 1.49313, 1.4896, 1.48461, 1.47702};
 	
+	//flip the order
+	std::reverse(std::begin(ENERGY_ACRYLIC), std::end(ENERGY_ACRYLIC));
+    std::reverse(std::begin(RINDEX_ACRYLIC), std::end(RINDEX_ACRYLIC));
+
 	G4MaterialPropertiesTable *MPT_Acrylic = new G4MaterialPropertiesTable();
 	MPT_Acrylic->AddProperty("RINDEX", ENERGY_ACRYLIC, RINDEX_ACRYLIC, 11);
 
@@ -492,6 +524,9 @@ void nDetMaterials::defineMaterials(){
 	                        4.43507*eV, 4.13105*eV, 3.87258*eV, 3.64454*eV, 3.43671*eV, 3.25129*eV, 3.10158*eV, 2.94219*eV, 2.81212*eV, 
 	                        2.69307*eV, 2.58078*eV, 2.47479*eV, 2.38212*eV, 2.29384*eV, 2.21614*eV, 1.7712*eV};
 	                       
+	//flip the order
+	std::reverse(std::begin(energy2), std::end(energy2));
+
 	// Acrylic absorption length (mm)
 	G4double abslength[25] = {0, 0, 1.02102, 1.28345, 1.8604, 2.44271, 3.20801, 4.15751, 5.55214, 6.99127, 13.0334, 19.3961, 27.6547, 
 	                          32.87, 34.1447, 35.5173, 34.1447, 32.87, 32.87, 34.1447, 34.1447, 35.5173, 35.5173, 34.1447, 33.7719};
@@ -636,16 +671,16 @@ void nDetMaterials::defineScintillators(){
     fEJ200MPT = new G4MaterialPropertiesTable();
     fEJ200MPT->AddProperty("RINDEX", photonEnergy_Ej200_2, RefIndex_EJ200, 2);
     fEJ200MPT->AddProperty("ABSLENGTH", photonEnergy_Ej200_2, Absorption_EJ200, 2);
-    fEJ200MPT->AddProperty("FASTCOMPONENT", photonEnergy_Ej200, ScintilFast_EJ200, 44);
+    fEJ200MPT->AddProperty("SCINTILLATIONCOMPONENT1", photonEnergy_Ej200, ScintilFast_EJ200, 44);
 
     //fEJ200MPT->AddConstProperty("SCINTILLATIONYIELD", 0.64*17400/MeV); // 64% of Anthracene
     fEJ200MPT->AddConstProperty("SCINTILLATIONYIELD", 10000/MeV); // Scintillation efficiency as per Eljen specs
     fEJ200MPT->AddConstProperty("RESOLUTIONSCALE", 1.0); // Intrinsic resolution
 
     //fEJ200MPT->AddConstProperty("RISETIMECONSTANT", 0.9*ns); Geant4 10.1 TODO
-    fEJ200MPT->AddConstProperty("FASTSCINTILLATIONRISETIME", 0.9*ns);
-    fEJ200MPT->AddConstProperty("FASTTIMECONSTANT", 2.1*ns);
-    fEJ200MPT->AddConstProperty("YIELDRATIO",1);// the strength of the fast component as a function of total scintillation yield
+    fEJ200MPT->AddConstProperty("SCINTILLATIONRISETIME1", 0.9*ns);
+    fEJ200MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 2.1*ns);
+    fEJ200MPT->AddConstProperty("SCINTILLATIONYIELD1",1);// the strength of the fast component as a function of total scintillation yield
 
 	std::cout << "nDetConstruction: Photon yield is set to " << lightYieldScale << "x scale\n";
     G4double pEF = lightYieldScale; 
@@ -662,20 +697,20 @@ void nDetMaterials::defineScintillators(){
 		                          3.0E+04*pEF, 3.4E+04*pEF, 4.0E+04*pEF, 4.8E+04*pEF, 6.0E+04*pEF, 7.2E+04*pEF, 8.4E+04*pEF, 1.0E+05*pEF, 1.1E+05*pEF, 
 		                          1.2E+05*pEF, 1.3E+05*pEF, 1.4E+05*pEF, 1.5E+05*pEF, 1.6E+05*pEF, 1.7E+05*pEF, 1.8E+05*pEF, 1.9E+05*pEF, 2.0E+05*pEF};
 
-    fEJ200MPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield, 36)->SetSpline(true);
+    fEJ200MPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield, 36);
 	G4double protonYield[36] = {0.6*pSF, 67.1*pSF, 88.6*pSF, 120.7*pSF, 146.5*pSF, 183.8*pSF, 246.0*pSF, 290.0*pSF, 365.0*pSF, 
 		                        483.0*pSF, 678.0*pSF, 910.0*pSF, 1175.0*pSF, 1562.0*pSF, 2385.0*pSF, 3660.0*pSF, 4725.0*pSF, 6250.0*pSF, 
 		                        8660.0*pSF, 10420.0*pSF, 13270.0*pSF, 17180.0*pSF, 23100.0*pSF, 29500.0*pSF, 36200.0*pSF, 45500.0*pSF, 51826.7*pSF, 
 		                        58313.7*pSF, 65047.2*pSF, 72027.4*pSF, 79254.2*pSF, 86727.6*pSF, 94447.6*pSF, 102414.2*pSF, 110627.4*pSF, 119087.2*pSF};
 
-    fEJ200MPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield, 36)->SetSpline(true);
+    fEJ200MPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield, 36);
 
 	G4double ionYield[36] = {0.2*pEF, 10.4*pEF, 12.7*pEF, 15.7*pEF, 17.9*pEF, 20.8*pEF, 25.1*pEF, 27.9*pEF, 31.9*pEF, 
 		                     36.8*pEF, 43.6*pEF, 50.2*pEF, 56.9*pEF, 65.7*pEF, 81.3*pEF, 101.6*pEF, 116.5*pEF, 136.3*pEF, 
 		                     166.2*pEF, 187.1*pEF, 218.6*pEF, 260.5*pEF, 323.5*pEF, 387.5*pEF, 451.5*pEF, 539.9*pEF, 595.5*pEF, 
 		                     651.8*pEF, 708.7*pEF, 766.2*pEF, 824.2*pEF, 882.9*pEF, 942.2*pEF, 1002.1*pEF, 1062.6*pEF, 1123.7*pEF}; 
                          
-    fEJ200MPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield, 36)->SetSpline(true);
+    fEJ200MPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield, 36);
 
     fEJ200->SetMaterialPropertiesTable(fEJ200MPT);
 
@@ -692,6 +727,8 @@ void nDetMaterials::defineScintillators(){
 		                               2.784*eV, 2.764*eV, 2.739*eV, 2.705*eV, 2.671*eV, 2.646*eV, 2.625*eV, 2.599*eV, 2.567*eV, 2.533*eV, 
 		                               2.500*eV, 2.468*eV, 2.437*eV, 2.406*eV, 2.377*eV, 2.350*eV};
 
+	std::reverse(std::begin(photonEnergy_Ej276), std::end(photonEnergy_Ej276));
+
 	G4double ScintilFast_EJ276[36] = {0.000, 0.010, 0.088, 0.157, 0.225, 0.293, 0.354, 0.415, 0.492, 0.570, 
 	                                  0.649, 0.730, 0.807, 0.882, 0.934, 1.000, 0.890, 0.826, 0.761, 0.692, 
 	                                  0.629, 0.569, 0.509, 0.445, 0.388, 0.326, 0.263, 0.200, 0.144, 0.100, 
@@ -700,14 +737,14 @@ void nDetMaterials::defineScintillators(){
     fEJ276MPT = new G4MaterialPropertiesTable();
     fEJ276MPT->AddProperty("RINDEX", photonEnergy_Ej200_2, RefIndex_EJ200, 2);
     fEJ276MPT->AddProperty("ABSLENGTH", photonEnergy_Ej200_2, Absorption_EJ200, 2);
-    fEJ276MPT->AddProperty("FASTCOMPONENT", photonEnergy_Ej276, ScintilFast_EJ276, 36);
+    fEJ276MPT->AddProperty("SCINTILLATIONCOMPONENT1", photonEnergy_Ej276, ScintilFast_EJ276, 36);
 
     fEJ276MPT->AddConstProperty("SCINTILLATIONYIELD", 8600/MeV); // Scintillation efficiency as per Eljen specs
     fEJ276MPT->AddConstProperty("RESOLUTIONSCALE", 1.0); // Intrinsic resolution
 
-    fEJ276MPT->AddConstProperty("FASTSCINTILLATIONRISETIME", 0.9*ns);
-    fEJ276MPT->AddConstProperty("FASTTIMECONSTANT", 2.1*ns);
-    fEJ276MPT->AddConstProperty("YIELDRATIO",1);// the strength of the fast component as a function of total scintillation yield
+    fEJ276MPT->AddConstProperty("SCINTILLATIONRISETIME1", 0.9*ns);
+    fEJ276MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 2.1*ns);
+    fEJ276MPT->AddConstProperty("SCINTILLATIONYIELD1",1);// the strength of the fast component as a function of total scintillation yield
 
 	G4double electronYield_EJ276[36];
 	G4double protonYield_EJ276[36];
@@ -720,9 +757,9 @@ void nDetMaterials::defineScintillators(){
 		ionYield_EJ276[i] = 0.86 * ionYield[i];
 	}
 
-    fEJ276MPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield_EJ276, 36)->SetSpline(true);
-    fEJ276MPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield_EJ276, 36)->SetSpline(true);
-    fEJ276MPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield_EJ276, 36)->SetSpline(true);
+    fEJ276MPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield_EJ276, 36);
+    fEJ276MPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield_EJ276, 36);
+    fEJ276MPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield_EJ276, 36);
 
 	fEJ276->SetMaterialPropertiesTable(fEJ276MPT);
 
@@ -760,14 +797,14 @@ void nDetMaterials::defineScintillators(){
     fYSOMPT = new G4MaterialPropertiesTable();
     fYSOMPT->AddProperty("RINDEX", photonEnergy_YSO_2, RefIndex_YSO, 2);
     fYSOMPT->AddProperty("ABSLENGTH", photonEnergy_YSO_2, Absorption_YSO, 2);
-    fYSOMPT->AddProperty("FASTCOMPONENT", photonEnergy_YSO, ScintilFast_YSO, 13);
+    fYSOMPT->AddProperty("SCINTILLATIONCOMPONENT1", photonEnergy_YSO, ScintilFast_YSO, 13);
 
     fYSOMPT->AddConstProperty("SCINTILLATIONYIELD", 24000/MeV); // Photon yield as found in paper above for 137Cs
     fYSOMPT->AddConstProperty("RESOLUTIONSCALE", 1.0); // Intrinsic resolution
 
-    fYSOMPT->AddConstProperty("FASTSCINTILLATIONRISETIME", 2.0*ns);
-    fYSOMPT->AddConstProperty("FASTTIMECONSTANT", 50.0*ns);
-    fYSOMPT->AddConstProperty("YIELDRATIO",1);// the strength of the fast component as a function of total scintillation yield
+    fYSOMPT->AddConstProperty("SCINTILLATIONRISETIME1", 2.0*ns);
+    fYSOMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 50.0*ns);
+    fYSOMPT->AddConstProperty("SCINTILLATIONYIELD1",1);// the strength of the fast component as a function of total scintillation yield
 
 	G4double electronYield_YSO[36];
 	G4double protonYield_YSO[36];
@@ -780,9 +817,9 @@ void nDetMaterials::defineScintillators(){
 		ionYield_YSO[i] = 0.86 * ionYield[i];
 	}
 
-    fYSOMPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield_YSO, 36)->SetSpline(true);
-    fYSOMPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield_YSO, 36)->SetSpline(true);
-    fYSOMPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield_YSO, 36)->SetSpline(true);
+    fYSOMPT->AddProperty("ELECTRONSCINTILLATIONYIELD", particleEnergy, electronYield_YSO, 36);
+    fYSOMPT->AddProperty("PROTONSCINTILLATIONYIELD", particleEnergy, protonYield_YSO, 36);
+    fYSOMPT->AddProperty("IONSCINTILLATIONYIELD", particleEnergy, ionYield_YSO, 36);
 
 	fYSO->SetMaterialPropertiesTable(fYSOMPT);
 	

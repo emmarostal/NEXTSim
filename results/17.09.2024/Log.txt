@@ -1,0 +1,25 @@
+Implemented geometrical correction and applied it to 49K source with full setup.
+We get a larger peak at very high energies, when doing geometrical correction. A result of over-correction?
+Perhaps due to double or triple events?
+The right-leaning "shoulders" are minimized. Next step should be to compare with real data
+
+Potential issues: The geometrical correction assumes no scattering and straight paths from source to detector.
+When high energy neutrons scatter many times before reaching the detector, they are under-corrected 
+(moved to lower TOF, but not far enough, or not moved at all when hitting the center) We would expect that scattered neutrons
+will be detected with higher TOF (lower energy) than what is the case using this geometrical correction. How to mitigate this problem? 
+How big of an issue is it?
+
+kan afhjælpes ved at lave momentum-cut
+sammenholde med ladede partikler
+
+hvad er tidsopløsningen? vi får bare et startsignal, uafhængigt af beta-detektion
+
+det er amerikanernes opstilling, vores er lidt anderledes.
+
+bliver crosstalk talt med dobbelt eller ej?
+
+Negativ tof kan være relateret til pulsanalysen.
+
+bliver negativ tof events talt med?
+
+plot traces (forstå hvordan simuleringen egentlig virker lol)
