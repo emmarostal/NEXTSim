@@ -1,0 +1,2 @@
+/home/emma/devel/resources/Clone/NEXTSim/install/bin/nextSim
+/home/emma/devel/resources/Clone/NEXTSim/install/share/modulefiles/nextSim

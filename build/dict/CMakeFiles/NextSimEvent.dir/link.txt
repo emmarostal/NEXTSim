@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNextSimEvent.a CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o
+/usr/bin/ranlib libNextSimEvent.a

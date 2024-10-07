@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNextSimPeripheral.a CMakeFiles/NextSimPeripheralObj.dir/optionHandler.cc.o CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o
+/usr/bin/ranlib libNextSimPeripheral.a
