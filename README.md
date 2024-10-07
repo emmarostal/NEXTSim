@@ -1,5 +1,10 @@
 # NEXTSim README
 
+
+[Emma R Sørensen](https://github.com/emmarostal)
+Modified version of the NEXTSim software, updated oct 7, 2024
+Now compatible with newest version of cadmesh and geant4.
+
 [Cory R. Thornsberry](https://github.com/cthornsb)
 
 Last updated: July 3, 2019
