@@ -198,6 +198,7 @@ void nDetConstruction::UpdateGeometry(){
 }
 
 bool nDetConstruction::AddGeometry(const G4String &geom){
+    G4cout << "Add detector" << G4endl;
 	// Define a new detector of the specified type
 	nDetDetector *newDetector = nDetDetectorTypes::getDetectorType(geom, this, &materials);
 	
@@ -408,6 +409,41 @@ void nDetConstruction::AddDetectorArray(const G4String &input){
 
 void nDetConstruction::BuildExp(std::string expName_){
 	expHall->SetExp(expName_);
+}
+
+void nDetConstruction::BuildINDIEFromAUSASetup(std::string setupFile){
+    //neutron detectors
+    shared_ptr<AUSA::Setup> setup;
+    setup = AUSA::JSON::readSetupFromJSON(setupFile);
+    vector<shared_ptr<AUSA::SingleSidedDetector>> indies;
+    for(int i = 0; i < setup->singleCount(); i++){
+        auto d = setup->getSingleSided(i);
+        if(d->getType()=="INDiE"){
+            indies.push_back(d);
+        }
+    }
+    params.SetMylarThickness(0.025*mm);
+    params.SetGreaseThickness(1*mm);
+    params.SetWrappingMaterial("mylar");
+    params.SetWindowThickness(1.0*mm);
+    params.SetDetectorLength(120.0*cm);
+    params.SetDetectorHeight(50*mm);
+    params.SetDetectorWidth(3.0*cm);
+    for(int i = 0; i < indies.size(); i++){
+        cout << indies[i]->getName() << endl;
+        auto pos = indies[i]->getPosition(1);
+        cout << "Set params" << endl;
+        params.SetPosition(G4ThreeVector(pos.X() * mm,pos.Y() * mm,pos.Z() * mm));
+        TVector3 z = TVector3(0,0,1);
+        auto angle = z.Angle(pos)*360/(2*TMath::Pi());
+        if(pos.Y() > 0){
+            params.SetRotation(G4ThreeVector(angle, 90, 0));
+        }else{
+            params.SetRotation(G4ThreeVector(-angle, 90, 0));
+        }
+        cout << "Params set" << endl;
+        AddGeometry("rectangle");
+    }
 }
 
 void nDetConstruction::SetLightYieldMultiplier(const G4double &yield){ 

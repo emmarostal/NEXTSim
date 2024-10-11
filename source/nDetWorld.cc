@@ -116,8 +116,20 @@ void nDetWorld::buildExpHall(nDetMaterials *materials){
 	physV = new G4PVPlacement(0, G4ThreeVector(0, 0, 0), logV, "expHallPhysV", 0, false, 0);
 	
 	if(expName=="isolde") BuildCERNElements();
-	G4cout << "buildExpHallEnd" << G4endl; 
+	G4cout << "buildExpHallEnd" << G4endl;
+
+    if(expName=="8HeIS659") BuildIS659setup8He();
 	return;
+}
+
+void nDetWorld::BuildIS659setup8He(){
+    //floor
+    CERNFloor* cernFloor = new CERNFloor();
+    G4RotationMatrix* floorRot = new G4RotationMatrix(0,0,0);
+    G4double floorYPos = -126.5*cm;
+    G4ThreeVector floorPosition = G4ThreeVector(0,floorYPos, 0.);
+    cernFloor->Place(floorRot, floorPosition, "cernFloor", logV);
+
 }
 
 void nDetWorld::BuildCERNStructures(){
@@ -128,13 +140,13 @@ void nDetWorld::BuildCERNStructures(){
    G4ThreeVector floorPosition = G4ThreeVector(floorXPos,0., 0.);
    cernFloor->Place(floorRot, floorPosition, "cernFloor", logV); 
    
-   CERNFrame* cernFrame = new CERNFrame();
+   /*CERNFrame* cernFrame = new CERNFrame();
    G4RotationMatrix* rotFrame = new G4RotationMatrix();
    rotFrame->rotateX(0*degree);
    G4double frameXPos = -22*cm;
    G4double frameZPos = 25*cm;
    G4ThreeVector framePosition = G4ThreeVector(frameXPos, 0, frameZPos);
-   cernFrame->Place(rotFrame, framePosition, "cernFrame", logV); 
+   cernFrame->Place(rotFrame, framePosition, "cernFrame", logV); */
 
    CERNTapeBox* tapeBox = new CERNTapeBox();
    G4RotationMatrix* rotTapeBox = new G4RotationMatrix();

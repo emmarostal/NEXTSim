@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/emma/devel/resources/Clone/NEXTSim/include/version.hh"
+  "/home/jeppe/devel/projects/NEXTSim/include/version.hh"
   "CMakeFiles/GetVersion"
   "version.hh"
 )

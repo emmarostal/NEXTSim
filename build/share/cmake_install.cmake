@@ -1,8 +1,8 @@
-# Install script for directory: /home/emma/devel/resources/Clone/NEXTSim/share
+# Install script for directory: /home/jeppe/devel/projects/NEXTSim/share
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/emma/devel/resources/Clone/NEXTSim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/jeppe/devel/projects/NEXTSim/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME " Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -37,12 +37,12 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set path to fallback-tool for dependency-resolution.
+# Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/modulefiles" TYPE FILE FILES "/home/emma/devel/resources/Clone/NEXTSim/build/share/nextSim")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/modulefiles" TYPE FILE FILES "/home/jeppe/devel/projects/NEXTSim/build/share/nextSim")
 endif()
 

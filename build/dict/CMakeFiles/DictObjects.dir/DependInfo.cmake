@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp" "dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o" "gcc" "dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o.d"
-  "/home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp" "dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o" "gcc" "dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o.d"
+  "/home/jeppe/devel/projects/NEXTSim/build/dict/NextSimEvent.cpp" "dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o" "gcc" "dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o.d"
+  "/home/jeppe/devel/projects/NEXTSim/dict/source/nDetStructures.cpp" "dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o" "gcc" "dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

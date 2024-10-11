@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/emma/devel/resources/Clone/NEXTSim/source/optionHandler.cc" "source/CMakeFiles/NextSimPeripheralObj.dir/optionHandler.cc.o" "gcc" "source/CMakeFiles/NextSimPeripheralObj.dir/optionHandler.cc.o.d"
-  "/home/emma/devel/resources/Clone/NEXTSim/source/termColors.cc" "source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o" "gcc" "source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o.d"
+  "/home/jeppe/devel/projects/NEXTSim/source/optionHandler.cc" "source/CMakeFiles/NextSimPeripheralObj.dir/optionHandler.cc.o" "gcc" "source/CMakeFiles/NextSimPeripheralObj.dir/optionHandler.cc.o.d"
+  "/home/jeppe/devel/projects/NEXTSim/source/termColors.cc" "source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o" "gcc" "source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
