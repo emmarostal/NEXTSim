@@ -7,6 +7,6 @@
 #ifndef NDET_VERSION_HH
 #define NDET_VERSION_HH
 
-#define VERSION_STRING "96d2ac4-main (2024-10-07)"
+#define VERSION_STRING "8ed0589-8HeGeometry (2024-10-11)"
 
 #endif

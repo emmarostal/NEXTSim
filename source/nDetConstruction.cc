@@ -198,7 +198,6 @@ void nDetConstruction::UpdateGeometry(){
 }
 
 bool nDetConstruction::AddGeometry(const G4String &geom){
-    G4cout << "Add detector" << G4endl;
 	// Define a new detector of the specified type
 	nDetDetector *newDetector = nDetDetectorTypes::getDetectorType(geom, this, &materials);
 	
@@ -244,7 +243,7 @@ bool nDetConstruction::AddGeometry(const G4String &geom){
 
 	// Add the new detector assembly to the vector of detectors
 	userDetectors.push_back(currentDetector);
-	
+
 	// Enable/disable overlap checking
 	currentDetector->setCheckOverlaps(fCheckOverlaps);
 
@@ -411,7 +410,7 @@ void nDetConstruction::BuildExp(std::string expName_){
 	expHall->SetExp(expName_);
 }
 
-void nDetConstruction::BuildINDIEFromAUSASetup(std::string setupFile){
+void nDetConstruction::BuildINDIEFromAUSASetup(const G4String &setupFile){
     //neutron detectors
     shared_ptr<AUSA::Setup> setup;
     setup = AUSA::JSON::readSetupFromJSON(setupFile);
@@ -430,9 +429,7 @@ void nDetConstruction::BuildINDIEFromAUSASetup(std::string setupFile){
     params.SetDetectorHeight(50*mm);
     params.SetDetectorWidth(3.0*cm);
     for(int i = 0; i < indies.size(); i++){
-        cout << indies[i]->getName() << endl;
         auto pos = indies[i]->getPosition(1);
-        cout << "Set params" << endl;
         params.SetPosition(G4ThreeVector(pos.X() * mm,pos.Y() * mm,pos.Z() * mm));
         TVector3 z = TVector3(0,0,1);
         auto angle = z.Angle(pos)*360/(2*TMath::Pi());
@@ -441,7 +438,6 @@ void nDetConstruction::BuildINDIEFromAUSASetup(std::string setupFile){
         }else{
             params.SetRotation(G4ThreeVector(-angle, 90, 0));
         }
-        cout << "Params set" << endl;
         AddGeometry("rectangle");
     }
 }

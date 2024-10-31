@@ -1,2 +1,0 @@
-/home/jeppe/devel/projects/NEXTSim/install/bin/nextSim
-/home/jeppe/devel/projects/NEXTSim/install/share/modulefiles/nextSim

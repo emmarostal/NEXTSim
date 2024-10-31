@@ -31,6 +31,7 @@ set(NextSimDetectorSources nDetMaterials.cc nDetMaterialsMessenger.cc nDetConstr
                            CERNFloor.cc
                            Polyhedron.cc IS530_Chamber.cc IS530_Plastic.cc Tape.cc
                            CloverQuadBuchDetector.cc CloverQuadDetector.cc CloverSingleBuchDetector.cc CloverSingleDetector.cc
+        IS659VandleFrame.cc IS659PolygonFrame.cc IS659Cube.cc
                            )
 set(NextSimGeneratorSources nDetParticleSource.cc nDetParticleSourceMessenger.cc)
 set(NextSimPeripheralSources optionHandler.cc termColors.cc)

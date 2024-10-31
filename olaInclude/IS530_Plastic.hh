@@ -1,8 +1,8 @@
 /************************************************************************
  * \file IS530_Plastic.hh
  *
- * \class IS530_Plastic   
- * \brief Plastic Scintillator and holding structure  
+ * \class IS530_Plastic
+ * \brief Plastic Scintillator and holding structure
  *
  * \author R. Lica based on the implementation of C. Sotty
  *************************************************************************/
@@ -67,14 +67,14 @@ class IS530_Plastic : public G4VUserDetectorConstruction
       //Emmas addition
       vector<G4VSolid* > IS530PlasticTessMesh_current;
 
-      // Physical and Logical volumes of the environnement   
+      // Physical and Logical volumes of the environnement
       //
       G4VPhysicalVolume*	det_env;
       G4VPhysicalVolume*	mother;
 
       G4LogicalVolume*		det_env_log;
       G4LogicalVolume*		mother_log;
-    
+
       // Position and Orientation
       //
       G4double	rho;
@@ -83,11 +83,11 @@ class IS530_Plastic : public G4VUserDetectorConstruction
       G4double	spin;
       G4RotationMatrix	IS530_Plastic_rotation;
       G4Transform3D*	IS530_Plastic_transformation;
-   
+
       // Visualisation
       //
       G4VisAttributes* IS530_Plastic_vis_att;
-    
+
 };
 
 #endif

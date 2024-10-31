@@ -57,6 +57,9 @@ void nDetConstructionMessenger::addAllCommands(){
 	addCommand(new G4UIcmdWithoutParameter("/nDet/detector/printAll", this));
 	addGuidance("Print construction parameters for all defined detectors");
 
+    addCommand(new G4UIcmdWithAString("/nDet/detector/buildSetupFromAusa", this));
+    addGuidance("Build array from an ausa setup file. SYNTAX: buildSetupFromAusa <path/to/setup.json");
+
 	///////////////////////////////////////////////////////////////////////////////
 	// PMT & digitizer commands
 	///////////////////////////////////////////////////////////////////////////////
@@ -195,6 +198,9 @@ void nDetConstructionMessenger::SetNewChildValue(G4UIcommand* command, G4String 
 	else if(index == 10){
 		fDetector->PrintAllDetectors();
 	}
+    else if(index == 11){
+        fDetector->BuildINDIEFromAUSASetup(newValue);
+    }
 	else{ // Digitizer command
 		pmtResponse *prL = fDetector->GetPmtResponseL();
 		pmtResponse *prR = fDetector->GetPmtResponseR();

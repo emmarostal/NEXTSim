@@ -206,7 +206,8 @@ void nDetMultiOutputStructure::SetValues(){
 }
 
 void nDetMultiOutputStructure::Append(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_, const short &detID_){
-	nPhotonsTot.push_back(nPhotonsTot_);
+	test.push_back(42);
+    nPhotonsTot.push_back(nPhotonsTot_);
 	nPhotonsDet.push_back(nPhotonsDet_);
 	lightBalance.push_back(lightBalance_);
 	tdiff.push_back(tdiff_);
@@ -228,6 +229,7 @@ void nDetMultiOutputStructure::Append(const unsigned int &nPhotonsTot_, const un
 }
 
 void nDetMultiOutputStructure::Append(const nDetOutputStructure &output, const short &detID_){
+    test.push_back(42);
 	nPhotonsTot.push_back(output.nPhotonsTot);
 	nPhotonsDet.push_back(output.nPhotonsDet);
 	lightBalance.push_back(output.lightBalance);
@@ -250,6 +252,7 @@ void nDetMultiOutputStructure::Append(const nDetOutputStructure &output, const s
 }
 
 void nDetMultiOutputStructure::Append(const nDetImplantOutputStructure &output, const short &detID_){
+    test.push_back(42);
 	nPhotonsTot.push_back(output.nPhotonsTot);
 	nPhotonsDet.push_back(output.nPhotonsDet);
 	lightBalance.push_back(output.lightBalance);
@@ -290,6 +293,7 @@ void nDetMultiOutputStructure::Append(const nDetDebugStructure &debug, const sho
 }
 
 void nDetMultiOutputStructure::Zero(){
+    test.clear();
 	nPhotonsTot.clear();
 	nPhotonsDet.clear();
 	lightBalance.clear();

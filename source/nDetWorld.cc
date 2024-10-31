@@ -31,6 +31,9 @@
 #include "CERNFloor.hh"
 #include "CERNTapeBox.hh"
 #include "CERNSupport.hh"
+#include "IS659VandleFrame.hh"
+#include "IS659PolygonFrame.hh"
+#include "IS659Cube.hh"
 
 #define DEFAULT_FLOOR_MATERIAL "G4_CONCRETE"
 
@@ -129,6 +132,15 @@ void nDetWorld::BuildIS659setup8He(){
     G4double floorYPos = -126.5*cm;
     G4ThreeVector floorPosition = G4ThreeVector(0,floorYPos, 0.);
     cernFloor->Place(floorRot, floorPosition, "cernFloor", logV);
+
+    IS659VandleFrame *vandleFrame = new IS659VandleFrame(physV, 0, 0, 0, 0);
+    vandleFrame->Construct();
+
+    IS659Cube *cube = new IS659Cube(physV, 0, 0, 0, 0);
+    cube->Construct();
+
+    /*IS659PolygonFrame *polyFrame = new IS659PolygonFrame(physV, 0, 0, 0, 0);
+    polyFrame->Construct()*/
 
 }
 

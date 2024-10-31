@@ -196,6 +196,7 @@ void nDetRunAction::BeginOfRunAction(const G4Run* aRun)
 
 	// Set the total number of events
 	outputFile->setTotalEvents(aRun->GetNumberOfEventToBeProcessed());
+    G4cout << "Begin run action success " << G4endl;
 }
 
 void nDetRunAction::EndOfRunAction(const G4Run* aRun)
@@ -211,10 +212,11 @@ void nDetRunAction::updateDetector(nDetConstruction *construction){
 	userDetectors.clear();
 	userImplants.clear();
 
+
 	// Copy the list of detectors
 	construction->GetCopiesOfDetectors(userDetectors);	
-	construction->GetCopiesOfImplants(userImplants);	
-	
+	construction->GetCopiesOfImplants(userImplants);
+
 	// Search for a start detector. Currently only one start is supported, break after finding the first one
 	startDetector = NULL;
 	for(std::vector<nDetDetector>::iterator iter = userDetectors.begin(); iter != userDetectors.end(); iter++){
@@ -785,6 +787,7 @@ bool nDetRunAction::AddDetectedPhoton(const G4Step *step, const double &mass/*=1
 	
 	if(!foundMatch){
 		Display::WarningPrint("Failed to find matching detector for detected photon?", "nDetRunAction");
+        Display::WarningPrint("copyNum is " + std::to_string(copyNum) + " size of userDetectors vector is " + std::to_string(userDetectors.size()), "nDetRunAction");
 		return false;
 	}
 	

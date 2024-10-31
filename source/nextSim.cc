@@ -177,18 +177,6 @@ int main(int argc, char** argv){
 	physics->ReplacePhysics(theOpticalPhysics);
 	runManager->SetUserInitialization(physics);
 
-    if(expName == "8HeIS659") {
-        if(!ausaSetup.empty()) {
-            if (expName == "8HeIS659") {
-                detector->BuildINDIEFromAUSASetup(ausaSetup);
-            }
-        }
-        else {
-            std::cerr << "You must give an ausa style setup file when using geometry of experiment 8HeIS659!" << std::endl;
-            exit(1);
-        }
-    }
-
 
 	// add visulization manager
 	G4VisManager *visManager = new G4VisExecutive;
