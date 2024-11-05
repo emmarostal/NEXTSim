@@ -68,6 +68,7 @@ G4VPhysicalVolume* IS659Clovers::Construct()
     auto fixingsTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/CloverFixings.stl");
     auto dewarsTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/CloverDewars.stl");
     auto crystalsTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/CloverGeCrystals.stl");
+    auto ln2TessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/CloverLN2.stl");
     //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
 
     //offset
@@ -75,12 +76,14 @@ G4VPhysicalVolume* IS659Clovers::Construct()
     fixingsTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
     dewarsTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
     crystalsTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
+    ln2TessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
 
     //Solid
     G4VSolid* casings_sol = casingsTessMesh->GetSolid();
     G4VSolid* fixings_sol = fixingsTessMesh->GetSolid();
     G4VSolid* dewars_sol = dewarsTessMesh->GetSolid();
     G4VSolid* crystals_sol = crystalsTessMesh->GetSolid();
+    G4VSolid* ln2_sol = ln2TessMesh->GetSolid();
 
     // Logical Volume
     G4String name="/IS659Clovers";
@@ -118,6 +121,11 @@ G4VPhysicalVolume* IS659Clovers::Construct()
     crystals_log = new G4LogicalVolume(crystals_sol, Ge_mat, name+"/crystals_log");
     crystals_log->SetVisAttributes(frame_vis_att);
     crystals_phys = new G4PVPlacement(transformation, name+"/crystals_phys",crystals_log, mother, false, 0);
+
+    ln2_sol = ln2TessMesh->GetSolid();
+    ln2_log = new G4LogicalVolume(ln2_sol, ln2_mat, name+"/ln2_log");
+    ln2_log->SetVisAttributes(frame_vis_att);
+    ln2_phys = new G4PVPlacement(transformation, name+"/ln2_phys",ln2_log, mother, false, 0);
 
     return(mother);
 
