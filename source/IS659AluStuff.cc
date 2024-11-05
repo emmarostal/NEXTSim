@@ -11,7 +11,7 @@
 //R. Lica on 01.03.2016 - Fixed the G4Transform3D bug, removed det_env
 
 #include <TText.h>
-#include "IS659PolygonFrame.hh"
+#include "IS659AluStuff.hh"
 #include "G4VisAttributes.hh"
 #include "G4SystemOfUnits.hh"
 #include "G4NistManager.hh"
@@ -25,8 +25,9 @@
 using namespace std;
 
 
+//lazily build everything aluminum in this class
 
-IS659PolygonFrame::IS659PolygonFrame(G4VPhysicalVolume* p_mother, G4double p_rho, G4double p_theta, G4double p_phi, G4double p_spin)
+IS659AluStuff::IS659AluStuff(G4VPhysicalVolume* p_mother, G4double p_rho, G4double p_theta, G4double p_phi, G4double p_spin)
         :mother(p_mother), rho(p_rho), theta(p_theta), phi(p_phi), spin(p_spin)
 {
     //G4cout	<<"\nClover Quad (Bucharest) DETECTOR#######################\n"	<<flush
@@ -37,11 +38,11 @@ IS659PolygonFrame::IS659PolygonFrame(G4VPhysicalVolume* p_mother, G4double p_rho
     //	<<"\nCloverNb =\t"	<<cl_nb 			<<G4endl;
 }
 
-IS659PolygonFrame::~IS659PolygonFrame()
+IS659AluStuff::~IS659AluStuff()
 {;}
 
 
-G4VPhysicalVolume* IS659PolygonFrame::Construct()
+G4VPhysicalVolume* IS659AluStuff::Construct()
 {
     // Material
     //
@@ -60,22 +61,33 @@ G4VPhysicalVolume* IS659PolygonFrame::Construct()
     frame_vis_att       = tapeBoxVisAtt;
 
     //tesselated mesh
-    auto polygonTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/polygon.stl");
-    auto polygonFrameTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/polygonFrame.stl");
-    auto polygonMountTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/polygonMount.stl");
+    auto polygonTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/polygonFixed.stl");
+    auto polygonFrameTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/polygonStandFixed.stl");
+    auto feedthroughTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/tubesAndFeedthrough.stl");
+    auto tapeTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/tapeStation.stl");
+    auto chamberTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/chamber.stl");
+    auto facelidTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/faceLid.stl");
+    auto beamlineTessMesh = CADMesh::TessellatedMesh::FromSTL("../stl/isolde/IS659/beamLine.stl");
 
     //scale (SetSCale uses a double, so cannot be used to set unit of mm - use multiplier when needed (see stl files))
 
     //offset
     polygonTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
     polygonFrameTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
-    polygonMountTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
-    //CapsuleTessMesh->SetOffset(G4ThreeVector(0*mm, 0*mm, 0*mm));
+    feedthroughTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
+    tapeTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
+    chamberTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
+    facelidTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
+    beamlineTessMesh->SetOffset(G4ThreeVector(-401.63*mm, 71.647*mm, -1569.255*mm));
 
     //Solid
-    auto polygon_sol = polygonTessMesh->GetSolid();
-    auto frame_sol = polygonFrameTessMesh->GetSolid();
-    auto mount_sol = polygonMountTessMesh->GetSolid();
+    polygon_sol = polygonTessMesh->GetSolid();
+    frame_sol = polygonFrameTessMesh->GetSolid();
+    feedthrough_sol = feedthroughTessMesh->GetSolid();
+    tape_sol = tapeTessMesh->GetSolid();
+    chamber_sol = chamberTessMesh->GetSolid();
+    facelid_sol = facelidTessMesh->GetSolid();
+    beamline_sol = beamlineTessMesh->GetSolid();
 
     // Logical Volume
     G4String name="/IS659PolygonFrame";
@@ -97,13 +109,30 @@ G4VPhysicalVolume* IS659PolygonFrame::Construct()
     frame_log		= new G4LogicalVolume(frame_sol       , Al_mat, name+"/frame_log"           );
     frame_log		->SetVisAttributes(frame_vis_att);
     frame_phys       = new G4PVPlacement(transformation, name+"/frame", frame_log, mother, false, 0);
-    /*mount_log = new G4LogicalVolume(mount_sol, Al_mat, name+"/mount_log");
-    mount_log->SetVisAttributes(frame_vis_att);
-    mount_phys = new G4PVPlacement(transformation, name+"/mount", mount_log, mother, false, 0);*/
+
     polygon_log = new G4LogicalVolume(polygon_sol, Al_mat, name+"/polygon_log");
     polygon_log->SetVisAttributes(frame_vis_att);
     polygon_phys = new G4PVPlacement(transformation, name+"/polygon", polygon_log, mother, false, 0);
 
+    feedthrough_log = new G4LogicalVolume(feedthrough_sol, Al_mat, name+"/feedthrough_log");
+    feedthrough_log->SetVisAttributes(frame_vis_att);
+    feedthrough_phys = new G4PVPlacement(transformation, name+"/feedthrough", feedthrough_log, mother, false, 0);
+
+    tape_log = new G4LogicalVolume(tape_sol, Al_mat, name+"/tape_log");
+    tape_log->SetVisAttributes(frame_vis_att);
+    tape_phys = new G4PVPlacement(transformation, name+"/tape", tape_log, mother, false, 0);
+
+    chamber_log = new G4LogicalVolume(chamber_sol, Al_mat, name+"/chamber_log");
+    chamber_log->SetVisAttributes(frame_vis_att);
+    chamber_phys = new G4PVPlacement(transformation, name+"/chamber", chamber_log, mother, false, 0);
+
+    beamline_log = new G4LogicalVolume(beamline_sol, Al_mat, name+"/beamline_log");
+    beamline_log->SetVisAttributes(frame_vis_att);
+    beamline_phys = new G4PVPlacement(transformation, name+"/beamline", beamline_log, mother, false, 0);
+
+    facelid_log = new G4LogicalVolume(facelid_sol, Al_mat, name+"/facelid_log");
+    facelid_log->SetVisAttributes(frame_vis_att);
+    facelid_phys = new G4PVPlacement(transformation, name+"/facelid", facelid_log, mother, false, 0);
 
 
     return(mother);

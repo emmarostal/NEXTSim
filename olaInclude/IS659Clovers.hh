@@ -9,8 +9,8 @@
  *
  *************************************************************************/
 
-#ifndef IS659PolygonFrame_H
-#define IS659PolygonFrame_H 1
+#ifndef IS659Clovers_H
+#define IS659Clovers_H 1
 
 
 // Include-files for detector construction
@@ -46,29 +46,23 @@
 #include "G4Colour.hh"
 #endif
 
-// Clover Detector Class
-class IS659PolygonFrame : public G4VUserDetectorConstruction
+class IS659Clovers : public G4VUserDetectorConstruction
 {
 public:
-    IS659PolygonFrame(G4VPhysicalVolume* p_mother, G4double p_rho, G4double p_theta, G4double p_phi, G4double p_spin);
-    ~IS659PolygonFrame();
+    IS659Clovers(G4VPhysicalVolume* p_mother, G4double p_rho, G4double p_theta, G4double p_phi, G4double p_spin);
+    ~IS659Clovers();
 
     G4VPhysicalVolume* Construct();
 
 private:
-    // Crystals defined by the CloverSingleDetector class
+    G4VSolid *casings_sol, *fixings_sol, *dewars_sol, *crystals_sol, *ln2_sol;
 
-    // Solid, Physical, Logical and CADMesh  volumes of the Capsules and Carbon window
-    //
-    G4VSolid* frame_sol, *polygon_sol, *mount_sol;
+    Mesh* casings_mesh, *fixings_mesh, *dewars_mesh, *crystals_mesh, *ln2_mesh;
 
-    Mesh* frame_mesh, *polygon_mesh, *mount_mesh;
+    G4VPhysicalVolume* casings_phys, *fixings_phys, *dewars_phys, *crystals_phys, *ln2_phys;
 
-    G4VPhysicalVolume* frame_phys, *polygon_phys, *mount_phys;
-
-    G4LogicalVolume* frame_log, *polygon_log, *mount_log;
-
-    const G4VisAttributes* frame_vis_att, *polygon_vis_att, *mount_vis_att;
+    G4LogicalVolume* casings_log, *fixings_log, *dewars_log, *crystals_log, *ln2_log;
+    const G4VisAttributes* frame_vis_att;
 
     // Physical and Logical volumes of the environnement
     //
