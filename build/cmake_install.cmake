@@ -1,8 +1,8 @@
-# Install script for directory: /home/emma/devel/resources/Clone/NEXTSim
+# Install script for directory: /home/emma/Documents/TILGITHUB
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/emma/devel/resources/Clone/NEXTSim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/emma/Documents/TILGITHUB/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/emma/devel/resources/Clone/NEXTSim/build/dict/cmake_install.cmake")
-  include("/home/emma/devel/resources/Clone/NEXTSim/build/source/cmake_install.cmake")
-  include("/home/emma/devel/resources/Clone/NEXTSim/build/share/cmake_install.cmake")
+  include("/home/emma/Documents/TILGITHUB/build/dict/cmake_install.cmake")
+  include("/home/emma/Documents/TILGITHUB/build/source/cmake_install.cmake")
+  include("/home/emma/Documents/TILGITHUB/build/share/cmake_install.cmake")
 
 endif()
 
@@ -65,6 +65,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/emma/devel/resources/Clone/NEXTSim/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/home/emma/Documents/TILGITHUB/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
