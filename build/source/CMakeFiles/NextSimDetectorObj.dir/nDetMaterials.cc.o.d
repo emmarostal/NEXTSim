@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterials.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetMaterials.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetMaterials.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_algobase.h \
@@ -271,16 +271,16 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterials.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
  /usr/local/include/Geant4/G4Color.hh \
  /usr/local/include/Geant4/G4VisAttributes.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/termColors.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterialsMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterialsMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
  /usr/local/include/Geant4/G4ApplicationState.hh \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UItokenNum.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDynamicMaterial.hh
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDynamicMaterial.hh

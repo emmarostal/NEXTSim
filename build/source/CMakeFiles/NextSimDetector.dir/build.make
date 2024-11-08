@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emma/devel/resources/Clone/NEXTSim
+CMAKE_SOURCE_DIR = /home/emma/Documents/TILGITHUB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emma/devel/resources/Clone/NEXTSim/build
+CMAKE_BINARY_DIR = /home/emma/Documents/TILGITHUB/build
 
 # Include any dependencies generated for this target.
 include source/CMakeFiles/NextSimDetector.dir/depend.make
@@ -74,33 +74,33 @@ NextSimDetector_OBJECTS =
 
 # External object files for target NextSimDetector
 NextSimDetector_EXTERNAL_OBJECTS = \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterials.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterialsMessenger.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldMessenger.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldObject.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetector.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorTypes.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorLayer.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/gdmlSolid.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDynamicMaterial.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNFrame.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNTapeBox.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/MaterialsManager.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNSupport.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/ArgoneFrame.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNFloor.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/Polyhedron.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/IS530_Chamber.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/IS530_Plastic.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/Tape.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadDetector.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleBuchDetector.cc.o" \
-"/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o"
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterials.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterialsMessenger.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldMessenger.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldObject.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetector.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorTypes.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorLayer.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/gdmlSolid.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/nDetDynamicMaterial.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNFrame.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNTapeBox.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/MaterialsManager.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNSupport.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/ArgoneFrame.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CERNFloor.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/Polyhedron.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/IS530_Chamber.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/IS530_Plastic.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/Tape.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadDetector.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleBuchDetector.cc.o" \
+"/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o"
 
 source/libNextSimDetector.a: source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterials.cc.o
 source/libNextSimDetector.a: source/CMakeFiles/NextSimDetectorObj.dir/nDetMaterialsMessenger.cc.o
@@ -131,19 +131,19 @@ source/libNextSimDetector.a: source/CMakeFiles/NextSimDetectorObj.dir/CloverSing
 source/libNextSimDetector.a: source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o
 source/libNextSimDetector.a: source/CMakeFiles/NextSimDetector.dir/build.make
 source/libNextSimDetector.a: source/CMakeFiles/NextSimDetector.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX static library libNextSimDetector.a"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && $(CMAKE_COMMAND) -P CMakeFiles/NextSimDetector.dir/cmake_clean_target.cmake
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NextSimDetector.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX static library libNextSimDetector.a"
+	cd /home/emma/Documents/TILGITHUB/build/source && $(CMAKE_COMMAND) -P CMakeFiles/NextSimDetector.dir/cmake_clean_target.cmake
+	cd /home/emma/Documents/TILGITHUB/build/source && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/NextSimDetector.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 source/CMakeFiles/NextSimDetector.dir/build: source/libNextSimDetector.a
 .PHONY : source/CMakeFiles/NextSimDetector.dir/build
 
 source/CMakeFiles/NextSimDetector.dir/clean:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && $(CMAKE_COMMAND) -P CMakeFiles/NextSimDetector.dir/cmake_clean.cmake
+	cd /home/emma/Documents/TILGITHUB/build/source && $(CMAKE_COMMAND) -P CMakeFiles/NextSimDetector.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/NextSimDetector.dir/clean
 
 source/CMakeFiles/NextSimDetector.dir/depend:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/devel/resources/Clone/NEXTSim /home/emma/devel/resources/Clone/NEXTSim/source /home/emma/devel/resources/Clone/NEXTSim/build /home/emma/devel/resources/Clone/NEXTSim/build/source /home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/NextSimDetector.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/emma/Documents/TILGITHUB/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/Documents/TILGITHUB /home/emma/Documents/TILGITHUB/source /home/emma/Documents/TILGITHUB/build /home/emma/Documents/TILGITHUB/build/source /home/emma/Documents/TILGITHUB/build/source/CMakeFiles/NextSimDetector.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : source/CMakeFiles/NextSimDetector.dir/depend
 

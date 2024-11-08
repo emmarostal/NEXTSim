@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetDynamicMaterial.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDynamicMaterial.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDynamicMaterial.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -272,11 +272,11 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDynamicMaterial.cc.o: \
  /usr/local/include/Geant4/G4UnitsTable.hh \
  /usr/local/include/Geant4/G4UnitsTable.icc \
  /usr/local/include/Geant4/G4Element.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/termColors.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDynamicMaterial.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDynamicMaterial.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h

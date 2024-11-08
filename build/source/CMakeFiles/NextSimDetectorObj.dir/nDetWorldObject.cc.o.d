@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldObject.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetWorldObject.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetWorldObject.cc \
  /usr/include/stdc-predef.h \
  /usr/local/include/Geant4/G4PhysicalConstants.hh \
  /usr/local/include/Geant4/CLHEP/Units/PhysicalConstants.h \
@@ -307,10 +307,10 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldObject.cc.o: \
  /usr/local/include/Geant4/G4Sphere.icc \
  /usr/local/include/Geant4/G4Torus.hh \
  /usr/local/include/Geant4/G4Torus.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
  /usr/local/include/Geant4/globals.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4LogicalVolume.hh /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -347,13 +347,13 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorldObject.cc.o: \
  /usr/local/include/Geant4/G4Physics2DVector.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorldObject.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorldObject.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh
+ /home/emma/Documents/TILGITHUB/include/termColors.hh

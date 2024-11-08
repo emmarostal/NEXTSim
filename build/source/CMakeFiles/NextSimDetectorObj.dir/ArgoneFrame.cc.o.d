@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/ArgoneFrame.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/ArgoneFrame.cc \
+ /home/emma/Documents/TILGITHUB/source/ArgoneFrame.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4PVPlacement.hh \
  /usr/local/include/Geant4/G4VPhysicalVolume.hh \
  /usr/local/include/Geant4/G4Types.hh \
@@ -299,7 +299,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/ArgoneFrame.cc.o: \
  /usr/local/include/Geant4/G4Visible.icc \
  /usr/local/include/Geant4/G4Box.icc /usr/local/include/Geant4/G4Tubs.hh \
  /usr/local/include/Geant4/G4Tubs.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/ArgoneFrame.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/ArgoneFrame.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
  /usr/local/include/Geant4/G4LogicalVolume.hh /usr/include/c++/11/memory \
@@ -311,7 +311,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/ArgoneFrame.cc.o: \
  /usr/local/include/Geant4/G4Region.hh \
  /usr/local/include/Geant4/G4Region.icc \
  /usr/local/include/Geant4/G4LogicalVolume.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/MaterialsManager.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/MaterialsManager.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh \

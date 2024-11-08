@@ -279,7 +279,11 @@ bool nDetRunAction::processDetector(nDetDetector* det){
 	
 	// Compute the total number of detected photons
 	outData.nPhotonsDet += cmL->getNumDetected() + cmR->getNumDetected();
-		
+	//Get detected photons in left pmt
+	outData.nPhotonsDetL += cmL->getNumDetected();
+	//Get detected photons in right pmt
+	outData.nPhotonsDetR += cmR->getNumDetected();	
+
 	// Check for valid bar detection
 	if(cmL->getNumDetected() > 0 && cmR->getNumDetected() > 0)
 		evtData.goodEvent = true;
@@ -430,7 +434,14 @@ bool nDetRunAction::processDetector(nDetDetector* det){
 	
 	// Compute "bar" variables.
 	double offset = distribution(generator);
-	outData.barTOF = ((debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset)/(sqrt(1+pow(abs(debugData.pulsePhase[0]-debugData.pulsePhase[1])*13.5/2,2)/pow(100,2)));
+	outData.barTOF = (debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset;
+	double x = abs(debugData.pulsePhase[0]-debugData.pulsePhase[1])*13.5/2;
+	if (x<120){
+		outData.barTOFcorr = ((debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset)/(sqrt(1+pow(x,2)/pow(100,2)));
+	}
+	else {
+		outData.barTOFcorr = -1;
+	}
 	outData.barQDC = std::sqrt(debugData.pulseQDC[0]*debugData.pulseQDC[1]);
 	outData.barMaxADC = std::sqrt(abs(debugData.pulseMax[0])*abs(debugData.pulseMax[1]));
 	outData.barTrig = Ftrigger;

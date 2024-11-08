@@ -1,8 +1,8 @@
-# Install script for directory: /home/emma/devel/resources/Clone/NEXTSim/source
+# Install script for directory: /home/emma/Documents/TILGITHUB/source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/emma/devel/resources/Clone/NEXTSim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/emma/Documents/TILGITHUB/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/nextSim"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/emma/devel/resources/Clone/NEXTSim/build/source/nextSim")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/emma/Documents/TILGITHUB/build/source/nextSim")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/nextSim" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/nextSim")
     file(RPATH_CHANGE
@@ -63,6 +63,6 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/nextSim.dir/install-cxx-module-bmi- Release.cmake" OPTIONAL)
+  include("/home/emma/Documents/TILGITHUB/build/source/CMakeFiles/nextSim.dir/install-cxx-module-bmi- Release.cmake" OPTIONAL)
 endif()
 

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DUSE_GDML
 
-CXX_INCLUDES = -I/home/emma/devel/resources/root/root/include -I/usr/local/include/Geant4 -I/home/emma/devel/resources/Clone/NEXTSim/include -I/home/emma/devel/resources/Clone/NEXTSim/dict/include -I/home/emma/devel/resources/Clone/NEXTSim/olaInclude
+CXX_INCLUDES = -I/home/emma/devel/resources/root/root/include -I/usr/local/include/Geant4 -I/home/emma/Documents/TILGITHUB/include -I/home/emma/Documents/TILGITHUB/dict/include -I/home/emma/Documents/TILGITHUB/olaInclude
 
 CXX_FLAGS =  -std=c++17 -fdiagnostics-color=auto -Wall -pedantic -fPIC
 

@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/CloverQuadBuchDetector.cc \
+ /home/emma/Documents/TILGITHUB/source/CloverQuadBuchDetector.cc \
  /usr/include/stdc-predef.h \
  /home/emma/devel/resources/root/root/include/TText.h \
  /home/emma/devel/resources/root/root/include/TAttText.h \
@@ -235,7 +235,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchDetector.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
@@ -449,7 +449,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o: \
  /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
  /usr/local/include/Geant4/G4VSDFilter.hh \
  /usr/local/include/Geant4/G4ios.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/CADMesh.hh \
+ /home/emma/Documents/TILGITHUB/include/CADMesh.hh \
  /usr/local/include/Geant4/G4String.hh \
  /usr/local/include/Geant4/G4TriangularFacet.hh \
  /usr/local/include/Geant4/G4VFacet.hh \
@@ -515,16 +515,16 @@ source/CMakeFiles/NextSimDetectorObj.dir/CloverQuadBuchDetector.cc.o: \
  /usr/local/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.h \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchHit.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchHit.hh \
  /usr/local/include/Geant4/G4VHit.hh \
  /usr/local/include/Geant4/G4THitsCollection.hh \
  /usr/local/include/Geant4/G4Allocator.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverQuadBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverQuadBuchDetector.hh \
  /usr/local/include/Geant4/G4VSolid.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchSD.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchSD.hh \
  /usr/local/include/Geant4/G4VSensitiveDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchHit.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchHit.hh \
  /usr/local/include/Geant4/G4VisAttributes.hh \
  /usr/local/include/Geant4/graphics_reps_defs.hh \
  /usr/local/include/Geant4/G4Colour.hh \

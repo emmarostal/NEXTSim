@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetWorld.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetWorld.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorld.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorld.hh \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -234,8 +234,8 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorldObject.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorldObject.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -319,21 +319,21 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
  /usr/local/include/Geant4/G4PhysicsVectorType.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorldMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorldMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
  /usr/local/include/Geant4/G4ApplicationState.hh \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UItokenNum.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh \
+ /home/emma/Documents/TILGITHUB/include/termColors.hh \
  /usr/local/include/Geant4/G4VisAttributes.hh \
  /usr/local/include/Geant4/graphics_reps_defs.hh \
  /usr/local/include/Geant4/G4Colour.hh \
@@ -347,7 +347,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
  /usr/local/include/Geant4/G4AffineTransform.icc \
  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
  /usr/local/include/Geant4/G4BooleanSolid.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/Tape.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/Tape.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
@@ -446,7 +446,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
  /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
  /usr/local/include/Geant4/G4VSDFilter.hh \
  /usr/local/include/Geant4/G4ios.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/CADMesh.hh \
+ /home/emma/Documents/TILGITHUB/include/CADMesh.hh \
  /usr/local/include/Geant4/G4String.hh \
  /usr/local/include/Geant4/G4TriangularFacet.hh \
  /usr/local/include/Geant4/G4VFacet.hh \
@@ -509,19 +509,19 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetWorld.cc.o: \
  /usr/local/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.h \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/IS530_Chamber.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/IS530_Plastic.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/Polyhedron.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverQuadDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverQuadBuchDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleBuchDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/global.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNFrame.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/MaterialsManager.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNFloor.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNTapeBox.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNSupport.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/ArgoneFrame.hh
+ /home/emma/Documents/TILGITHUB/olaInclude/IS530_Chamber.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/IS530_Plastic.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/Polyhedron.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverQuadDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverQuadBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleBuchDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/global.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNFrame.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/MaterialsManager.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNFloor.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNTapeBox.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNSupport.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/ArgoneFrame.hh

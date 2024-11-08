@@ -94,6 +94,29 @@ void nDetParticleSource::SetBeamEnergySigma(const G4double &energy, const G4doub
 	GetCurrentSource()->GetEneDist()->SetMonoEnergy(energy);
 	GetCurrentSource()->GetEneDist()->SetBeamSigmaInE(dE);
 }
+bool nDetParticleSource::SetUniformEnergyDist(const G4String &str){
+	// Expects a space-delimited string of the form:
+	//  "Emin(MeV) Emax(MeV)"
+	std::vector<std::string> args;
+	unsigned int Nargs = split_str(str, args);
+	if(Nargs < 2){
+		std::cout << " nDetConstruction: Invalid number of arguments given to ::SetUniformEnergyDist(). Expected 2, received " << Nargs << ".\n";
+		std::cout << " nDetConstruction:  SYNTAX: <Emin> <Emax>\n";
+		return false;
+	}
+	double Emin = strtod(args.at(0).c_str(), NULL);
+	double Emax = strtod(args.at(1).c_str(), NULL);
+	SetUniformEnergyDist(Emin, Emax);
+	return true;
+}
+void nDetParticleSource::SetUniformEnergyDist(const G4double &Emin, const G4double &Emax){
+	GetCurrentSource()->GetEneDist()->SetEnergyDisType("Lin");  // Set Linear distribution
+	GetCurrentSource()->GetEneDist()->SetGradient(0);           // Flat gradient for uniformity
+	GetCurrentSource()->GetEneDist()->SetInterCept(1);     
+	// Set the energy limits for uniform sampling
+	GetCurrentSource()->GetEneDist()->SetEmin(Emin * MeV);
+	GetCurrentSource()->GetEneDist()->SetEmax(Emax * MeV);
+}
 
 void nDetParticleSource::SetSourcePosition(const G4ThreeVector &position){
 	G4SingleParticleSource *src;
@@ -209,6 +232,7 @@ void nDetParticleSource::SetBeamspotType(const G4String &str){
 
 void nDetParticleSource::SetEnergyLimits(const double &Elow_, const double &Ehigh_){
 	std::cout << " nDetParticleSource: Setting energy distribution sampling in the range " << Elow_ << " MeV to " << Ehigh_ << " MeV.\n";
+	GetCurrentSource()->GetEneDist()->SetEnergyDisType("Lin");
 	GetCurrentSource()->GetEneDist()->SetEmin(Elow_*MeV);
 	GetCurrentSource()->GetEneDist()->SetEmax(Ehigh_*MeV);
 }

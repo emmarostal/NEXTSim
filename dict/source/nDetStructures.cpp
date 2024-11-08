@@ -69,10 +69,13 @@ void nDetEventStructure::Zero(){
 nDetOutputStructure::nDetOutputStructure(){
 	nPhotonsTot = 0;
 	nPhotonsDet = 0;
+	nPhotonsDetL = 0;
+	nPhotonsDetR = 0;
 	lightBalance = 0;
 	tdiff = 0;
 	photonDetEff = 0;
 	barTOF = 0;
+	barTOFcorr = 0;
 	barQDC = 0;
 	barMaxADC = 0;
 	barTrig = false;
@@ -85,14 +88,17 @@ nDetOutputStructure::nDetOutputStructure(){
 	photonComRow = 0;
 }
 
-void nDetOutputStructure::SetValues(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_){
+void nDetOutputStructure::SetValues(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const unsigned int &nPhotonsDetL_, const unsigned int &nPhotonsDetR_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barTOFcorr_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_){
 	nPhotonsTot = nPhotonsTot_;
 	nPhotonsDet = nPhotonsDet_;
+	nPhotonsDetL = nPhotonsDetL_;
+	nPhotonsDetR = nPhotonsDetR_;
 	lightBalance = lightBalance_;
 	tdiff = tdiff_;
 	photonTdiff = photonTdiff_;
 	photonDetEff = photonDetEff_;
 	barTOF = barTOF_;
+	barTOFcorr = barTOFcorr_;
 	barQDC = barQDC_;
 	barMaxADC = barMaxADC_;
 	barTrig = barTrig_;
@@ -111,11 +117,14 @@ void nDetOutputStructure::Append(){
 void nDetOutputStructure::Zero(){
 	nPhotonsTot = 0;
 	nPhotonsDet = 0;
+	nPhotonsDetL = 0;
+	nPhotonsDetR = 0;
 	lightBalance = 0;
 	tdiff = 0;
 	photonTdiff = 0;
 	photonDetEff = 0;
 	barTOF = 0;
+	barTOFcorr = 0;
 	barQDC = 0;
 	barMaxADC = 0;
 	barTrig = false;
@@ -205,14 +214,17 @@ nDetMultiOutputStructure::nDetMultiOutputStructure(){
 void nDetMultiOutputStructure::SetValues(){
 }
 
-void nDetMultiOutputStructure::Append(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_, const short &detID_){
+void nDetMultiOutputStructure::Append(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const unsigned int &nPhotonsDetL_, const unsigned int &nPhotonsDetR_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barTOFcorr_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_, const short &detID_){
 	nPhotonsTot.push_back(nPhotonsTot_);
 	nPhotonsDet.push_back(nPhotonsDet_);
+	nPhotonsDetL.push_back(nPhotonsDetL_);
+	nPhotonsDetR.push_back(nPhotonsDetR_);
 	lightBalance.push_back(lightBalance_);
 	tdiff.push_back(tdiff_);
 	photonTdiff.push_back(photonTdiff_);
 	photonDetEff.push_back(photonDetEff_);
 	barTOF.push_back(barTOF_);
+	barTOFcorr.push_back(barTOFcorr_);
 	barQDC.push_back(barQDC_);
 	barMaxADC.push_back(barMaxADC_);
 	barTrig.push_back(barTrig_);
@@ -230,11 +242,14 @@ void nDetMultiOutputStructure::Append(const unsigned int &nPhotonsTot_, const un
 void nDetMultiOutputStructure::Append(const nDetOutputStructure &output, const short &detID_){
 	nPhotonsTot.push_back(output.nPhotonsTot);
 	nPhotonsDet.push_back(output.nPhotonsDet);
+	nPhotonsDetL.push_back(output.nPhotonsDetL);
+	nPhotonsDetR.push_back(output.nPhotonsDetR);
 	lightBalance.push_back(output.lightBalance);
 	tdiff.push_back(output.tdiff);
 	photonTdiff.push_back(output.photonTdiff);
 	photonDetEff.push_back(output.photonDetEff);
 	barTOF.push_back(output.barTOF);
+	barTOFcorr.push_back(output.barTOFcorr);
 	barQDC.push_back(output.barQDC);
 	barMaxADC.push_back(output.barMaxADC);
 	barTrig.push_back(output.barTrig);
@@ -292,11 +307,14 @@ void nDetMultiOutputStructure::Append(const nDetDebugStructure &debug, const sho
 void nDetMultiOutputStructure::Zero(){
 	nPhotonsTot.clear();
 	nPhotonsDet.clear();
+	nPhotonsDetL.clear();
+	nPhotonsDetR.clear();
 	lightBalance.clear();
 	tdiff.clear();
 	photonTdiff.clear();
 	photonDetEff.clear();
 	barTOF.clear();
+	barTOFcorr.clear();
 	barQDC.clear();
 	barMaxADC.clear();
 	barTrig.clear();

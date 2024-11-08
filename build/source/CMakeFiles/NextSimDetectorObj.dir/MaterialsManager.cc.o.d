@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/MaterialsManager.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/MaterialsManager.cc \
+ /home/emma/Documents/TILGITHUB/source/MaterialsManager.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/globals.hh \
  /usr/local/include/Geant4/G4ios.hh /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/11/complex \
@@ -228,7 +228,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/MaterialsManager.cc.o: \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/MaterialsManager.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/MaterialsManager.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh \

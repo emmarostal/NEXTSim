@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDetectorMessenger.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDetectorMessenger.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
@@ -241,8 +241,8 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o: \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UItokenNum.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/CLHEP/Vector/Rotation.h \
  /usr/local/include/Geant4/CLHEP/Vector/RotationInterfaces.h \
@@ -260,7 +260,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.h \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.icc \
  /usr/local/include/Geant4/CLHEP/Vector/Rotation.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -326,9 +326,9 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorMessenger.cc.o: \
  /usr/local/include/Geant4/G4PhysicsVectorType.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
  /usr/local/include/Geant4/G4UIcmdWithAString.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \

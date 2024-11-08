@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimCoreObj.dir/cmcalc.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/cmcalc.cc \
+ /home/emma/Documents/TILGITHUB/source/cmcalc.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -250,8 +250,8 @@ source/CMakeFiles/NextSimCoreObj.dir/cmcalc.cc.o: \
  /usr/local/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.h \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/cmcalc.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetParticleSource.hh \
+ /home/emma/Documents/TILGITHUB/include/cmcalc.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetParticleSource.hh \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
@@ -429,4 +429,4 @@ source/CMakeFiles/NextSimCoreObj.dir/cmcalc.cc.o: \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh
+ /home/emma/Documents/TILGITHUB/include/termColors.hh

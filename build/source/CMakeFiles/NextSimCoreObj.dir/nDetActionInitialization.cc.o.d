@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimCoreObj.dir/nDetActionInitialization.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetActionInitialization.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetActionInitialization.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4RunManager.hh \
  /usr/local/include/Geant4/G4Event.hh /usr/include/c++/11/set \
  /usr/include/c++/11/bits/stl_tree.h \
@@ -489,17 +489,17 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetActionInitialization.cc.o: \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
  /usr/local/include/Geant4/G4RunManager.hh \
  /usr/local/include/Geant4/G4Threading.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetActionInitialization.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetActionInitialization.hh \
  /usr/local/include/Geant4/G4VUserActionInitialization.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -525,11 +525,11 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetActionInitialization.cc.o: \
  /usr/local/include/Geant4/G4Physics2DVector.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetParticleSource.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetParticleSource.hh \
  /usr/local/include/Geant4/G4GeneralParticleSource.hh \
  /usr/local/include/Geant4/G4SingleParticleSource.hh \
  /usr/local/include/Geant4/G4VPrimaryGenerator.hh \
@@ -545,18 +545,18 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetActionInitialization.cc.o: \
  /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /usr/local/include/Geant4/G4SystemOfUnits.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetRunAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetRunAction.hh \
  /usr/local/include/Geant4/G4UserRunAction.hh \
  /usr/local/include/Geant4/G4Step.hh \
  /usr/local/include/Geant4/G4ParticleDefinition.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDataPack.hh \
- /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDataPack.hh \
+ /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h \
  /home/emma/devel/resources/root/root/include/Rtypes.h \
  /home/emma/devel/resources/root/root/include/RtypesCore.h \
  /home/emma/devel/resources/root/root/include/ROOT/RConfig.hxx \
- /home/emma/devel/resources/root/root/include/ROOT/../RVersion.h \
+ /home/emma/devel/resources/root/root/include/RVersion.h \
  /home/emma/devel/resources/root/root/include/RConfigure.h \
  /home/emma/devel/resources/root/root/include/DllImport.h \
  /home/emma/devel/resources/root/root/include/strtok.h \
@@ -576,19 +576,19 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetActionInitialization.cc.o: \
  /home/emma/devel/resources/root/root/include/TStorage.h \
  /home/emma/devel/resources/root/root/include/TVersionCheck.h \
  /home/emma/devel/resources/root/root/include/RVersion.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetEventAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetEventAction.hh \
  /usr/local/include/Geant4/G4UserEventAction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetStackingAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetStackingAction.hh \
  /usr/local/include/Geant4/G4UserStackingAction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetEventAction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetRunAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetEventAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetRunAction.hh \
  /usr/local/include/Geant4/G4Track.hh \
  /usr/local/include/Geant4/G4TrackVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/photonCounter.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetSteppingAction.hh \
+ /home/emma/Documents/TILGITHUB/include/photonCounter.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetSteppingAction.hh \
  /usr/local/include/Geant4/G4UserSteppingAction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetTrackingAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetTrackingAction.hh \
  /usr/local/include/Geant4/G4UserTrackingAction.hh \
  /usr/local/include/Geant4/G4Types.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetThreadContainer.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetActionInitialization.hh
+ /home/emma/Documents/TILGITHUB/include/nDetThreadContainer.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetActionInitialization.hh

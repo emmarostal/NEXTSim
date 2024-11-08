@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimCoreObj.dir/nDetStackingAction.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetStackingAction.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetStackingAction.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetStackingAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetStackingAction.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/11/complex \
@@ -232,9 +232,9 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetStackingAction.cc.o: \
  /usr/include/c++/11/bits/unique_lock.h \
  /usr/local/include/Geant4/G4UserStackingAction.hh \
  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetEventAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetEventAction.hh \
  /usr/local/include/Geant4/G4UserEventAction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetRunAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetRunAction.hh \
  /usr/local/include/Geant4/G4UserRunAction.hh \
  /usr/local/include/Geant4/G4Step.hh /usr/local/include/Geant4/globals.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
@@ -362,13 +362,13 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetStackingAction.cc.o: \
  /usr/local/include/Geant4/G4Step.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
  /usr/local/include/Geant4/G4ParticleDefinition.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -396,17 +396,17 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetStackingAction.cc.o: \
  /usr/local/include/Geant4/G4Physics2DVector.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDataPack.hh \
- /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDataPack.hh \
+ /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h \
  /home/emma/devel/resources/root/root/include/Rtypes.h \
  /home/emma/devel/resources/root/root/include/RtypesCore.h \
  /home/emma/devel/resources/root/root/include/ROOT/RConfig.hxx \
- /home/emma/devel/resources/root/root/include/ROOT/../RVersion.h \
+ /home/emma/devel/resources/root/root/include/RVersion.h \
  /home/emma/devel/resources/root/root/include/RConfigure.h \
  /home/emma/devel/resources/root/root/include/DllImport.h \
  /home/emma/devel/resources/root/root/include/strtok.h \
@@ -428,7 +428,7 @@ source/CMakeFiles/NextSimCoreObj.dir/nDetStackingAction.cc.o: \
  /home/emma/devel/resources/root/root/include/RVersion.h \
  /usr/local/include/Geant4/G4Track.hh \
  /usr/local/include/Geant4/G4TrackVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/photonCounter.hh \
+ /home/emma/Documents/TILGITHUB/include/photonCounter.hh \
  /usr/local/include/Geant4/G4ParticleTypes.hh \
  /usr/local/include/Geant4/G4ChargedGeantino.hh \
  /usr/local/include/Geant4/G4Geantino.hh \

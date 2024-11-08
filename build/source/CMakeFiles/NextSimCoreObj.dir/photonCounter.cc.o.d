@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimCoreObj.dir/photonCounter.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/photonCounter.cc \
+ /home/emma/Documents/TILGITHUB/source/photonCounter.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -168,7 +168,7 @@ source/CMakeFiles/NextSimCoreObj.dir/photonCounter.cc.o: \
  /usr/include/c++/11/tr1/poly_hermite.tcc \
  /usr/include/c++/11/tr1/poly_laguerre.tcc \
  /usr/include/c++/11/tr1/riemann_zeta.tcc \
- /home/emma/devel/resources/Clone/NEXTSim/include/photonCounter.hh \
+ /home/emma/Documents/TILGITHUB/include/photonCounter.hh \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \

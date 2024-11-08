@@ -11,9 +11,9 @@ proc ModulesHelp {} {
 }
 module-whatis "NExT detector simulation program using Geant4"
 
-set topdir  /home/emma/devel/resources/Clone/NEXTSim
+set topdir  /home/emma/Documents/TILGITHUB
 set rootdir /home/emma/devel/resources/root/root
-set builddir /home/emma/devel/resources/Clone/NEXTSim/build
+set builddir /home/emma/Documents/TILGITHUB
 
 # Set paths for binaries
 prepend-path PATH $builddir/dict

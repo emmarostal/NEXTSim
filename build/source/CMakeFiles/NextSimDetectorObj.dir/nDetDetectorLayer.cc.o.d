@@ -1,8 +1,8 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorLayer.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDetectorLayer.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDetectorLayer.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4SystemOfUnits.hh \
  /usr/local/include/Geant4/CLHEP/Units/SystemOfUnits.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/11/complex \
@@ -252,7 +252,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorLayer.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.h \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.icc \
  /usr/local/include/Geant4/CLHEP/Vector/Rotation.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -318,11 +318,11 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorLayer.cc.o: \
  /usr/local/include/Geant4/G4PhysicsVectorType.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorLayer.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorldObject.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorLayer.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorldObject.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h

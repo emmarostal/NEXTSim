@@ -81,7 +81,17 @@ class nDetParticleSource : public G4GeneralParticleSource {
 	  * @param energy The mean of the gaussian distribution of the particle energy (in MeV)
 	  * @param dE The sigma of the gaussian distribution of the particle energy (in MeV)
 	  */
+
 	void SetBeamEnergySigma(const G4double &energy, const G4double &dE);
+
+	bool SetUniformEnergyDist(const G4String &str);
+
+	/** Sets the source to a uniform energy distribution with a specified sigma
+	  * @param Emin The lower limit of the uniform distribution of the particle energy (in MeV)
+	  * @param Emax The upper limit of the inuform distribution of the particle energy (in MeV)
+	  */
+	
+	void SetUniformEnergyDist(const G4double &Emin, const G4double &Emax);
 
 	/** Sets the position of the center of the source
 	  * @param position The position of the center of the source (in mm)

@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/termColors.cc \
+ /home/emma/Documents/TILGITHUB/source/termColors.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iomanip \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -158,4 +158,4 @@ source/CMakeFiles/NextSimPeripheralObj.dir/termColors.cc.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh
+ /home/emma/Documents/TILGITHUB/include/termColors.hh

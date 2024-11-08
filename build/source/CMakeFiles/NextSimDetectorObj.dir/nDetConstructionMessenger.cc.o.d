@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetConstructionMessenger.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetConstructionMessenger.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -146,7 +146,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstructionMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstructionMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
@@ -240,8 +240,8 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o: \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UItokenNum.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/CLHEP/Vector/Rotation.h \
@@ -260,11 +260,11 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o: \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.h \
  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.icc \
  /usr/local/include/Geant4/CLHEP/Vector/Rotation.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4GeomTypes.hh \
  /usr/local/include/Geant4/G4GeomConfig.hh \
@@ -330,10 +330,10 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstructionMessenger.cc.o: \
  /usr/local/include/Geant4/G4PhysicsVectorType.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh \

@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetDetector.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDetector.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDetector.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4LogicalVolume.hh \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -346,33 +346,33 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetector.cc.o: \
  /usr/local/include/Geant4/G4Cons.icc \
  /usr/local/include/Geant4/G4Sphere.hh \
  /usr/local/include/Geant4/G4Sphere.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
  /usr/local/include/Geant4/globals.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4VPhysicalVolume.hh \
  /usr/local/include/Geant4/G4LogicalBorderSurface.hh \
  /usr/local/include/Geant4/G4LogicalBorderSurface.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorLayer.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorldObject.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorLayer.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorldObject.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
  /usr/local/include/Geant4/G4UIdirectory.hh \
  /usr/local/include/Geant4/G4UIcommand.hh \
  /usr/local/include/Geant4/G4ApplicationState.hh \
  /usr/local/include/Geant4/G4UIparameter.hh \
  /usr/local/include/Geant4/G4UItokenNum.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_ext.h

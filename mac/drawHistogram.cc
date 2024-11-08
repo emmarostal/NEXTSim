@@ -40,7 +40,7 @@ void drawHistogram(const char* filename, const char* treeName, const char* branc
     TAxis *yAxis = histogram->GetYaxis();
 
     // Customize X axis label
-    xAxis->SetTitle("TOF (ns)");
+    xAxis->SetTitle("TOFcorr (ns)");
     xAxis->SetTitleSize(0.04); // Set title size
     xAxis->SetLabelSize(0.03); // Set label size
     // You can customize other properties like font, color, etc.

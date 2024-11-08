@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimDetectorObj.dir/CERNSupport.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/CERNSupport.cc \
+ /home/emma/Documents/TILGITHUB/source/CERNSupport.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/CADMesh.hh \
+ /home/emma/Documents/TILGITHUB/include/CADMesh.hh \
  /usr/local/include/Geant4/G4String.hh \
  /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/11/complex \
@@ -405,13 +405,13 @@ source/CMakeFiles/NextSimDetectorObj.dir/CERNSupport.cc.o: \
  /usr/local/include/Geant4/G4SubtractionSolid.hh \
  /usr/local/include/Geant4/G4Box.hh /usr/local/include/Geant4/G4Tubs.hh \
  /usr/local/include/Geant4/G4Tubs.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNSupport.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNSupport.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/MaterialsManager.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/MaterialsManager.hh \
  /usr/local/include/Geant4/G4VisAttributes.hh \
  /usr/local/include/Geant4/graphics_reps_defs.hh \
  /usr/local/include/Geant4/G4Colour.hh \
  /usr/local/include/Geant4/G4Color.hh \
  /usr/local/include/Geant4/G4VisAttributes.icc \
  /usr/local/include/Geant4/G4VSolid.hh \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/ArgoneFrame.hh
+ /home/emma/Documents/TILGITHUB/olaInclude/ArgoneFrame.hh

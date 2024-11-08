@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetConstruction.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetConstruction.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4LogicalVolume.hh \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -523,40 +523,40 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o: \
  /usr/local/include/Geant4/G4VisAttributes.icc \
  /usr/local/include/Geant4/G4PVPlacement.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4OpticalSurface.hh \
  /usr/local/include/Geant4/G4Physics2DVector.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetMaterials.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstructionMessenger.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetMaterials.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetConstructionMessenger.hh \
  /usr/local/include/Geant4/G4UImessenger.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/messengerHandler.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetThreadContainer.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetActionInitialization.hh \
+ /home/emma/Documents/TILGITHUB/include/messengerHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetThreadContainer.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetActionInitialization.hh \
  /usr/local/include/Geant4/G4VUserActionInitialization.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetRunAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetRunAction.hh \
  /usr/local/include/Geant4/G4UserRunAction.hh \
  /usr/local/include/Geant4/G4Step.hh \
  /usr/local/include/Geant4/G4ParticleDefinition.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetConstruction.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDataPack.hh \
- /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/include/nDetConstruction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDataPack.hh \
+ /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h \
  /home/emma/devel/resources/root/root/include/Rtypes.h \
  /home/emma/devel/resources/root/root/include/RtypesCore.h \
  /home/emma/devel/resources/root/root/include/ROOT/RConfig.hxx \
- /home/emma/devel/resources/root/root/include/ROOT/../RVersion.h \
+ /home/emma/devel/resources/root/root/include/RVersion.h \
  /home/emma/devel/resources/root/root/include/RConfigure.h \
  /home/emma/devel/resources/root/root/include/DllImport.h \
  /home/emma/devel/resources/root/root/include/strtok.h \
@@ -576,7 +576,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o: \
  /home/emma/devel/resources/root/root/include/TStorage.h \
  /home/emma/devel/resources/root/root/include/TVersionCheck.h \
  /home/emma/devel/resources/root/root/include/RVersion.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetParticleSource.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetParticleSource.hh \
  /usr/local/include/Geant4/G4GeneralParticleSource.hh \
  /usr/local/include/Geant4/G4SingleParticleSource.hh \
  /usr/local/include/Geant4/G4VPrimaryGenerator.hh \
@@ -591,7 +591,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetConstruction.cc.o: \
  /usr/local/include/Geant4/G4GeneralParticleSourceData.hh \
  /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
  /usr/local/include/Geant4/G4SystemOfUnits.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetWorld.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/optionHandler.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetWorld.hh \
+ /home/emma/Documents/TILGITHUB/include/termColors.hh \
+ /home/emma/Documents/TILGITHUB/include/optionHandler.hh \
  /usr/include/getopt.h /usr/include/x86_64-linux-gnu/bits/getopt_ext.h

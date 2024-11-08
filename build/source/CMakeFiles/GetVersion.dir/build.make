@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emma/devel/resources/Clone/NEXTSim
+CMAKE_SOURCE_DIR = /home/emma/Documents/TILGITHUB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emma/devel/resources/Clone/NEXTSim/build
+CMAKE_BINARY_DIR = /home/emma/Documents/TILGITHUB/build
 
 # Utility rule file for GetVersion.
 
@@ -66,20 +66,20 @@ include source/CMakeFiles/GetVersion.dir/compiler_depend.make
 # Include the progress variables for this target.
 include source/CMakeFiles/GetVersion.dir/progress.make
 
-source/CMakeFiles/GetVersion: /home/emma/devel/resources/Clone/NEXTSim/include/version.hh
+source/CMakeFiles/GetVersion: /home/emma/Documents/TILGITHUB/include/version.hh
 
-/home/emma/devel/resources/Clone/NEXTSim/include/version.hh: source/version.hh
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/emma/devel/resources/Clone/NEXTSim/include/version.hh"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && cp /home/emma/devel/resources/Clone/NEXTSim/build/source/version.hh /home/emma/devel/resources/Clone/NEXTSim/include/version.hh
+/home/emma/Documents/TILGITHUB/include/version.hh: source/version.hh
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/emma/Documents/TILGITHUB/include/version.hh"
+	cd /home/emma/Documents/TILGITHUB/build/source && cp /home/emma/Documents/TILGITHUB/build/source/version.hh /home/emma/Documents/TILGITHUB/include/version.hh
 
-source/version.hh: /home/emma/devel/resources/Clone/NEXTSim/.git/refs/heads/isolde
-source/version.hh: /home/emma/devel/resources/Clone/NEXTSim/cmake/version.sh
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating version.hh"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && /home/emma/devel/resources/Clone/NEXTSim/cmake/version.sh > /home/emma/devel/resources/Clone/NEXTSim/build/source/version.hh
+source/version.hh: /home/emma/Documents/TILGITHUB/.git/refs/heads/main
+source/version.hh: /home/emma/Documents/TILGITHUB/cmake/version.sh
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating version.hh"
+	cd /home/emma/Documents/TILGITHUB/build/source && /home/emma/Documents/TILGITHUB/cmake/version.sh > /home/emma/Documents/TILGITHUB/build/source/version.hh
 
 GetVersion: source/CMakeFiles/GetVersion
 GetVersion: source/version.hh
-GetVersion: /home/emma/devel/resources/Clone/NEXTSim/include/version.hh
+GetVersion: /home/emma/Documents/TILGITHUB/include/version.hh
 GetVersion: source/CMakeFiles/GetVersion.dir/build.make
 .PHONY : GetVersion
 
@@ -88,10 +88,10 @@ source/CMakeFiles/GetVersion.dir/build: GetVersion
 .PHONY : source/CMakeFiles/GetVersion.dir/build
 
 source/CMakeFiles/GetVersion.dir/clean:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/source && $(CMAKE_COMMAND) -P CMakeFiles/GetVersion.dir/cmake_clean.cmake
+	cd /home/emma/Documents/TILGITHUB/build/source && $(CMAKE_COMMAND) -P CMakeFiles/GetVersion.dir/cmake_clean.cmake
 .PHONY : source/CMakeFiles/GetVersion.dir/clean
 
 source/CMakeFiles/GetVersion.dir/depend:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/devel/resources/Clone/NEXTSim /home/emma/devel/resources/Clone/NEXTSim/source /home/emma/devel/resources/Clone/NEXTSim/build /home/emma/devel/resources/Clone/NEXTSim/build/source /home/emma/devel/resources/Clone/NEXTSim/build/source/CMakeFiles/GetVersion.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/emma/Documents/TILGITHUB/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/Documents/TILGITHUB /home/emma/Documents/TILGITHUB/source /home/emma/Documents/TILGITHUB/build /home/emma/Documents/TILGITHUB/build/source /home/emma/Documents/TILGITHUB/build/source/CMakeFiles/GetVersion.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : source/CMakeFiles/GetVersion.dir/depend
 

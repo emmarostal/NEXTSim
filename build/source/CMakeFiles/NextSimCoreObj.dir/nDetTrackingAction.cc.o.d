@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimCoreObj.dir/nDetTrackingAction.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetTrackingAction.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetTrackingAction.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetTrackingAction.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetTrackingAction.hh \
  /usr/local/include/Geant4/G4UserTrackingAction.hh \
  /usr/local/include/Geant4/G4Types.hh \
  /usr/local/include/Geant4/G4GlobalConfig.hh /usr/include/c++/11/complex \

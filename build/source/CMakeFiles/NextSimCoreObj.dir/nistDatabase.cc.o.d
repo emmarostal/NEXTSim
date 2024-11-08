@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimCoreObj.dir/nistDatabase.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nistDatabase.cc \
+ /home/emma/Documents/TILGITHUB/source/nistDatabase.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -260,6 +260,6 @@ source/CMakeFiles/NextSimCoreObj.dir/nistDatabase.cc.o: \
  /usr/local/include/Geant4/G4Pow.hh /usr/local/include/Geant4/G4Exp.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4Material.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nistDatabase.hh \
+ /home/emma/Documents/TILGITHUB/include/nistDatabase.hh \
  /usr/local/include/Geant4/globals.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/termColors.hh
+ /home/emma/Documents/TILGITHUB/include/termColors.hh

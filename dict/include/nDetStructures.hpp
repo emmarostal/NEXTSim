@@ -123,11 +123,14 @@ class nDetOutputStructure : public TObject {
   public:
 	unsigned int nPhotonsTot; ///< Total number of scintillation photons produced
 	unsigned int nPhotonsDet; ///< Total number of optical photons detected by both PMTs
+	unsigned int nPhotonsDetL; ///< Total number of optical photons detected by left PMTs
+	unsigned int nPhotonsDetR; ///< Total number of optical photons detected by right PMTs
 	double lightBalance; ///< Ratio of the difference of left and right TQDC to the sum of left and right TQDC
 	double tdiff; ///< Time difference between left and right PolyCFD phase (in ns)
 	double photonTdiff; ///< Time differnence between average photon arrival time for each detector.
 	double photonDetEff; ///< Ratio of optical photons detected by a PMT to the total number of photons generated
 	double barTOF; ///< Average of the left and right dynode light pulse phases computed using PolyCFD (in ns)
+	double barTOFcorr; ///< barTOF with simple geometrical correction
 	double barQDC; ///< Average of the left and right dynode light pulse integrals
 	double barMaxADC; ///< Average of the left and right dynode light pulse maxima (in ADC channels)
 	bool   barTrig; ///< Flag to register if both PMT's would have triggered a digitizer filter
@@ -150,9 +153,12 @@ class nDetOutputStructure : public TObject {
 	/** Set single entry data fields
 	  * @param nPhotonsTot_ Total number of scintillation photons produced
 	  * @param nPhotonsDet_ Total number of optical photons detected by both PMTs
+	  * @param nPhotonsDetL_; ///< Total number of optical photons detected by left PMTs
+	  * @param nPhotonsDetR_; ///< Total number of optical photons detected by right PMTs
 	  * @param lightBalance_ Ratio of the difference of left and right TQDC to the sum of left and right TQDC
 	  * @param photonDetEff_ Ratio of optical photons detected by a PMT to the total number of photons generated
 	  * @param barTOF_ Average of the left and right dynode light pulse phases computed using PolyCFD (in ns)
+	  * @param barTOFcorr_; ///< barTOF with simple geometrical correction
 	  * @param barQDC_ Average of the left and right dynode light pulse integrals
 	  * @param barMaxADC_ Average of the left and right dynode light pulse maxima (in ADC channels)
 	  * @param photonComX_ Average of the left and right photon center-of-mass X position (in mm)
@@ -162,7 +168,7 @@ class nDetOutputStructure : public TObject {
 	  * @param photonComCol_ Segmented PMT anode column corresponding to the photon center-of-mass for the left and right PMT
 	  * @param photonComRow_ Segmented PMT anode row corresponding to the photon center-of-mass for the left and right PMT
 	  */
-	void SetValues(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_);
+	void SetValues(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const unsigned int &nPhotonsDetL_, const unsigned int &nPhotonsDetR_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barTOFcorr_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_);
 
 	/** Push back with data
 	  */
@@ -350,11 +356,14 @@ class nDetMultiOutputStructure : public TObject {
   public:
 	std::vector<unsigned int> nPhotonsTot; ///< Total number of scintillation photons produced
 	std::vector<unsigned int> nPhotonsDet; ///< Total number of optical photons detected by both PMTs
+	std::vector<unsigned int> nPhotonsDetL; ///< Total number of optical photons detected by left PMTs
+	std::vector<unsigned int> nPhotonsDetR; ///< Total number of optical photons detected by right PMTs
 	std::vector<double> lightBalance; ///< Ratio of the difference of left and right TQDC to the sum of left and right TQDC
 	std::vector<double> tdiff; ///< Time difference between left and right PMT (in ns)
 	std::vector<double> photonTdiff; ///< Time difference between average photon arrival time for left and right PMT (in ns)
 	std::vector<double> photonDetEff; ///< Ratio of optical photons detected by a PMT to the total number of photons generated
 	std::vector<double> barTOF; ///< Average of the left and right dynode light pulse phases computed using PolyCFD (in ns)
+	std::vector<double> barTOFcorr; ///< barTOF with simple geometrical correction
 	std::vector<double> barQDC; ///< Average of the left and right dynode light pulse integrals
 	std::vector<double> barMaxADC; ///< Average of the left and right dynode light pulse maxima (in ADC channels)
 	std::vector<bool>   barTrig; ///< Flag to register if both PMT's would trigger a digitizer filter.
@@ -396,9 +405,12 @@ class nDetMultiOutputStructure : public TObject {
 	/** Push back with data
 	  * @param nPhotonsTot_ Total number of scintillation photons produced
 	  * @param nPhotonsDet_ Total number of optical photons detected by both PMTs
+	  * @param nPhotonsDetL_ Total number of optical photons detected by left PMTs
+	  * @param nPhotonsDetR_ Total number of optical photons detected by right PMTs
 	  * @param lightBalance_ Ratio of the difference of left and right TQDC to the sum of left and right TQDC
 	  * @param photonDetEff_ Ratio of optical photons detected by a PMT to the total number of photons generated
 	  * @param barTOF_ Average of the left and right dynode light pulse phases computed using PolyCFD (in ns)
+	  * @param barTOFcorr_ barTOF with simple geometrical correction
 	  * @param barQDC_ Average of the left and right dynode light pulse integrals
 	  * @param barMaxADC_ Average of the left and right dynode light pulse maxima (in ADC channels)
 	  * @param photonComX_ Average of the left and right photon center-of-mass X position (in mm)
@@ -409,7 +421,7 @@ class nDetMultiOutputStructure : public TObject {
 	  * @param photonComRow_ Segmented PMT anode row corresponding to the photon center-of-mass for the left and right PMT
 	  * @param detID_ ID of the detector which fired
 	  */
-	void Append(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_, const short &detID_);
+	void Append(const unsigned int &nPhotonsTot_, const unsigned int &nPhotonsDet_, const unsigned int &nPhotonsDetL_, const unsigned int &nPhotonsDetR_, const double &lightBalance_, const double &tdiff_, const double &photonTdiff_, const double &photonDetEff_, const double &barTOF_, const double &barTOFcorr_, const double &barQDC_, const double &barMaxADC_, const bool &barTrig_, const double &photonTOF_, const double &photonComX_, const double &photonComY_, const double &reconComX_, const double &reconComY_, const short &photonComCol_, const short &photonComRow_, const short &detID_);
 
 	/** Push back with data from a nDetOutputStructure object
 	  * @param output nDetOutputStructure object containing simulation variables for a single detector

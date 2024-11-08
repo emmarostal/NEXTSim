@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/CloverSingleDetector.cc \
+ /home/emma/Documents/TILGITHUB/source/CloverSingleDetector.cc \
  /usr/include/stdc-predef.h \
  /home/emma/devel/resources/root/root/include/TText.h \
  /home/emma/devel/resources/root/root/include/TAttText.h \
@@ -235,7 +235,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CloverSingleDetector.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CloverSingleDetector.hh \
  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
@@ -449,7 +449,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/CloverSingleDetector.cc.o: \
  /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
  /usr/local/include/Geant4/G4VSDFilter.hh \
  /usr/local/include/Geant4/G4ios.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/CADMesh.hh \
+ /home/emma/Documents/TILGITHUB/include/CADMesh.hh \
  /usr/local/include/Geant4/G4String.hh \
  /usr/local/include/Geant4/G4TriangularFacet.hh \
  /usr/local/include/Geant4/G4VFacet.hh \

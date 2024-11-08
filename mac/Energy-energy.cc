@@ -4,6 +4,8 @@
 #include <TH2F.h>
 #include <TCanvas.h>
 #include <TAttText.h>
+#include <TStyle.h>
+#include <TPaveStats.h>
 
 #include <iostream>
 //use command g++ -o drawEnergy Energy-energy.cc $(root-config --cflags --libs) to compile
@@ -16,6 +18,7 @@ void drawHistogram(const char* filename) {
 
     const char* treeName = "data";
     const char* barTOF = "barTOF";
+    const char* barTOFcorr = "barTOFcorr";
     const char* nInitEnergy ="nInitEnergy";
 
     if (!file->IsOpen()) {
@@ -33,15 +36,18 @@ void drawHistogram(const char* filename) {
     }
 
     // Create a histogram
-    TH2F *scatterplot = new TH2F("scatterplot", "Calculated kinetic energy vs simulated energy", 150, 0, 4, 150, 0, 4);
+    TH2F *COLZ = new TH2F("COLZ", "Calculated kinetic energy vs simulated energy", 100, 0.2, 2.01, 100, 0.2, 2.01);
 
 
     // Fill the histogram from the branch
-    tree->Draw(Form("(0.5*939*(100/9)*(1/(%s*%s))):%s>>scatterplot", barTOF, barTOF, nInitEnergy), "barTOF > 0 && goodEvent", "goff");
+    tree->Draw(Form("(0.5*939*(100/9)*(1/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "barTOFcorr > 0 && goodEvent", "COLZ");
     //tree->Draw(Form("%s:(1/(%s*%s)>>scatterplot", nInitEnergy, barTOF, barTOF), "goodEvent", "goff");
     // Get the X axis and Y axis objects
-    TAxis *xAxis = scatterplot->GetXaxis();
-    TAxis *yAxis = scatterplot->GetYaxis();
+    TAxis *xAxis = COLZ->GetXaxis();
+    TAxis *yAxis = COLZ->GetYaxis();
+
+    // Customize the statistics box (show entries only)
+    gStyle->SetOptStat(10);  // This will only show entries
 
     // Customize X axis label
     xAxis->SetTitle("Simulated energy (MeV)");
@@ -57,14 +63,30 @@ void drawHistogram(const char* filename) {
 
     // Create a canvas to save the histogram as a PNG
     TCanvas *canvas = new TCanvas("canvas");
-    scatterplot->Draw();
+    COLZ->Draw("COLZ");
+
+    // Update the canvas to ensure stats box is created
+    canvas->Update();
+
+    // Retrieve the statistics box
+    TPaveStats *stats = (TPaveStats*)COLZ->GetListOfFunctions()->FindObject("stats");
+    if (stats) {
+        stats->SetX1NDC(0.1); // Left boundary (0 to 1 range)
+        stats->SetX2NDC(0.3); // Right boundary (0 to 1 range)
+        stats->SetY1NDC(0.8); // Bottom boundary (moves it up)
+        stats->SetY2NDC(0.9); // Top boundary (moves it up)
+        stats->Draw();         // Redraw the stats box in new position
+    }
+
+
+
     canvas->SaveAs("Energy-energy.pdf");
-    std::cout << "Saved pdf file: Response.pdf" << std::endl;
+    std::cout << "Saved pdf file: Energy-energy.pdf" << std::endl;
 
 
     // Clean up
     delete canvas;
-    delete scatterplot;
+    delete COLZ;
     file->Close();
     delete file;
 }

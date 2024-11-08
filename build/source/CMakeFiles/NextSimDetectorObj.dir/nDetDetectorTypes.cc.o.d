@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorTypes.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDetectorTypes.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDetectorTypes.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4SystemOfUnits.hh \
  /usr/local/include/Geant4/CLHEP/Units/SystemOfUnits.h \
  /usr/local/include/Geant4/G4SubtractionSolid.hh \
@@ -282,13 +282,13 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorTypes.cc.o: \
  /usr/local/include/Geant4/G4Visible.icc \
  /usr/local/include/Geant4/G4Trd.icc /usr/local/include/Geant4/G4Tubs.hh \
  /usr/local/include/Geant4/G4Tubs.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetectorTypes.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetectorTypes.hh \
  /usr/local/include/Geant4/G4String.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDetector.hh \
+ /home/emma/Documents/TILGITHUB/include/nDetDetector.hh \
  /usr/local/include/Geant4/globals.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh /usr/local/include/Geant4/G4Box.icc \
  /usr/local/include/Geant4/G4LogicalVolume.hh /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -330,5 +330,5 @@ source/CMakeFiles/NextSimDetectorObj.dir/nDetDetectorTypes.cc.o: \
  /usr/local/include/Geant4/G4PhysicsVectorType.hh \
  /usr/local/include/Geant4/G4Physics2DVector.icc \
  /usr/local/include/Geant4/G4SurfaceProperty.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/centerOfMass.hh \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh
+ /home/emma/Documents/TILGITHUB/include/centerOfMass.hh \
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh

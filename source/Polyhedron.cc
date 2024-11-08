@@ -51,6 +51,7 @@ G4VPhysicalVolume* Polyhedron::Construct()
     G4Material* Vacuum          = NISTmgr->FindOrBuildMaterial("G4_Galactic");
     G4Material* Air             = NISTmgr->FindOrBuildMaterial("G4_AIR");
     G4Material* Al_mat          = NISTmgr->FindOrBuildMaterial("G4_Al");
+    G4Material* Plastic         = NISTmgr->FindOrBuildMaterial("G4_PLEXIGLASS");
 
     // Visualisation
     // 

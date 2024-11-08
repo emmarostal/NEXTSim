@@ -6,3 +6,12 @@ Removing negative TOF and also removing un-physically high energies. What causes
 Maybe look only at multiplicity ==1?
 
 It is not due to geometric correction, since we correct to slightly higher energies (or not at all)
+
+In general, we see more values of lower calculated energies for the full setup compared to just the detector arrac. This
+is most likely due to scattering in the surrounding materials. In the same way, we see more low valuesof calculated energies for
+higher multiplicities when looking at just the detector arrays compared to lower multiplicities. Again, this could be attributed
+to scattering from one detector into another.
+
+
+
+tree->Draw("detID:eventID", "multiplicity==2 && abs(detID[0] - detID[1]) == 1"); To look at events where two adjacent detectors are hit.

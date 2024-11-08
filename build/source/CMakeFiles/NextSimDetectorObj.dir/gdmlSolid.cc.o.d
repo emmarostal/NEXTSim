@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimDetectorObj.dir/gdmlSolid.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/gdmlSolid.cc \
+ /home/emma/Documents/TILGITHUB/source/gdmlSolid.cc \
  /usr/include/stdc-predef.h /usr/local/include/Geant4/G4VisAttributes.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
  /usr/local/include/Geant4/G4Types.hh \
@@ -582,7 +582,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/gdmlSolid.cc.o: \
  /usr/local/include/Geant4/G4SafetyHelper.hh \
  /usr/local/include/Geant4/G4TransportationManager.icc \
  /usr/local/include/Geant4/G4GDMLParser.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/gdmlSolid.hh \
+ /home/emma/Documents/TILGITHUB/include/gdmlSolid.hh \
  /usr/local/include/Geant4/G4Box.hh \
  /usr/local/include/Geant4/G4LogicalVolume.hh \
  /usr/local/include/Geant4/G4VPhysicalVolume.hh \

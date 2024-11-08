@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimCoreObj.dir/pmtResponse.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/pmtResponse.cc \
+ /home/emma/Documents/TILGITHUB/source/pmtResponse.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -343,4 +343,4 @@ source/CMakeFiles/NextSimCoreObj.dir/pmtResponse.cc.o: \
  /usr/local/include/Geant4/CLHEP/Random/RandPoissonQ.icc \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.h \
  /usr/local/include/Geant4/CLHEP/Random/RandStudentT.icc \
- /home/emma/devel/resources/Clone/NEXTSim/include/pmtResponse.hh
+ /home/emma/Documents/TILGITHUB/include/pmtResponse.hh

@@ -1,5 +1,5 @@
 source/CMakeFiles/NextSimOutputObj.dir/nDetDataPack.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/nDetDataPack.cc \
+ /home/emma/Documents/TILGITHUB/source/nDetDataPack.cc \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -258,6 +258,6 @@ source/CMakeFiles/NextSimOutputObj.dir/nDetDataPack.cc.o: \
  /home/emma/devel/resources/root/root/include/Compression.h \
  /home/emma/devel/resources/root/root/include/ROOT/TIOFeatures.hxx \
  /home/emma/devel/resources/root/root/include/Rtypes.h \
- /home/emma/devel/resources/Clone/NEXTSim/include/nDetDataPack.hh \
- /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/include/nDetDataPack.hh \
+ /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h

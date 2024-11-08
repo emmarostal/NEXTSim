@@ -1,7 +1,7 @@
 source/CMakeFiles/NextSimDetectorObj.dir/CERNTapeBox.cc.o: \
- /home/emma/devel/resources/Clone/NEXTSim/source/CERNTapeBox.cc \
+ /home/emma/Documents/TILGITHUB/source/CERNTapeBox.cc \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/CERNTapeBox.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/CERNTapeBox.hh \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/G4ThreeVector.hh \
  /usr/local/include/Geant4/globals.hh /usr/local/include/Geant4/G4ios.hh \
@@ -281,7 +281,7 @@ source/CMakeFiles/NextSimDetectorObj.dir/CERNTapeBox.cc.o: \
  /usr/local/include/Geant4/G4RotationMatrix.hh \
  /usr/local/include/Geant4/G4VPhysicalVolume.icc \
  /usr/local/include/Geant4/G4LogicalVolume.icc \
- /home/emma/devel/resources/Clone/NEXTSim/olaInclude/MaterialsManager.hh \
+ /home/emma/Documents/TILGITHUB/olaInclude/MaterialsManager.hh \
  /usr/local/include/Geant4/G4Material.hh \
  /usr/local/include/Geant4/G4Element.hh \
  /usr/local/include/Geant4/G4ElementTable.hh \
