@@ -1,8 +1,8 @@
-# Install script for directory: /home/emma/devel/resources/Clone/NEXTSim/share
+# Install script for directory: /home/emma/Documents/TILGITHUB/share
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/emma/devel/resources/Clone/NEXTSim/install")
+  set(CMAKE_INSTALL_PREFIX "/home/emma/Documents/TILGITHUB/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,6 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/modulefiles" TYPE FILE FILES "/home/emma/devel/resources/Clone/NEXTSim/build/share/nextSim")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/modulefiles" TYPE FILE FILES "/home/emma/Documents/TILGITHUB/build/share/nextSim")
 endif()
 

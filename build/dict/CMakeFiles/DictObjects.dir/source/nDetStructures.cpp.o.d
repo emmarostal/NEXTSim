@@ -1,7 +1,7 @@
 dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o: \
- /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp \
+ /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp \
  /usr/include/stdc-predef.h \
- /home/emma/devel/resources/Clone/NEXTSim/dict/source/../include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/dict/source/../include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h \
  /home/emma/devel/resources/root/root/include/Rtypes.h \
  /home/emma/devel/resources/root/root/include/RtypesCore.h \

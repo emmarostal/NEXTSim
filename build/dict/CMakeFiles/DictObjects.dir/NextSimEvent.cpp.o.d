@@ -1,5 +1,5 @@
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o: \
- /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp \
+ /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp \
  /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -274,5 +274,5 @@ dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o: \
  /usr/include/c++/11/forward_list /usr/include/c++/11/bits/forward_list.h \
  /usr/include/c++/11/bits/forward_list.tcc \
  /home/emma/devel/resources/root/root/include/TDataMember.h \
- /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp \
+ /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp \
  /home/emma/devel/resources/root/root/include/TObject.h

@@ -1,6 +1,6 @@
 // Do NOT change. Changes will be lost next time file is generated
 
-#define R__DICTIONARY_FILENAME dIhomedIemmadIdeveldIresourcesdIClonedINEXTSimdIbuilddIdictdINextSimEvent
+#define R__DICTIONARY_FILENAME dIhomedIemmadIDocumentsdITILGITHUBdIbuilddIdictdINextSimEvent
 #define R__NO_DEPRECATION
 
 /*******************************************************************/
@@ -35,7 +35,7 @@
 #include "TDataMember.h"
 
 // Header files passed as explicit arguments
-#include "/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp"
+#include "/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp"
 
 // Header files passed via #pragma extra_include
 
@@ -55,7 +55,7 @@ namespace ROOT {
       ::nDetTraceStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetTraceStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetTraceStructure", ::nDetTraceStructure::Class_Version(), "", 28,
+         instance("nDetTraceStructure", ::nDetTraceStructure::Class_Version(), "include/nDetStructures.hpp", 28,
                   typeid(::nDetTraceStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetTraceStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetTraceStructure) );
@@ -87,7 +87,7 @@ namespace ROOT {
       ::nDetEventStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetEventStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetEventStructure", ::nDetEventStructure::Class_Version(), "", 70,
+         instance("nDetEventStructure", ::nDetEventStructure::Class_Version(), "include/nDetStructures.hpp", 70,
                   typeid(::nDetEventStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetEventStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetEventStructure) );
@@ -119,7 +119,7 @@ namespace ROOT {
       ::nDetOutputStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetOutputStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetOutputStructure", ::nDetOutputStructure::Class_Version(), "", 122,
+         instance("nDetOutputStructure", ::nDetOutputStructure::Class_Version(), "include/nDetStructures.hpp", 122,
                   typeid(::nDetOutputStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetOutputStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetOutputStructure) );
@@ -151,7 +151,7 @@ namespace ROOT {
       ::nDetImplantOutputStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetImplantOutputStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetImplantOutputStructure", ::nDetImplantOutputStructure::Class_Version(), "", 181,
+         instance("nDetImplantOutputStructure", ::nDetImplantOutputStructure::Class_Version(), "include/nDetStructures.hpp", 187,
                   typeid(::nDetImplantOutputStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetImplantOutputStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetImplantOutputStructure) );
@@ -183,7 +183,7 @@ namespace ROOT {
       ::nDetDebugStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetDebugStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetDebugStructure", ::nDetDebugStructure::Class_Version(), "", 244,
+         instance("nDetDebugStructure", ::nDetDebugStructure::Class_Version(), "include/nDetStructures.hpp", 250,
                   typeid(::nDetDebugStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetDebugStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetDebugStructure) );
@@ -215,7 +215,7 @@ namespace ROOT {
       ::nDetMultiOutputStructure *ptr = nullptr;
       static ::TVirtualIsAProxy* isa_proxy = new ::TInstrumentedIsAProxy< ::nDetMultiOutputStructure >(nullptr);
       static ::ROOT::TGenericClassInfo 
-         instance("nDetMultiOutputStructure", ::nDetMultiOutputStructure::Class_Version(), "", 349,
+         instance("nDetMultiOutputStructure", ::nDetMultiOutputStructure::Class_Version(), "include/nDetStructures.hpp", 355,
                   typeid(::nDetMultiOutputStructure), ::ROOT::Internal::DefineBehavior(ptr, ptr),
                   &::nDetMultiOutputStructure::Dictionary, isa_proxy, 4,
                   sizeof(::nDetMultiOutputStructure) );
@@ -970,12 +970,12 @@ namespace ROOT {
 namespace {
   void TriggerDictionaryInitialization_NextSimEvent_Impl() {
     static const char* headers[] = {
-"/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp",
+"/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp",
 nullptr
     };
     static const char* includePaths[] = {
 "/home/emma/devel/resources/root/root/include/",
-"/home/emma/devel/resources/Clone/NEXTSim/build/dict/",
+"/home/emma/Documents/TILGITHUB/build/dict/",
 nullptr
     };
     static const char* fwdDeclCode = R"DICTFWDDCLS(
@@ -984,12 +984,12 @@ nullptr
 #pragma clang diagnostic ignored "-Wignored-attributes"
 #pragma clang diagnostic ignored "-Wreturn-type-c-linkage"
 extern int __Cling_AutoLoading_Map;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetTraceStructure;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetEventStructure;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetOutputStructure;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetImplantOutputStructure;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetDebugStructure;
-class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp")))  nDetMultiOutputStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetTraceStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetEventStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetOutputStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetImplantOutputStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetDebugStructure;
+class __attribute__((annotate("$clingAutoload$/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp")))  nDetMultiOutputStructure;
 )DICTFWDDCLS";
     static const char* payloadCode = R"DICTPAYLOAD(
 #line 1 "NextSimEvent dictionary payload"
@@ -997,7 +997,7 @@ class __attribute__((annotate("$clingAutoload$/home/emma/devel/resources/Clone/N
 
 #define _BACKWARD_BACKWARD_WARNING_H
 // Inline headers
-#include "/home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp"
+#include "/home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp"
 
 #undef  _BACKWARD_BACKWARD_WARNING_H
 )DICTPAYLOAD";

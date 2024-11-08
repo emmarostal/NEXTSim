@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emma/devel/resources/Clone/NEXTSim
+CMAKE_SOURCE_DIR = /home/emma/Documents/TILGITHUB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emma/devel/resources/Clone/NEXTSim/build
+CMAKE_BINARY_DIR = /home/emma/Documents/TILGITHUB/build
 
 # Include any dependencies generated for this target.
 include dict/CMakeFiles/DictObjects.dir/depend.make
@@ -69,38 +69,38 @@ include dict/CMakeFiles/DictObjects.dir/progress.make
 # Include the compile flags for this target's objects.
 include dict/CMakeFiles/DictObjects.dir/flags.make
 
-dict/NextSimEvent.cpp: /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp
-dict/NextSimEvent.cpp: /home/emma/devel/resources/Clone/NEXTSim/dict/include/LinkDef.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating NextSimEvent.cpp"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /home/emma/devel/resources/root/root/bin/rootcint -f /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp -c /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp /home/emma/devel/resources/Clone/NEXTSim/dict/include/LinkDef.h
+dict/NextSimEvent.cpp: /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp
+dict/NextSimEvent.cpp: /home/emma/Documents/TILGITHUB/dict/include/LinkDef.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating NextSimEvent.cpp"
+	cd /home/emma/Documents/TILGITHUB/build/dict && /home/emma/devel/resources/root/root/bin/rootcint -f /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp -c /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp /home/emma/Documents/TILGITHUB/dict/include/LinkDef.h
 
 dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o: dict/CMakeFiles/DictObjects.dir/flags.make
-dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o: /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp
+dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o: /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp
 dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o: dict/CMakeFiles/DictObjects.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o -MF CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o.d -o CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o -c /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o"
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o -MF CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o.d -o CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o -c /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp
 
 dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.i"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp > CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.i
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp > CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.i
 
 dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.s"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp -o CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.s
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp -o CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.s
 
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o: dict/CMakeFiles/DictObjects.dir/flags.make
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o: dict/NextSimEvent.cpp
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o: dict/CMakeFiles/DictObjects.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o -MF CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o.d -o CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o -c /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o"
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o -MF CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o.d -o CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o -c /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp
 
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/DictObjects.dir/NextSimEvent.cpp.i"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp > CMakeFiles/DictObjects.dir/NextSimEvent.cpp.i
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp > CMakeFiles/DictObjects.dir/NextSimEvent.cpp.i
 
 dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/DictObjects.dir/NextSimEvent.cpp.s"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp -o CMakeFiles/DictObjects.dir/NextSimEvent.cpp.s
+	cd /home/emma/Documents/TILGITHUB/build/dict && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp -o CMakeFiles/DictObjects.dir/NextSimEvent.cpp.s
 
 DictObjects: dict/CMakeFiles/DictObjects.dir/source/nDetStructures.cpp.o
 DictObjects: dict/CMakeFiles/DictObjects.dir/NextSimEvent.cpp.o
@@ -112,10 +112,10 @@ dict/CMakeFiles/DictObjects.dir/build: DictObjects
 .PHONY : dict/CMakeFiles/DictObjects.dir/build
 
 dict/CMakeFiles/DictObjects.dir/clean:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && $(CMAKE_COMMAND) -P CMakeFiles/DictObjects.dir/cmake_clean.cmake
+	cd /home/emma/Documents/TILGITHUB/build/dict && $(CMAKE_COMMAND) -P CMakeFiles/DictObjects.dir/cmake_clean.cmake
 .PHONY : dict/CMakeFiles/DictObjects.dir/clean
 
 dict/CMakeFiles/DictObjects.dir/depend: dict/NextSimEvent.cpp
-	cd /home/emma/devel/resources/Clone/NEXTSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/devel/resources/Clone/NEXTSim /home/emma/devel/resources/Clone/NEXTSim/dict /home/emma/devel/resources/Clone/NEXTSim/build /home/emma/devel/resources/Clone/NEXTSim/build/dict /home/emma/devel/resources/Clone/NEXTSim/build/dict/CMakeFiles/DictObjects.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/emma/Documents/TILGITHUB/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/Documents/TILGITHUB /home/emma/Documents/TILGITHUB/dict /home/emma/Documents/TILGITHUB/build /home/emma/Documents/TILGITHUB/build/dict /home/emma/Documents/TILGITHUB/build/dict/CMakeFiles/DictObjects.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : dict/CMakeFiles/DictObjects.dir/depend
 

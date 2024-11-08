@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/emma/devel/resources/Clone/NEXTSim
+CMAKE_SOURCE_DIR = /home/emma/Documents/TILGITHUB
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/emma/devel/resources/Clone/NEXTSim/build
+CMAKE_BINARY_DIR = /home/emma/Documents/TILGITHUB/build
 
 # Utility rule file for GenerateDict.
 
@@ -66,15 +66,15 @@ include dict/CMakeFiles/GenerateDict.dir/compiler_depend.make
 # Include the progress variables for this target.
 include dict/CMakeFiles/GenerateDict.dir/progress.make
 
-dict/CMakeFiles/GenerateDict: /home/emma/devel/resources/Clone/NEXTSim/dict/source/nDetStructures.cpp
-dict/CMakeFiles/GenerateDict: /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp
-dict/CMakeFiles/GenerateDict: /home/emma/devel/resources/Clone/NEXTSim/dict/include/LinkDef.h
+dict/CMakeFiles/GenerateDict: /home/emma/Documents/TILGITHUB/dict/source/nDetStructures.cpp
+dict/CMakeFiles/GenerateDict: /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp
+dict/CMakeFiles/GenerateDict: /home/emma/Documents/TILGITHUB/dict/include/LinkDef.h
 dict/CMakeFiles/GenerateDict: dict/NextSimEvent.cpp
 
-dict/NextSimEvent.cpp: /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp
-dict/NextSimEvent.cpp: /home/emma/devel/resources/Clone/NEXTSim/dict/include/LinkDef.h
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/devel/resources/Clone/NEXTSim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating NextSimEvent.cpp"
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && /home/emma/devel/resources/root/root/bin/rootcint -f /home/emma/devel/resources/Clone/NEXTSim/build/dict/NextSimEvent.cpp -c /home/emma/devel/resources/Clone/NEXTSim/dict/include/nDetStructures.hpp /home/emma/devel/resources/Clone/NEXTSim/dict/include/LinkDef.h
+dict/NextSimEvent.cpp: /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp
+dict/NextSimEvent.cpp: /home/emma/Documents/TILGITHUB/dict/include/LinkDef.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/emma/Documents/TILGITHUB/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating NextSimEvent.cpp"
+	cd /home/emma/Documents/TILGITHUB/build/dict && /home/emma/devel/resources/root/root/bin/rootcint -f /home/emma/Documents/TILGITHUB/build/dict/NextSimEvent.cpp -c /home/emma/Documents/TILGITHUB/dict/include/nDetStructures.hpp /home/emma/Documents/TILGITHUB/dict/include/LinkDef.h
 
 GenerateDict: dict/CMakeFiles/GenerateDict
 GenerateDict: dict/NextSimEvent.cpp
@@ -86,10 +86,10 @@ dict/CMakeFiles/GenerateDict.dir/build: GenerateDict
 .PHONY : dict/CMakeFiles/GenerateDict.dir/build
 
 dict/CMakeFiles/GenerateDict.dir/clean:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build/dict && $(CMAKE_COMMAND) -P CMakeFiles/GenerateDict.dir/cmake_clean.cmake
+	cd /home/emma/Documents/TILGITHUB/build/dict && $(CMAKE_COMMAND) -P CMakeFiles/GenerateDict.dir/cmake_clean.cmake
 .PHONY : dict/CMakeFiles/GenerateDict.dir/clean
 
 dict/CMakeFiles/GenerateDict.dir/depend:
-	cd /home/emma/devel/resources/Clone/NEXTSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/devel/resources/Clone/NEXTSim /home/emma/devel/resources/Clone/NEXTSim/dict /home/emma/devel/resources/Clone/NEXTSim/build /home/emma/devel/resources/Clone/NEXTSim/build/dict /home/emma/devel/resources/Clone/NEXTSim/build/dict/CMakeFiles/GenerateDict.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/emma/Documents/TILGITHUB/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/emma/Documents/TILGITHUB /home/emma/Documents/TILGITHUB/dict /home/emma/Documents/TILGITHUB/build /home/emma/Documents/TILGITHUB/build/dict /home/emma/Documents/TILGITHUB/build/dict/CMakeFiles/GenerateDict.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : dict/CMakeFiles/GenerateDict.dir/depend
 
