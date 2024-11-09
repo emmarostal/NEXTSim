@@ -1,0 +1,7 @@
+Preparation for zoom meeting
+
+changed material of polyhedron
+
+changed values of pmt delay (more negative TOF values for higher delay)
+
+Tested gamma source

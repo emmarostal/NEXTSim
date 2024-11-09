@@ -1,0 +1,7 @@
+Benyt store simulerede filer med uniform energifordeling.
+ToDo: 
+- Indlæs spredningsvektorer korrekt.
+- Plot målt vs udregnet placering (y-akse). måske også andre akser?
+- Plot enkelte neutroners vej.
+- Inddrag rumvinkel (udregn for et 100 x 100 grid rumvinklen for detektorarrayet. Spredningsdata kan divideres
+med dette for at se om der er "skygger" eller om fordelingen er isotrop).

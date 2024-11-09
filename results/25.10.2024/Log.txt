@@ -1,0 +1,5 @@
+Arbejde med at læse spredningsinformation fra root filerne.
+nScatterTime er i modsat rækkefølge. 
+nScatterScint: flag for om spredning er sket i scintillerende materiale
+Der sker ofte flere spredningsbegivenheder i scintillerende materiale for et enkelt event. Den
+"målte placering" er derfor ikke nødvendigvis den sidste (første?) indgang i vektoren.
