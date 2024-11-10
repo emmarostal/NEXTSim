@@ -38,9 +38,11 @@ void drawHistogram(const char* filename) {
     // Create a histogram
     TH2F *COLZ = new TH2F("COLZ", "Calculated kinetic energy vs simulated energy", 300, 0.0, 3.01, 300, 0.0, 3.01);
 
-
+    // Use Project to fill the histogram explicitly
+    tree->Project("COLZ", "(0.5*939*(100/9)*(1/(barTOFcorr*barTOFcorr))):nInitEnergy", 
+                  "barTOFcorr > 0 && goodEvent");
     // Fill the histogram from the branch
-    tree->Draw(Form("(0.5*939*(100/9)*(1/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "barTOFcorr > 0 && goodEvent", "COLZ");
+    //tree->Draw(Form("(0.5*939*(100/9)*(1/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "barTOFcorr > 0 && goodEvent", "COLZ");
     //tree->Draw(Form("%s:(1/(%s*%s)>>scatterplot", nInitEnergy, barTOF, barTOF), "goodEvent", "goff");
     // Get the X axis and Y axis objects
     TAxis *xAxis = COLZ->GetXaxis();
@@ -62,17 +64,28 @@ void drawHistogram(const char* filename) {
     // You can customize other properties like font, color, etc.
 
     // Create a canvas to save the histogram as a PNG
-    TCanvas *canvas = new TCanvas("canvas");
+    TCanvas *canvas = new TCanvas("canvas","canvas", 900, 800);
+    canvas->cd();
+
+    // Adjust margins before drawing
+    canvas->SetLeftMargin(0.15);   // Increase the left margin
+    canvas->SetRightMargin(0.15);  // Increase the right margin if needed
+    canvas->SetBottomMargin(0.1); // Increase the bottom margin
+    canvas->SetTopMargin(0.1);     // Increase the top margin if needed
+
+    canvas->cd();
     COLZ->Draw("COLZ");
 
     // Update the canvas to ensure stats box is created
     canvas->Update();
+    gPad->Update();
+    canvas->Modified();
 
     // Retrieve the statistics box
     TPaveStats *stats = (TPaveStats*)COLZ->GetListOfFunctions()->FindObject("stats");
     if (stats) {
-        stats->SetX1NDC(0.1); // Left boundary (0 to 1 range)
-        stats->SetX2NDC(0.3); // Right boundary (0 to 1 range)
+        stats->SetX1NDC(0.15); // Left boundary (0 to 1 range)
+        stats->SetX2NDC(0.35); // Right boundary (0 to 1 range)
         stats->SetY1NDC(0.8); // Bottom boundary (moves it up)
         stats->SetY2NDC(0.9); // Top boundary (moves it up)
         stats->Draw();         // Redraw the stats box in new position

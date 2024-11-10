@@ -108,6 +108,12 @@ void drawPosition(const char* filename) {
 
     // Create and update canvas
     TCanvas *canvas = new TCanvas("canvas", "Position Plot", 800, 800);
+
+    // Adjust margins before drawing
+    canvas->SetLeftMargin(0.13);   // Increase the left margin
+    canvas->SetRightMargin(0.13);  // Increase the right margin if needed
+    canvas->SetBottomMargin(0.1); // Increase the bottom margin
+    canvas->SetTopMargin(0.1);     // Increase the top margin if needed
     
 
 

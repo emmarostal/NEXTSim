@@ -48,7 +48,7 @@ void drawPhotons(const char* filename) {
 
     // Fill the histogram from the branch
     //tree->Draw("detID:eventID", "multiplicity==2 && abs(detID[0] - detID[1]) == 1");
-    tree->Draw(Form("%s:%s>>COLZ", nPhotonsDet, barTOFcorr), "barTOFcorr > 0 && goodEvent", "COLZ");
+    tree->Draw(Form("%s:%s>>COLZ", nPhotonsDet, barTOFcorr), "barTOFcorr > 0 && goodEvent &&nScatterScint", "COLZ");
     //tree->Draw(Form("%s:(1/(%s*%s)>>scatterplot", nInitEnergy, barTOF, barTOF), "goodEvent", "goff");
     // Get the X axis and Y axis objects
     TAxis *xAxis = COLZ->GetXaxis();
