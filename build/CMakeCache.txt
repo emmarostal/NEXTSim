@@ -340,11 +340,14 @@ Fontconfig_INCLUDE_DIR:PATH=/usr/include
 //Path to a library.
 Fontconfig_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfontconfig.so
 
+//No help, variable specified on the command line.
+GEANT4_BUILD_MULTITHREADED:UNINITIALIZED=ON
+
 //Enable support for G4GDMLParser.
 GEANT4_GDML:BOOL=ON
 
 //Enable multi-threading support (if available).
-GEANT4_MT:BOOL=OFF
+GEANT4_MT:BOOL=ON
 
 //Build example with Geant4 UI and Vis drivers
 GEANT4_UIVIS:BOOL=ON

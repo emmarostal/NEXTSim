@@ -58,6 +58,7 @@ int main(int argc, char** argv){
 	handler.add(optionExt("mt-max-threads", no_argument, NULL, 'T', "", "Print the maximum number of threads."));
 #endif
 
+
 	// Handle user input.
 	if(!handler.setup(argc, argv))
 		return 1;
