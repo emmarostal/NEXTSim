@@ -1,2 +1,0 @@
-/usr/bin/ar qc libNextSimGenerator.a CMakeFiles/NextSimGeneratorObj.dir/nDetParticleSource.cc.o CMakeFiles/NextSimGeneratorObj.dir/nDetParticleSourceMessenger.cc.o
-/usr/bin/ranlib libNextSimGenerator.a

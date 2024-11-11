@@ -31,6 +31,7 @@ set(NextSimDetectorSources nDetMaterials.cc nDetMaterialsMessenger.cc nDetConstr
                            CERNFloor.cc
                            Polyhedron.cc IS530_Chamber.cc IS530_Plastic.cc Tape.cc
                            CloverQuadBuchDetector.cc CloverQuadDetector.cc CloverSingleBuchDetector.cc CloverSingleDetector.cc
+        IS659VandleFrame.cc IS659AluStuff.cc IS659Cube.cc IS659Clovers.cc
                            )
 set(NextSimGeneratorSources nDetParticleSource.cc nDetParticleSourceMessenger.cc)
 set(NextSimPeripheralSources optionHandler.cc termColors.cc)
@@ -70,5 +71,5 @@ add_custom_command(OUTPUT ${VERSION_HEADER} COMMAND cp ${INTERNAL_VERSION_HEADER
 #Build simpleScan executable.
 add_executable(nextSim nextSim.cc)
 #target_link_libraries(nextSim NextSimOutput NextSimDetector NextSimGenerator NextSimPeripheral NextSimCore ${Geant4_LIBRARIES} ${ROOT_LIBRARIES})
-target_link_libraries(nextSim NextSimOutput NextSimDetector NextSimGenerator NextSimPeripheral NextSimCore ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${cadmesh_LIBRARIES})
+target_link_libraries(nextSim NextSimOutput NextSimDetector NextSimGenerator NextSimPeripheral NextSimCore ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${cadmesh_LIBRARIES} AUSA::AUSA)
 install(TARGETS nextSim DESTINATION bin)

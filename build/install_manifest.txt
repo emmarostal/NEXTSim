@@ -1,2 +1,0 @@
-/home/emma/Documents/TILGITHUB/install/bin/nextSim
-/home/emma/Documents/TILGITHUB/install/share/modulefiles/nextSim

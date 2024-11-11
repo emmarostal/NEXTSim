@@ -6,6 +6,7 @@
 #include "globals.hh"
 
 #include "G4ThreeVector.hh"
+#include "ausa/json/IO.h"
 
 class nDetWorldObject;
 class nDetWorldPrimitive;
@@ -82,6 +83,7 @@ class nDetWorld{
 	 */
 	void SetExp(std::string const expName_){expName = expName_;}
 
+    void SetAusaSetup(std::string const setup_){setupFile = setup_;}
 	/** Build the CERN hall structures
 	 */
 	void BuildCERNStructures();
@@ -89,6 +91,8 @@ class nDetWorld{
 	/** Build the CERN IDS elements
 	 */
 	void BuildCERNElements();
+
+    void BuildIS659setup8He();
 
 	/** Add a new Geant primitive object to the world
 	  * @param str Space-delimited input string with format specified in nDetWorldPrimitive::decodeArgs()
@@ -137,6 +141,7 @@ class nDetWorld{
 	std::vector<nDetWorldObject*> objects; ///< Vector of objects to add to the experimental setup area
 	
 	std::string expName;
+    std::string setupFile;
 
 	nDetWorldMessenger *messenger; ///< Pointer to the messenger used for this class
 };

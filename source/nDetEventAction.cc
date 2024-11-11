@@ -13,6 +13,6 @@ void nDetEventAction::BeginOfEventAction(const G4Event* evt){
 }
 
 void nDetEventAction::EndOfEventAction(const G4Event*){
-	// Process primary scatters. 
+	// Process primary scatters.
 	runAct->process();
 }

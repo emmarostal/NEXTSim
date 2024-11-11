@@ -2,6 +2,8 @@ cmake_minimum_required (VERSION 2.8)
 
 project (nextSim)
 
+find_package(AUSALIB REQUIRED)
+
 #Compile with c++11 or c++0x depending on the compiler version
 if (CMAKE_COMPILER_IS_GNUCXX)
 	if (${CMAKE_CXX_COMPILER_VERSION} VERSION_GREATER "4.3" AND
@@ -68,7 +70,6 @@ mark_as_advanced(FORCE GENREFLEX_EXECUTABLE ROOTCINT_EXECUTABLE ROOT_CONFIG_EXEC
 include_directories(${ROOT_INCLUDE_DIR})
 link_directories(${ROOT_LIBRARY_DIR})
 
-
 #Find CADMesh
 #find_package (cadmesh)
 #message(${CADMESH_INCLUDE_DIRS})
@@ -77,7 +78,7 @@ link_directories(${cadmesh_LIBRARIES})
 
 #Inform the user about the Geant4 install version
 message(STATUS "Found ROOT install: v${ROOT_VERSION}")
-
+set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /usr/local/lib)
 #Find Geant install.
 if(GEANT4_UIVIS)
 	find_package(Geant4 REQUIRED ui_all vis_all)
@@ -85,6 +86,7 @@ else()
 	find_package(Geant4 REQUIRED)
 endif()
 include_directories(${Geant4_INCLUDE_DIRS})
+link_directories(${Geant4_LIBRARY_DIR})
 
 #Inform the user about the Geant4 install version
 message(STATUS "Found Geant4 install: v${Geant4_VERSION}")

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libNextSimOutput.a CMakeFiles/NextSimOutputObj.dir/nDetMasterOutputFile.cc.o CMakeFiles/NextSimOutputObj.dir/nDetMasterOutputFileMessenger.cc.o CMakeFiles/NextSimOutputObj.dir/nDetDataPack.cc.o
-/usr/bin/ranlib libNextSimOutput.a

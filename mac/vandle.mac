@@ -64,7 +64,8 @@
 /nDet/detector/setRotation 0 0 0
 
 # Update the detector.
-/nDet/detector/addGeometry rectangle
+#/nDet/detector/addGeometry rectangle
+/nDet/detector/buildSetupFromAusa ../../is659/setups/setup8He/setup.json
 /nDet/detector/update
 
 ################
@@ -78,11 +79,11 @@
 #/nDet/source/type 60Co
 #/nDet/source/type gamma 0.03
 
-#/nDet/source/spot 25
-#/nDet/source/spot 15
+#/nDet/source/spot 0
+#/nDet/source/spot 0
 
 # Set isotropic source (0=off, 1=psuedo, 2=realistic)
-/nDet/source/iso 0
+/nDet/source/iso 2
 
 ###############
 # RUN CONTROL #

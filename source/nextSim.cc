@@ -53,6 +53,7 @@ int main(int argc, char** argv){
 	handler.add(optionExt("delay", required_argument, NULL, 'D', "<seconds>", "Set the time delay between successive event counter updates (default=10s)."));
 	handler.add(optionExt("version", no_argument, NULL, 'V', "", "Print the version number."));
 	handler.add(optionExt("exp",required_argument,NULL,'e',"<setup>","Specify experimental hall setup to build (default=none)."));
+    handler.add(optionExt("setup",required_argument,NULL,'s',"<AUSAsetup>","AUSAlib setup file"));
 #ifdef USE_MULTITHREAD
 	handler.add(optionExt("mt-thread-limit", required_argument, NULL, 'n', "<threads>", "Set the number of threads to use (uses all threads for n <= 0)."));
 	handler.add(optionExt("mt-max-threads", no_argument, NULL, 'T', "", "Print the maximum number of threads."));
@@ -100,7 +101,9 @@ int main(int argc, char** argv){
 	if(handler.getOption(8)->active)
 		expName = handler.getOption(8)->argument;
 
-
+    std::string ausaSetup;
+    if(handler.getOption(9)->active)
+        ausaSetup = handler.getOption(9)->argument;
 
 #ifdef USE_MULTITHREAD
 	G4int numberOfThreads = 1; // Sequential mode by default.
@@ -161,6 +164,7 @@ int main(int argc, char** argv){
 		detector->BuildExp(expName);
 	}else std::cout << "<<<<<<<<<<<<<<<<<<<<   No experiment specified for \"-e\" argument. No setup will be constructed. >>>>>>>>>>>>>>>>>>>>\n";
 
+
 	if(yieldMult > 0){ // Modify the photon yield of the detector
 		std::cout << PROGRAM_NAME << ": Setting photon yield multiplier to " << yieldMult << std::endl;
 		detector->SetLightYieldMultiplier(yieldMult);
@@ -208,7 +212,7 @@ int main(int argc, char** argv){
 		G4String command = "/control/execute ";
 		command += inputFilename;
 		UImanager->ApplyCommand(command);
-		UImanager->ApplyCommand("/vis/open OGL");
+		UImanager->ApplyCommand("/vis/open VTKQt");
 		UImanager->ApplyCommand("/vis/drawVolume");
 		UImanager->ApplyCommand("/vis/scene/add/trajectories");
 		UImanager->ApplyCommand("/vis/viewer/set/viewpointThetaPhi 90 0");

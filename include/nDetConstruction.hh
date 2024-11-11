@@ -200,6 +200,8 @@ class nDetConstruction : public G4VUserDetectorConstruction{
 	 */
 	void BuildExp(std::string expName_);
 
+    void BuildINDIEFromAUSASetup(const G4String &setupPath);
+
   private:
 	nDetConstructionMessenger *fDetectorMessenger; ///< Geant messenger to use for this class
 	

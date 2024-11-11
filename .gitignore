@@ -1,3 +1,9 @@
+build
+cmake-build-debug
+mac/vandle_bar*
+build/*
+.idea
+.idea/*
 *.root
 Datafiles/faD3WtdPky
 IS659/

@@ -31,6 +31,10 @@
 #include "CERNFloor.hh"
 #include "CERNTapeBox.hh"
 #include "CERNSupport.hh"
+#include "IS659VandleFrame.hh"
+#include "IS659AluStuff.hh"
+#include "IS659Cube.hh"
+#include "IS659Clovers.hh"
 
 #define DEFAULT_FLOOR_MATERIAL "G4_CONCRETE"
 
@@ -116,8 +120,35 @@ void nDetWorld::buildExpHall(nDetMaterials *materials){
 	physV = new G4PVPlacement(0, G4ThreeVector(0, 0, 0), logV, "expHallPhysV", 0, false, 0);
 	
 	if(expName=="isolde") BuildCERNElements();
-	G4cout << "buildExpHallEnd" << G4endl; 
+	G4cout << "buildExpHallEnd" << G4endl;
+
+    if(expName=="8HeIS659") BuildIS659setup8He();
 	return;
+}
+
+void nDetWorld::BuildIS659setup8He(){
+    //floor
+    CERNFloor* cernFloor = new CERNFloor();
+    G4RotationMatrix* floorRot = new G4RotationMatrix(0,0,0);
+    G4double floorYPos = -125*cm - 5*cm; //position is the middle of the placed object; floor has 10 cm thickness.
+    G4ThreeVector floorPosition = G4ThreeVector(0,floorYPos, 0.);
+    cernFloor->Place(floorRot, floorPosition, "cernFloor", logV);
+
+    IS659Clovers *clovers = new IS659Clovers(physV, 0, 0, 0, 0);
+    clovers->Construct();
+
+    IS659VandleFrame *vandleFrame = new IS659VandleFrame(physV, 0, 0, 0, 0);
+    vandleFrame->Construct();
+
+    IS659Cube *cube = new IS659Cube(physV, 0, 0, 0, 0);
+    cube->Construct();
+
+    IS659AluStuff *aluStuff = new IS659AluStuff(physV, 0, 0, 0, 0);
+    aluStuff->Construct();
+
+    /*IS659PolygonFrame *polyFrame = new IS659PolygonFrame(physV, 0, 0, 0, 0);
+    polyFrame->Construct()*/
+
 }
 
 void nDetWorld::BuildCERNStructures(){
@@ -128,13 +159,13 @@ void nDetWorld::BuildCERNStructures(){
    G4ThreeVector floorPosition = G4ThreeVector(floorXPos,0., 0.);
    cernFloor->Place(floorRot, floorPosition, "cernFloor", logV); 
    
-   CERNFrame* cernFrame = new CERNFrame();
+   /*CERNFrame* cernFrame = new CERNFrame();
    G4RotationMatrix* rotFrame = new G4RotationMatrix();
    rotFrame->rotateX(0*degree);
    G4double frameXPos = -22*cm;
    G4double frameZPos = 25*cm;
    G4ThreeVector framePosition = G4ThreeVector(frameXPos, 0, frameZPos);
-   cernFrame->Place(rotFrame, framePosition, "cernFrame", logV); 
+   cernFrame->Place(rotFrame, framePosition, "cernFrame", logV); */
 
    CERNTapeBox* tapeBox = new CERNTapeBox();
    G4RotationMatrix* rotTapeBox = new G4RotationMatrix();

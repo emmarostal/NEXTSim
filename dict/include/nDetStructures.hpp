@@ -121,6 +121,7 @@ class nDetEventStructure : public TObject {
 
 class nDetOutputStructure : public TObject {
   public:
+    unsigned int test;
 	unsigned int nPhotonsTot; ///< Total number of scintillation photons produced
 	unsigned int nPhotonsDet; ///< Total number of optical photons detected by both PMTs
 	unsigned int nPhotonsDetL; ///< Total number of optical photons detected by left PMTs
@@ -186,6 +187,7 @@ class nDetOutputStructure : public TObject {
 
 class nDetImplantOutputStructure : public TObject {
   public:
+    unsigned int test;
 	unsigned int nPhotonsTot; ///< Total number of scintillation photons produced
 	unsigned int nPhotonsDet; ///< Total number of optical photons detected by both PMTs
 	double lightBalance; ///< Ratio of the difference of left and right TQDC to the sum of left and right TQDC
@@ -354,6 +356,7 @@ class nDetDebugStructure : public TObject {
 
 class nDetMultiOutputStructure : public TObject {
   public:
+    std::vector<unsigned int> test;
 	std::vector<unsigned int> nPhotonsTot; ///< Total number of scintillation photons produced
 	std::vector<unsigned int> nPhotonsDet; ///< Total number of optical photons detected by both PMTs
 	std::vector<unsigned int> nPhotonsDetL; ///< Total number of optical photons detected by left PMTs
