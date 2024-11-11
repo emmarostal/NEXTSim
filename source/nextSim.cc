@@ -212,7 +212,7 @@ int main(int argc, char** argv){
 		G4String command = "/control/execute ";
 		command += inputFilename;
 		UImanager->ApplyCommand(command);
-		UImanager->ApplyCommand("/vis/open VTKQt");
+		UImanager->ApplyCommand("/vis/open OGL");
 		UImanager->ApplyCommand("/vis/drawVolume");
 		UImanager->ApplyCommand("/vis/scene/add/trajectories");
 		UImanager->ApplyCommand("/vis/viewer/set/viewpointThetaPhi 90 0");
