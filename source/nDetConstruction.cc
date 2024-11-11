@@ -24,6 +24,7 @@
 #include "termColors.hh"
 #include "optionHandler.hh" // split_str
 
+using namespace std;
 
 ///////////////////////////////////////////////////////////////////////////////
 // class nDetConstruction

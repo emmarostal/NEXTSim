@@ -65,7 +65,7 @@
 
 # Update the detector.
 #/nDet/detector/addGeometry rectangle
-/nDet/detector/buildSetupFromAusa ../../is659/setups/setup8He/setup.json
+/nDet/detector/buildSetupFromAusa ../../setup/setup.json
 /nDet/detector/update
 
 ################
