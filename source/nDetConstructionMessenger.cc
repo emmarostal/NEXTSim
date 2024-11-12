@@ -204,7 +204,7 @@ void nDetConstructionMessenger::SetNewChildValue(G4UIcommand* command, G4String 
 	else{ // Digitizer command
 		pmtResponse *prL = fDetector->GetPmtResponseL();
 		pmtResponse *prR = fDetector->GetPmtResponseR();
-		index = index - 11;
+		index = index - 12;
 		if(index == 0){
 			G4double val = command->ConvertToDouble(newValue);
 			prL->setRisetime(val);
