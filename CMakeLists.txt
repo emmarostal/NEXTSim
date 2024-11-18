@@ -52,7 +52,7 @@ endif(CMAKE_BUILD_TYPE MATCHES "Debug")
 #Install options
 #option(BUILD_SHARED "Build and install shared libraries." OFF)
 option(BUILD_TOOLS "Build and install tool programs." OFF)
-option(GEANT4_MT "Enable multi-threading support (if available)." OFF)
+option(GEANT4_MT "Enable multi-threading support (if available)." ON)
 option(GEANT4_GDML "Enable support for G4GDMLParser." ON)
 option(GEANT4_UIVIS "Build example with Geant4 UI and Vis drivers" ON)
 

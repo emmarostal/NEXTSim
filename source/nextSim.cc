@@ -108,14 +108,14 @@ int main(int argc, char** argv){
 #ifdef USE_MULTITHREAD
 	G4int numberOfThreads = 1; // Sequential mode by default.
 	if(handler.getOption(9)->active){ 
-		G4int userInput = strtol(handler.getOption(9)->argument.c_str(), NULL, 10);
+		G4int userInput = strtol(handler.getOption(10)->argument.c_str(), NULL, 11);
 		if(userInput > 0) // Set the number of threads to use.
 			numberOfThreads = std::min(userInput, G4Threading::G4GetNumberOfCores());
 		else // Use all available threads.
 			numberOfThreads = G4Threading::G4GetNumberOfCores();
 	}
 	
-	if(handler.getOption(10)->active){ // Print maximum number of threads.
+	if(handler.getOption(11)->active){ // Print maximum number of threads.
 		std::cout << PROGRAM_NAME << ": Max number of threads on this machine is " << G4Threading::G4GetNumberOfCores() << ".\n";
 		return 0;
 	}
