@@ -34,7 +34,7 @@ nDetMasterOutputFile::nDetMasterOutputFile(){
 	verbose = false;
 
 	outputEnabled = true;
-	outputTraces = false;
+	outputTraces = true;
 	outputDebug = false;
 	outputBadEvents = false;
 	singleDetectorMode = true;
@@ -144,10 +144,14 @@ bool nDetMasterOutputFile::openRootFile(const G4Run* aRun){
 	writeMessengerCommands(nDetConstruction::getInstance().GetMessenger(), dir);
 	const G4UserRunAction *runAction = NULL;
 #ifdef USE_MULTITHREAD
-	if(G4MTRunManager::GetMasterRunManager()) // Multithreaded mode.
+	if(G4MTRunManager::GetMasterRunManager()){ // Multithreaded mode.
 		runAction = G4MTRunManager::GetMasterRunManager()->GetUserRunAction();
-	else if(G4RunManager::GetRunManager()) // Sequential mode.
+		G4cout << "multithreading" << G4endl;
+	}
+	else if(G4RunManager::GetRunManager()){ // Sequential mode.
 		runAction = G4RunManager::GetRunManager()->GetUserRunAction();
+		G4cout << "Not multithreading" << G4endl;
+	}
 #else
 	if(G4RunManager::GetRunManager())
 		runAction = G4RunManager::GetRunManager()->GetUserRunAction();

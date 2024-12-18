@@ -352,6 +352,11 @@ double pmtResponse::analyzeCFD(const double &F_/*=0.5*/, const size_t &D_/*=1*/,
 
 /// Perform polynomial CFD analysis on the waveform.
 double pmtResponse::analyzePolyCFD(const double &F_){
+	for(size_t i=0; i<pulseArray.size(); i++){
+		std::cout << pulseArray[i] <<std::endl;
+	}
+	
+	
 	if(pulseLength == 0 || pulseArray.empty()) return -9999;
 	if(maximum <= 0 && findMaximum() <= 0) return -9999;
 
@@ -381,6 +386,7 @@ double pmtResponse::analyzePolyCFD(const double &F_){
 		
 		}
 	}
+	std::cout << "Phase (ticks): " << phase << " max: " << maximum + baseline << " threshold: " << threshold << " baseline: " << baseline <<std::endl;
 
 	return (phase*adcClockTick-traceDelay+tLatch);
 }
@@ -534,7 +540,9 @@ double pmtResponse::findMaximum(){
 	// Find the baseline.
 	double tempbaseline = 0.0;
 	size_t sample_size = floor(traceDelay/adcClockTick);
+	//std::cout << pulseLength << std::endl;
 	sample_size = (sample_size <= pulseLength ? 15:pulseLength);
+	//std::cout << sample_size << std::endl;
 	for(size_t i = 0; i < sample_size; i++){
 		tempbaseline += pulseArray[i];
 	}
@@ -555,6 +563,7 @@ double pmtResponse::findMaximum(){
 		maximum = calculateP3(maxIndex-2, &pulseArray[maxIndex-2], cfdPar, maximumTime) - baseline;
 	else // Favor the right side of the pulse.
 		maximum = calculateP3(maxIndex-1, &pulseArray[maxIndex-1], cfdPar, maximumTime) - baseline;
+	//maximumTime = maximumTime*adcClockTick; //Convert to ns
 
 	return maximum;
 }

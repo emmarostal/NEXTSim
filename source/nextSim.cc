@@ -107,8 +107,8 @@ int main(int argc, char** argv){
 
 #ifdef USE_MULTITHREAD
 	G4int numberOfThreads = 1; // Sequential mode by default.
-	if(handler.getOption(9)->active){ 
-		G4int userInput = strtol(handler.getOption(10)->argument.c_str(), NULL, 11);
+	if(handler.getOption(10)->active){ 
+		G4int userInput = strtol(handler.getOption(10)->argument.c_str(), NULL, 10);
 		if(userInput > 0) // Set the number of threads to use.
 			numberOfThreads = std::min(userInput, G4Threading::G4GetNumberOfCores());
 		else // Use all available threads.
@@ -143,12 +143,12 @@ int main(int argc, char** argv){
 	// Construct the default run manager
 #ifdef USE_MULTITHREAD
 	G4RunManager* runManager;
-	if(batchMode && numberOfThreads > 1){
-		runManager = new G4MTRunManager();
-		((G4MTRunManager*)runManager)->SetNumberOfThreads(numberOfThreads);
-		std::cout << PROGRAM_NAME << ": Multi-threading mode enabled.\n";
-		std::cout << PROGRAM_NAME << ": Set number of threads to " << ((G4MTRunManager*)runManager)->GetNumberOfThreads() << std::endl;
-	}
+	if (batchMode && numberOfThreads > 1) {
+    	runManager = new G4MTRunManager();
+    	runManager->SetNumberOfThreads(numberOfThreads);
+    	std::cout << PROGRAM_NAME << ": Multi-threading mode enabled.\n";
+    	std::cout << PROGRAM_NAME << ": Set number of threads to " << runManager->GetNumberOfThreads() << std::endl;
+}
 	else{
 		runManager = new G4RunManager();
 		std::cout << PROGRAM_NAME << ": Using sequential mode.\n";

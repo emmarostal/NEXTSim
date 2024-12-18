@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
     std::string search_word = argv[1];
 
     // Open the file
-    std::ifstream infile("errors.txt");
+    std::ifstream infile("multithread_errors.txt");
     if (!infile.is_open()) {
         std::cerr << "Error: Unable to open the file!" << std::endl;
         return 1;

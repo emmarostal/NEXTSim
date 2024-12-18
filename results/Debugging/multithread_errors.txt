@@ -1,0 +1,1009 @@
+G4WT11 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-2.553727137745088,-336.0092,-679.1355343864211)
+     in direction: (-0.003370295204056959,-0.4434499592932062,-0.8962927951920016)
+    (local position: (-2.553727137745088,-336.0092,-679.1355343864211))
+    (local direction: (-0.003370295204056959,-0.4434499592932062,-0.8962927951920016)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 466397, TIME=2692.2 s, REMAINING=193.968 s, RATE=173.24 evt/s (78430.2 phot/s & 7201.16 det/s)
+G4WT7 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-9.753556448075551,51.49842025221233,-117.095)
+     in direction: (-0.07602710047474195,0.401420301573991,-0.9127330505014319)
+    (local position: (-9.753556448075551,51.49842025221233,-117.095))
+    (local direction: (-0.07602710047474195,0.401420301573991,-0.9127330505014319)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 471205, TIME=2702.2 s, REMAINING=165.13 s, RATE=174.378 evt/s (78435.6 phot/s & 7200.6 det/s)
+G4WT14 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,19.14067510791961,-23.20552382885651)
+     in direction: (0.9613277942896268,0.1752430052915458,-0.2124588454798443)
+    (local position: (104.9997,19.14067510791961,-23.20552382885651))
+    (local direction: (0.9613277942896268,0.1752430052915458,-0.2124588454798443)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (12.55004609826336,-51.89044297270028,-487.4940000000001)
+     in direction: (0.02559100311021222,-0.1058106462006078,-0.9940569438972915)
+    (local position: (12.55004609826336,-51.89044297270028,-487.4940000000001))
+    (local direction: (0.02559100311021222,-0.1058106462006078,-0.9940569438972915)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT5 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,19.545687240496,-22.33972862877569)
+     in direction: (0.7732474416876667,0.4732313277993054,-0.4220669429282338)
+    (local position: (104.9997,19.545687240496,-22.33972862877569))
+    (local direction: (0.7732474416876667,0.4732313277993054,-0.4220669429282338)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT9 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-2.341622368393623,51.4010269264274,-117.095)
+     in direction: (-0.01830801665015914,0.4018798545428491,-0.9155093658936296)
+    (local position: (-2.341622368393623,51.4010269264274,-117.095))
+    (local direction: (-0.01830801665015914,0.4018798545428491,-0.9155093658936296)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 472588, TIME=2712.23 s, REMAINING=157.32 s, RATE=174.244 evt/s (78430.1 phot/s & 7198.98 det/s)
+G4WT13 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,19.5022964237351,-21.30206454730422)
+     in direction: (0.9277520931420494,0.305408989451225,-0.2144793762414633)
+    (local position: (104.9997,19.5022964237351,-21.30206454730422))
+    (local direction: (0.9277520931420494,0.305408989451225,-0.2144793762414633)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (-12.29950000000002,-759.0347389257171,15.49144713870219)
+     in direction: (-0.9904420717164473,-0.103691047568681,0.09095421501030887)
+    (local position: (-12.29950000000002,-759.0347389257171,15.49144713870219))
+    (local direction: (-0.9904420717164473,-0.103691047568681,0.09095421501030887)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT15 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-47.55683833309671,-23.99139476785633,-285.4930000000002)
+     in direction: (-0.359160032203199,0.3645231306264891,-0.859143153674672)
+    (local position: (-47.55683833309671,-23.99139476785633,-285.4930000000002))
+    (local direction: (-0.359160032203199,0.3645231306264891,-0.859143153674672)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 471496, TIME=2722.23 s, REMAINING=164.571 s, RATE=173.202 evt/s (78413.8 phot/s & 7199.1 det/s)
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (48.59050741340598,21.62392831784476,-285.4950000000001)
+     in direction: (-0.04065341883210466,0.2762184830221368,-0.9602346844257452)
+    (local position: (48.59050741340598,21.62392831784476,-285.4950000000001))
+    (local direction: (-0.04065341883210466,0.2762184830221368,-0.9602346844257452)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659Cube/ladderAndEars'
+   - at position : (-133.3311128268647,20.13896787170044,-1.016000000000076)
+     in direction: (0.1856979677178446,0.6744146457302626,0.71461958440137)
+    (local position: (-133.3311128268647,20.13896787170044,-1.016000000000076))
+    (local direction: (0.1856979677178446,0.6744146457302626,0.71461958440137)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT0 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (52.92021945600376,5.569417543273721,-285.4950000000001)
+     in direction: (0.03716792791803147,-0.8415277016578389,-0.5389338294046453)
+    (local position: (52.92021945600376,5.569417543273721,-285.4950000000001))
+    (local direction: (0.03716792791803147,-0.8415277016578389,-0.5389338294046453)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT10 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (16.3195901542186,49.48645886546632,-285.4950000000001)
+     in direction: (0.0562334642455693,0.1705186826969234,-0.9837485330867072)
+    (local position: (16.3195901542186,49.48645886546632,-285.4950000000001))
+    (local direction: (0.0562334642455693,0.1705186826969234,-0.9837485330867072)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 475792, TIME=2732.24 s, REMAINING=139.015 s, RATE=174.14 evt/s (78406.6 phot/s & 7198.84 det/s)
+G4WT14 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-5.673507095698275,-53.10927879389254,-487.4930000000002)
+     in direction: (-0.01156890000527927,-0.1082956142215632,-0.9940514174292204)
+    (local position: (-5.673507095698275,-53.10927879389254,-487.4930000000002))
+    (local direction: (-0.01156890000527927,-0.1082956142215632,-0.9940514174292204)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT0 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: 'expHallPhysV'
+   - at position : (-4.508220642693404,56.02572747557651,-117.095)
+     in direction: (-0.03470898320796483,0.4313444678701471,-0.9015194044070759)
+    (local position: (-4.508220642693404,56.02572747557651,-117.095))
+    (local direction: (-0.03470898320796483,0.4313444678701471,-0.9015194044070759)).
+  Previous phys volume: '/IS659PolygonFrame/feedthrough'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT13 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,-20.41800687846977,-22.84199227797198)
+     in direction: (0.5531648586563891,0.8284489266092774,-0.08764140087648911)
+    (local position: (104.9997,-20.41800687846977,-22.84199227797198))
+    (local direction: (0.5531648586563891,0.8284489266092774,-0.08764140087648911)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-12.12476363319699,-52.2086692161494,-487.4930000000002)
+     in direction: (-0.08320850014663389,-0.327780630303012,-0.9410824639220029)
+    (local position: (-12.12476363319699,-52.2086692161494,-487.4930000000002))
+    (local direction: (-0.08320850014663389,-0.327780630303012,-0.9410824639220029)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 477645, TIME=2742.25 s, REMAINING=128.344 s, RATE=174.18 evt/s (78399.8 phot/s & 7198.7 det/s)
+G4WT6 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (21.37883265613702,-627.5101,-22.35441335658975)
+     in direction: (-0.09420941942355601,-0.9897730094324666,-0.107116642455198)
+    (local position: (21.37883265613702,-627.5101,-22.35441335658975))
+    (local direction: (-0.09420941942355601,-0.9897730094324666,-0.107116642455198)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 474828, TIME=2752.25 s, REMAINING=145.905 s, RATE=172.523 evt/s (78387.9 phot/s & 7196.46 det/s)
+G4WT3 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,-17.40982702001758,-21.86572574559183)
+     in direction: (0.9663488352436497,-0.1602287060114211,-0.20123789502265)
+    (local position: (104.9997,-17.40982702001758,-21.86572574559183))
+    (local direction: (0.9663488352436497,-0.1602287060114211,-0.20123789502265)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT13 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-2.71413638899924,52.67847304590583,-117.095)
+     in direction: (-0.6885585559418197,-0.2262425746685973,-0.6889857853734285)
+    (local position: (-2.71413638899924,52.67847304590583,-117.095))
+    (local direction: (-0.6885585559418197,-0.2262425746685973,-0.6889857853734285)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT4 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (52.23250579613482,2.168848159065294,-285.4950000000001)
+     in direction: (-0.3599016380342011,0.5338857463142367,-0.7651384324570224)
+    (local position: (52.23250579613482,2.168848159065294,-285.4950000000001))
+    (local direction: (-0.3599016380342011,0.5338857463142367,-0.7651384324570224)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT12 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-6.983788223577113,48.99130094583586,-117.095)
+     in direction: (-0.05493741679086152,0.3853861876999103,-0.9211185409959332)
+    (local position: (-6.983788223577113,48.99130094583586,-117.095))
+    (local direction: (-0.05493741679086152,0.3853861876999103,-0.9211185409959332)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,19.53360237161977,-23.71251304688226)
+     in direction: (0.9597609632223696,0.1785489770674445,-0.2167467560602432)
+    (local position: (104.9997,19.53360237161977,-23.71251304688226))
+    (local direction: (0.9597609632223696,0.1785489770674445,-0.2167467560602432)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 481732, TIME=2762.25 s, REMAINING=104.749 s, RATE=174.398 evt/s (78384.8 phot/s & 7197.2 det/s)
+G4WT10 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-43.4569092174742,-28.685120832317,-285.4930000000002)
+     in direction: (-0.4417260853253036,-0.5326708605564224,-0.7219001453506316)
+    (local position: (-43.4569092174742,-28.685120832317,-285.4930000000002))
+    (local direction: (-0.4417260853253036,-0.5326708605564224,-0.7219001453506316)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT12 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-45.57702208162522,-25.22125044945923,-285.4930000000002)
+     in direction: (0.2344566757788107,0.6504735321657413,-0.7224363301596712)
+    (local position: (-45.57702208162522,-25.22125044945923,-285.4930000000002))
+    (local direction: (0.2344566757788107,0.6504735321657413,-0.7224363301596712)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT0 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (32.16936200888989,42.70291335365734,-505.4950000000001)
+     in direction: (0.0632863391229971,0.08400884839720134,-0.9944532933584086)
+    (local position: (32.16936200888989,42.70291335365734,-505.4950000000001))
+    (local direction: (0.0632863391229971,0.08400884839720134,-0.9944532933584086)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT12 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-3.62140017641848,57.22293927016675,-117.095)
+     in direction: (-0.02777583681458734,0.438895163690831,-0.8981088676647436)
+    (local position: (-3.62140017641848,57.22293927016675,-117.095))
+    (local direction: (-0.02777583681458734,0.438895163690831,-0.8981088676647436)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT12 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-8.402422188106494,48.93632615150077,-117.095)
+     in direction: (0.5508770816120818,0.4901645569104339,-0.6754799390828371)
+    (local position: (-8.402422188106494,48.93632615150077,-117.095))
+    (local direction: (0.5508770816120818,0.4901645569104339,-0.6754799390828371)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 482907, TIME=2772.28 s, REMAINING=98.1276 s, RATE=174.192 evt/s (78359.2 phot/s & 7196.63 det/s)
+G4WT12 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (105.0003,24.1935734608775,24.01652490290172)
+     in direction: (0.9511276995653253,0.2191534488007094,0.2175496839766198)
+    (local position: (105.0003,24.1935734608775,24.01652490290172))
+    (local direction: (0.9511276995653253,0.2191534488007094,0.2175496839766198)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 485814, TIME=2782.28 s, REMAINING=81.2439 s, RATE=174.61 evt/s (78355.8 phot/s & 7197.13 det/s)
+G4WT0 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-27.25273814650238,-44.61514436656135,-487.4930000000002)
+     in direction: (-0.05558512491927865,-0.09099776908931403,-0.9942985969559024)
+    (local position: (-27.25273814650238,-44.61514436656135,-487.4930000000002))
+    (local direction: (-0.05558512491927865,-0.09099776908931403,-0.9942985969559024)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT11 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (97.58253584419816,-1191.51,245.5190556298721)
+     in direction: (0.4538458621336436,0.7292257425823557,0.5121071663034809)
+    (local position: (97.58253584419816,-1191.51,245.5190556298721))
+    (local direction: (0.4538458621336436,0.7292257425823557,0.5121071663034809)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT6 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,19.22736450462423,-23.31394458878339)
+     in direction: (0.9812134217638689,-0.0846655112340971,0.1733550465314141)
+    (local position: (104.9997,19.22736450462423,-23.31394458878339))
+    (local direction: (0.9812134217638689,-0.0846655112340971,0.1733550465314141)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 487600, TIME=2792.28 s, REMAINING=71.0096 s, RATE=174.624 evt/s (78359.4 phot/s & 7199.47 det/s)
+G4WT8 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-47.27595174375614,22.66727747463692,-487.4940000000001)
+     in direction: (0.05618767221861004,-0.289585293458781,0.9555015977501271)
+    (local position: (-47.27595174375614,22.66727747463692,-487.4940000000001))
+    (local direction: (0.05618767221861004,-0.289585293458781,0.9555015977501271)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT8 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-35.39740962246963,-38.55346668916784,-285.4930000000002)
+     in direction: (0.05618767221861004,-0.289585293458781,0.9555015977501271)
+    (local position: (-35.39740962246963,-38.55346668916784,-285.4930000000002))
+    (local direction: (0.05618767221861004,-0.289585293458781,0.9555015977501271)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-48.14832171061639,-23.69732474502824,-285.4930000000002)
+     in direction: (-0.1090271260319606,-0.2773850020759749,-0.9545525896526197)
+    (local position: (-48.14832171061639,-23.69732474502824,-285.4930000000002))
+    (local direction: (-0.1090271260319606,-0.2773850020759749,-0.9545525896526197)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT13 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659Cube/ladderAndEars'
+   - at position : (-131.7847555514057,-16.02651694694184,-1.015000000000101)
+     in direction: (-0.5914007849793687,0.2396363003430252,0.7699477612693564)
+    (local position: (-131.7847555514057,-16.02651694694184,-1.015000000000101))
+    (local direction: (-0.5914007849793687,0.2396363003430252,0.7699477612693564)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 489641, TIME=2802.29 s, REMAINING=59.2861 s, RATE=174.729 evt/s (78367.9 phot/s & 7197.88 det/s)
+G4WT7 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: 'expHallPhysV'
+   - at position : (-48.99250000000001,-850.2117727495329,236.6141547307771)
+     in direction: (-0.9339765139413939,0.1833429632392773,-0.3067135948022554)
+    (local position: (-48.99250000000001,-850.2117727495329,236.6141547307771))
+    (local direction: (-0.9339765139413939,0.1833429632392773,-0.3067135948022554)).
+  Previous phys volume: '/IS659PolygonFrame/tape'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (-124.3907783125529,-986.3210072496199,385.923)
+     in direction: (-0.2414383020370153,0.7342010318663494,0.6345521185181486)
+    (local position: (-124.3907783125529,-986.3210072496199,385.923))
+    (local direction: (-0.2414383020370153,0.7342010318663494,0.6345521185181486)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT2 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (-132.2668419270553,-962.3703168081088,406.6229999999998)
+     in direction: (-0.2414383020370153,0.7342010318663494,0.6345521185181486)
+    (local position: (-132.2668419270553,-962.3703168081088,406.6229999999998))
+    (local direction: (-0.2414383020370153,0.7342010318663494,0.6345521185181486)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 490588, TIME=2812.29 s, REMAINING=53.9543 s, RATE=174.444 evt/s (78366.1 phot/s & 7199.28 det/s)
+Event ID: 492646, TIME=2822.31 s, REMAINING=42.1302 s, RATE=174.554 evt/s (78359.3 phot/s & 7198.86 det/s)
+G4WT1 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,-15.81469337025535,-22.62075436884361)
+     in direction: (0.09924184858332019,0.8276969465932251,-0.5523303541269635)
+    (local position: (104.9997,-15.81469337025535,-22.62075436884361))
+    (local direction: (0.09924184858332019,0.8276969465932251,-0.5523303541269635)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT11 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (44.01179999999999,-1032.143566056535,373.5442876166686)
+     in direction: (-0.308653305563033,-0.01221927965001474,-0.9510961182603196)
+    (local position: (44.01179999999999,-1032.143566056535,373.5442876166686))
+    (local direction: (-0.308653305563033,-0.01221927965001474,-0.9510961182603196)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT15 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (38.12001424860558,-36.64584084505525,-285.4940000000001)
+     in direction: (0.08201722413369963,0.9270078003028004,0.365964087204149)
+    (local position: (38.12001424860558,-36.64584084505525,-285.4940000000001))
+    (local direction: (0.08201722413369963,0.9270078003028004,0.365964087204149)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 493698, TIME=2832.31 s, REMAINING=36.1542 s, RATE=174.309 evt/s (78366.2 phot/s & 7200.68 det/s)
+G4WT0 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (24.46550506507948,46.37216899430082,-285.4950000000001)
+     in direction: (-0.08429146407136447,0.4498391930810951,-0.8891229664410064)
+    (local position: (24.46550506507948,46.37216899430082,-285.4950000000001))
+    (local direction: (-0.08429146407136447,0.4498391930810951,-0.8891229664410064)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT4 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,-21.33978499044022,-23.44688896411114)
+     in direction: (0.5838005472336824,0.7903109335620663,0.1859719047111915)
+    (local position: (104.9997,-21.33978499044022,-23.44688896411114))
+    (local direction: (0.5838005472336824,0.7903109335620663,0.1859719047111915)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 496679, TIME=2842.32 s, REMAINING=19.0049 s, RATE=174.744 evt/s (78343.6 phot/s & 7199.97 det/s)
+G4WT14 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: 'expHallPhysV'
+   - at position : (-4.548328295717744,56.41227821785221,-117.095)
+     in direction: (-0.03497237738789289,0.4337574939352989,-0.9003506923831447)
+    (local position: (-4.548328295717744,56.41227821785221,-117.095))
+    (local direction: (-0.03497237738789289,0.4337574939352989,-0.9003506923831447)).
+  Previous phys volume: '/IS659PolygonFrame/feedthrough'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT4 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (20.22672903477473,49.61818961318779,-285.4950000000001)
+     in direction: (-0.1336749767324238,-0.02985386176648119,-0.9905754628160407)
+    (local position: (20.22672903477473,49.61818961318779,-285.4950000000001))
+    (local direction: (-0.1336749767324238,-0.02985386176648119,-0.9905754628160407)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT14 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (-51.66849606560616,-8.02411752329072,-487.4930000000002)
+     in direction: (0.3463279169980569,0.6870712215282169,0.6387410355187073)
+    (local position: (-51.66849606560616,-8.02411752329072,-487.4930000000002))
+    (local direction: (0.3463279169980569,0.6870712215282169,0.6387410355187073)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT7 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/beamline'
+   - at position : (51.90743016248895,14.40774708754911,-285.4950000000001)
+     in direction: (0.17866283699177,0.04959076111576868,-0.9826598328465507)
+    (local position: (51.90743016248895,14.40774708754911,-285.4950000000001))
+    (local direction: (0.17866283699177,0.04959076111576868,-0.9826598328465507)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 498664, TIME=2852.32 s, REMAINING=7.64182 s, RATE=174.827 evt/s (78321.6 phot/s & 7198.93 det/s)
+G4WT1 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,-18.78440584954109,-22.35539721741281)
+     in direction: (0.9634397016699232,-0.1723589911945332,-0.2051251310799633)
+    (local position: (104.9997,-18.78440584954109,-22.35539721741281))
+    (local direction: (0.9634397016699232,-0.1723589911945332,-0.2051251310799633)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Event ID: 497688, TIME=2862.33 s, REMAINING=13.2969 s, RATE=173.875 evt/s (78347.9 phot/s & 7202.17 det/s)
+G4WT15 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/feedthrough'
+   - at position : (-10.17429013418252,53.70438093878291,-117.095)
+     in direction: (-0.07873357677107828,0.4155904681134431,-0.9061377305366343)
+    (local position: (-10.17429013418252,53.70438093878291,-117.095))
+    (local direction: (-0.07873357677107828,0.4155904681134431,-0.9061377305366343)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT4 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/chamber'
+   - at position : (104.9997,17.75720860947419,-21.36535100589693)
+     in direction: (0.8695696679502145,-0.3405344342831362,0.3576099714051861)
+    (local position: (104.9997,17.75720860947419,-21.36535100589693))
+    (local direction: (0.8695696679502145,-0.3405344342831362,0.3576099714051861)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4WT9 > 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomNav1002
+      issued by : G4Navigator::ComputeStep()
+Stuck Track: potential geometry or navigation problem.
+  Track stuck, not moving for 10 steps.
+  Current  phys volume: '/IS659PolygonFrame/tape'
+   - at position : (-123.0467545993749,-1024.435358072895,385.923)
+     in direction: (0.7664311450273712,0.4121924567369218,0.4926263071956405)
+    (local position: (-123.0467545993749,-1024.435358072895,385.923))
+    (local direction: (0.7664311450273712,0.4121924567369218,0.4926263071956405)).
+  Previous phys volume: 'expHallPhysV'
+
+  Likely geometry overlap - else navigation problem !
+   *** Trying to get *unstuck* using a push - expanding step to 1e-07 (mm) ...       Potential overlap in geometry !
+
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+number of event = 500000 User=45156.400000s Real=2941.447794s Sys=7.170000s [Cpu=1535.4%]
+Graphics systems deleted.
+Visualization Manager deleting...

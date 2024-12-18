@@ -7,6 +7,6 @@
 #ifndef NDET_VERSION_HH
 #define NDET_VERSION_HH
 
-#define VERSION_STRING "cab980a-jeppes_repo (2024-11-12)"
+#define VERSION_STRING "dd7909f-jeppes_repo (2024-11-18)"
 
 #endif

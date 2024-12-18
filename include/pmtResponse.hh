@@ -134,7 +134,7 @@ public:
 	  */
 	double getBaseline() const { return baseline; }
 
-	/** Get the pulse phase at the maximum (in ns)
+	/** Get the pulse phase at the maximum (in ns) (actually ADC bins)
 	  */
 	double getMaximumTime() const { return maximumTime; }
 

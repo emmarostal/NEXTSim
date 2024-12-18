@@ -631,13 +631,16 @@ bool nDetRunAction::processImplant(nDetImplant* imp){
 }
 
 bool nDetRunAction::processStartDetector(nDetDetector* det, double &startTime){
-	if(!processDetector(det)) // No detected photons, do not process
-		return false;
-		
+	if(!processDetector(det)){ // No detected photons, do not process
+		//std::cout << "no Detected Photons" << evtData.eventID <<std::endl;
+		return false;}
+	else{
 	// Return the time-of-flight from the start detector
 	startTime = outData.barTOF;
+
+
 		
-	return true;
+	return true;}
 }
 
 bool nDetRunAction::processStartImplant(nDetImplant* imp, double &startTime){
@@ -665,6 +668,8 @@ void nDetRunAction::process(){
 	short detID = 0;
 	double startTime;
 	if(processStartDetector(startDetector, startTime)){ // Check for valid start signal
+	//std::cout << "startDet" << std::endl;
+			
 			for(std::vector<nDetDetector>::iterator iter = userDetectors.begin(); iter != userDetectors.end(); iter++){
 				// Skip the start detector because we already processed it
 				if(&(*iter) != startDetector && !processDetector(&(*iter))){ // Skip events with no detected photons
@@ -675,12 +680,14 @@ void nDetRunAction::process(){
 				// Update the time-of-flight of the event
 				outData.barTOF = outData.barTOF - startTime;
 				
+				
 				// Push data onto the output branch for multiple detectors
 				if(userDetectors.size() > 1)
 					multData.Append(outData, detID++);
 			}
 		}
 	else if(endImplant){ // Un-triggered mode (default)
+	//std::cout << "endImplant" << std::endl;
 		for(std::vector<nDetImplant>::iterator iter = userImplants.begin(); iter != userImplants.end(); iter++){
 			if(!processImplant(&(*iter))){ // Skip the start detector because we already processed it
 				detID++;
@@ -693,6 +700,7 @@ void nDetRunAction::process(){
 		}
 	}
 	else if(endDetector){ // Un-triggered mode (default)
+	//std::cout << "endDetector" << std::endl;
 		for(std::vector<nDetDetector>::iterator iter = userDetectors.begin(); iter != userDetectors.end(); iter++){
 			if(!processDetector(&(*iter))){ // Skip the start detector because we already processed it
 				detID++;
@@ -706,6 +714,7 @@ void nDetRunAction::process(){
 	}
 	
 	else{ // Start triggered mode
+	//std::cout << "Triggered" << std::endl;
 		if(processStartImplant(startImplant, startTime)){ // Check for valid start signal
 			for(std::vector<nDetImplant>::iterator iter = userImplants.begin(); iter != userImplants.end(); iter++){
 				// Skip the start detector because we already processed it

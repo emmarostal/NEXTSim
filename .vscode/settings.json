@@ -76,6 +76,10 @@
         "vec4": "cpp",
         "obj_list": "cpp",
         "bmf": "cpp",
-        "group": "cpp"
+        "group": "cpp",
+        "allocator": "cpp",
+        "forward_list": "cpp",
+        "unordered_set": "cpp",
+        "span": "cpp"
     }
 }

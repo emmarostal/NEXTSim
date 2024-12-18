@@ -1,7 +1,0 @@
-Første run: 1 MeV 500.000 neutroner. Stuck/events ca 0.15% 
-
-Andet run: Samme - mutithreading: 
-Event ID: 499767, TIME=3120.1 s, REMAINING=1.45465 s, RATE=160.176 evt/s (72304.4 phot/s & 6593.37 det/s)
-number of event = 500000 User=3120.440000s Real=3122.079965s Sys=0.560000s [Cpu=100.0%]
-
-Tredje run: Uniform 500.000 neutroner

@@ -1,0 +1,21 @@
+Første run: 1 MeV 500.000 neutroner. Stuck/events ca 0.15% 
+
+Andet run: Uden multithreading, med setup: 
+Event ID: 499767, TIME=3120.1 s, REMAINING=1.45465 s, RATE=160.176 evt/s (72304.4 phot/s & 6593.37 det/s)
+number of event = 500000 User=3120.440000s Real=3122.079965s Sys=0.560000s [Cpu=100.0%]
+
+Tredje run: med multithreading (16 threads, med setup): Stuck/events ca 0.17% 
+Event ID: 497688, TIME=2862.33 s, REMAINING=13.2969 s, RATE=173.875 evt/s (78347.9 phot/s & 7202.17 det/s) 
+number of event = 500000 User=45156.400000s Real=2941.447794s Sys=7.170000s [Cpu=1535.4%]
+
+Fjerde run: multithreading (12 threads, uden setup): 
+Event ID: 498836, TIME=2281.98 s, REMAINING=5.32485 s, RATE=218.598 evt/s (75804.6 phot/s & 7074.94 det/s)
+number of event = 500000 User=30290.520000s Real=2341.692162s Sys=6.310000s [Cpu=1293.8%]
+
+Femte run: multithreading (12 threads, med setup):
+Event ID: 499746, TIME=3002.54 s, REMAINING=1.52607 s, RATE=166.441 evt/s (75177.1 phot/s & 6902.31 det/s)
+number of event = 500000 User=39590.110000s Real=3057.917260s Sys=7.280000s [Cpu=1294.9%]
+
+Sjette run: multithreading (16 threads, uden setup):
+Event ID: 499756, TIME=2131.22 s, REMAINING=1.04054 s, RATE=234.493 evt/s (81957.8 phot/s & 7608.75 det/s)
+number of event = 500000 User=33823.640000s Real=2202.858324s Sys=4.490000s [Cpu=1535.6%]

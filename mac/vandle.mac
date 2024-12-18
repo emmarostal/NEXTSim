@@ -10,18 +10,22 @@
 /nDet/output/filename vandle_barTOFtest.root
 /nDet/output/title medium VANDLE bar with 1 MeV iso neutron pencil beam at 1 m (wrapped with mylar)
 /nDet/output/debug true
+/nDet/output/trace/params false
+/nDet/output/trace/print false
 
 # Setup information about the PMT response
-/nDet/output/trace/setRisetime 2
-/nDet/output/trace/setFalltime 20
-/nDet/output/trace/setTimeSpread 0.35
-/nDet/output/trace/setGain 0.5E3
-/nDet/output/trace/setBaseline 7.5
+/nDet/output/trace/setRisetime 4.0
+/nDet/output/trace/setFalltime 10
+/nDet/output/trace/setTimeSpread 13.4 #2.355*sigma*4 for dt distribution (FWHM)
+/nDet/output/trace/setGain 300
+/nDet/output/trace/setBaseline 9.9
 /nDet/output/trace/setJitter 0.15
+/nDet/output/trace/setFunction 0 #Bør sættes eksplicit (1=VANDLE), ellers benyttes 0=expo.
+
 
 # Setup the PMT light pulse output
-/nDet/output/trace/setTraceDelay 60
-/nDet/output/trace/setTraceLength 500
+/nDet/output/trace/setTraceDelay 344
+/nDet/output/trace/setTraceLength 496
 /nDet/output/trace/setBitRange 16
 
 /nDet/output/trace/setCfdFraction 0.5
@@ -60,8 +64,8 @@
 /nDet/detector/setPmtRows 1
 
 # Set the position and rotation of the detector in the lab frame.
-/nDet/detector/setPosition 100 0 0 cm
-/nDet/detector/setRotation 0 0 0
+#/nDet/detector/setPosition 100 0 0 cm
+#/nDet/detector/setRotation 0 0 0
 
 # Update the detector.
 #/nDet/detector/addGeometry rectangle
@@ -75,13 +79,13 @@
 # Available source types: 137Cs 60Co 133Ba 241Am 90Sr 252Cf
 #/nDet/source/type 252Cf
 
-/nDet/source/type neutron 1.00
-#/nDet/source/type 60Co
+#/nDet/source/type neutron 1
+/nDet/source/type 49K
 #/nDet/source/type gamma 0.03
 
 #/nDet/source/spot 0
 #/nDet/source/spot 0
-
+#/nDet/source/setUniformEnergy 2.1 2.2 
 # Set isotropic source (0=off, 1=psuedo, 2=realistic)
 /nDet/source/iso 2
 
@@ -89,5 +93,4 @@
 # RUN CONTROL #
 ###############
 
-#/run/beamOn 500000
-
+/run/beamOn 1000000

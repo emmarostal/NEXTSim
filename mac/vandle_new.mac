@@ -1,0 +1,102 @@
+# vandle.mac
+# Cory R Thornsberry
+# Simulates a small, medium, or large VANDLE bar with a 1 MeV beam of neutrons
+
+################
+# OUTPUT SETUP #
+################
+
+# Set the output filename prefix
+/nDet/output/filename vandle_barTOFtest.root
+/nDet/output/title medium VANDLE bar with 1 MeV iso neutron pencil beam at 1 m (wrapped with mylar)
+/nDet/output/debug true
+/nDet/output/trace/params true
+/nDet/output/trace/print true
+/nDet/output/recordTrace false
+
+# Setup information about the PMT response
+/nDet/output/trace/setRisetime 1.48
+/nDet/output/trace/setFalltime 1.08
+/nDet/output/trace/setTimeSpread 10.8 #2.355*sigma*4 for dt distribution (FWHM)
+/nDet/output/trace/setGain 20
+/nDet/output/trace/setBaseline 9.9
+/nDet/output/trace/setJitter 0.15
+/nDet/output/trace/setFunction 1 #Bør sættes eksplicit (1=VANDLE), ellers benyttes 0=expo.
+
+
+# Setup the PMT light pulse output
+#/nDet/output/trace/setTraceDelay 160
+/nDet/output/trace/setTraceDelay 400
+#/nDet/output/trace/setTraceDelay 60
+#/nDet/output/trace/setTraceLength 800
+/nDet/output/trace/setTraceLength 496
+
+/nDet/output/trace/setBitRange 16
+
+/nDet/output/trace/setCfdFraction 0.5
+/nDet/output/trace/setIntegralLow 5
+/nDet/output/trace/setIntegralHigh 10
+
+##################
+# DETECTOR SETUP #
+##################
+
+# Mylar and optical grease thickness.
+/nDet/detector/setMylarThickness 0.025
+/nDet/detector/setGreaseThickness 1
+/nDet/detector/setWrapping mylar
+/nDet/detector/setWindowThickness 1.0
+
+# Small VANDLE (3x3x60 cm^3)
+#/nDet/detector/setDetectorLength 60.0
+#/nDet/detector/setDetectorWidth 3.0
+#/nDet/detector/setDetectorThickness 30.0
+#/nDet/detector/setPmtDimensions 30.0
+
+# Medium VANDLE (5x3x120 cm^3)
+/nDet/detector/setDetectorLength 120.0
+/nDet/detector/setDetectorWidth 3.0
+/nDet/detector/setDetectorThickness 50.0
+/nDet/detector/setPmtDimensions 30.0
+
+# Large VANDLE (5x5x200 cm^3)
+#/nDet/detector/setDetectorLength 200.0
+#/nDet/detector/setDetectorWidth 5.0
+#/nDet/detector/setDetectorThickness 50.0
+#/nDet/detector/setPmtDimensions 50.0
+
+/nDet/detector/setPmtColumns 1
+/nDet/detector/setPmtRows 1
+
+# Set the position and rotation of the detector in the lab frame.
+/nDet/detector/setPosition 100 0 0 cm
+/nDet/detector/setRotation 0 0 0
+
+# Update the detector.
+/nDet/detector/addGeometry rectangle
+#/nDet/detector/buildSetupFromAusa ../../setup/setup.json
+#/nDet/detector/addArray rectangle 100 0 180 20
+/nDet/detector/update
+
+################
+# SOURCE SETUP #
+################
+
+# Available source types: 137Cs 60Co 133Ba 241Am 90Sr 252Cf
+#/nDet/source/type 252Cf
+
+/nDet/source/type neutron 
+#/nDet/source/type 49K
+#/nDet/source/type gamma 0.03
+
+#/nDet/source/spot 0
+#/nDet/source/spot 0
+/nDet/source/setUniformEnergy 1.2 1.3 
+# Set isotropic source (0=off, 1=psuedo, 2=realistic)
+/nDet/source/iso 2
+
+###############
+# RUN CONTROL #
+###############
+
+/run/beamOn 1000
