@@ -18,8 +18,8 @@
 #include "termColors.hh"
 
 
-const double KINETIC_ENERGY_THRESHOLD = 0.03; // MeV
-//const double KINETIC_ENERGY_THRESHOLD = 0.001; // MeV
+//const double KINETIC_ENERGY_THRESHOLD = 0.03; // MeV
+const double KINETIC_ENERGY_THRESHOLD = 0.001; // MeV
 std::default_random_engine generator;
 std::normal_distribution<double> distribution(6.551,0.7);
 

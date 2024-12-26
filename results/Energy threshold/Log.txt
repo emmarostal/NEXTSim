@@ -1,0 +1,4 @@
+Testing the impact of adjusting the energy threshold parameter.
+Is there a benefit to selecting 30keV or 1keV?
+
+First test: Uniform energy distribution from 1keV to 5MeV with each threshold.

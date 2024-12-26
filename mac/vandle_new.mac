@@ -10,8 +10,8 @@
 /nDet/output/filename vandle_barTOFtest.root
 /nDet/output/title medium VANDLE bar with 1 MeV iso neutron pencil beam at 1 m (wrapped with mylar)
 /nDet/output/debug true
-/nDet/output/trace/params true
-/nDet/output/trace/print true
+/nDet/output/trace/params false
+/nDet/output/trace/print false
 /nDet/output/recordTrace false
 
 # Setup information about the PMT response
@@ -25,8 +25,8 @@
 
 
 # Setup the PMT light pulse output
-#/nDet/output/trace/setTraceDelay 160
-/nDet/output/trace/setTraceDelay 400
+/nDet/output/trace/setTraceDelay 120
+#/nDet/output/trace/setTraceDelay 400
 #/nDet/output/trace/setTraceDelay 60
 #/nDet/output/trace/setTraceLength 800
 /nDet/output/trace/setTraceLength 496
@@ -73,8 +73,8 @@
 /nDet/detector/setRotation 0 0 0
 
 # Update the detector.
-/nDet/detector/addGeometry rectangle
-#/nDet/detector/buildSetupFromAusa ../../setup/setup.json
+#/nDet/detector/addGeometry rectangle
+/nDet/detector/buildSetupFromAusa ../../setup/setup.json
 #/nDet/detector/addArray rectangle 100 0 180 20
 /nDet/detector/update
 
@@ -91,7 +91,7 @@
 
 #/nDet/source/spot 0
 #/nDet/source/spot 0
-/nDet/source/setUniformEnergy 1.2 1.3 
+/nDet/source/setUniformEnergy 0.001 5.0 
 # Set isotropic source (0=off, 1=psuedo, 2=realistic)
 /nDet/source/iso 2
 
@@ -99,4 +99,4 @@
 # RUN CONTROL #
 ###############
 
-/run/beamOn 1000
+/run/beamOn 500000

@@ -352,9 +352,9 @@ double pmtResponse::analyzeCFD(const double &F_/*=0.5*/, const size_t &D_/*=1*/,
 
 /// Perform polynomial CFD analysis on the waveform.
 double pmtResponse::analyzePolyCFD(const double &F_){
-	for(size_t i=0; i<pulseArray.size(); i++){
-		std::cout << pulseArray[i] <<std::endl;
-	}
+	//for(size_t i=0; i<pulseArray.size(); i++){
+	//	std::cout << pulseArray[i] <<std::endl;
+	//}
 	
 	
 	if(pulseLength == 0 || pulseArray.empty()) return -9999;
@@ -386,7 +386,7 @@ double pmtResponse::analyzePolyCFD(const double &F_){
 		
 		}
 	}
-	std::cout << "Phase (ticks): " << phase << " max: " << maximum + baseline << " threshold: " << threshold << " baseline: " << baseline <<std::endl;
+	//std::cout << "Phase (ticks): " << phase << " max: " << maximum + baseline << " threshold: " << threshold << " baseline: " << baseline <<std::endl;
 
 	return (phase*adcClockTick-traceDelay+tLatch);
 }

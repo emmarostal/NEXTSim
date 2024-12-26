@@ -336,7 +336,7 @@ void nDetParticleSource::Set90Sr(){
 void nDetParticleSource::Set49K(){
 	Reset();
 	AddDiscreteEnergy(150, 6.4, false, G4Neutron::NeutronDefinition());
-	AddDiscreteEnergy(330, 12, false, G4Neutron::NeutronDefinition());
+	AddDiscreteEnergy(440, 12, false, G4Neutron::NeutronDefinition());
 	AddDiscreteEnergy(570, 8.8, false, G4Neutron::NeutronDefinition());
 	AddDiscreteEnergy(1170, 8.5, false, G4Neutron::NeutronDefinition());
 	AddDiscreteEnergy(1210, 8.5, false, G4Neutron::NeutronDefinition());
