@@ -2,3 +2,10 @@ Testing the impact of adjusting the energy threshold parameter.
 Is there a benefit to selecting 30keV or 1keV?
 
 First test: Uniform energy distribution from 1keV to 5MeV with each threshold.
+Necessarily higher tracelength to see low energy neutrons (1keV is expected at 2200ns)
+
+Simulation time 1keV: number of event = 500000 User=6240.640000s Real=6242.643371s Sys=0.770000s [Cpu=100.0%]
+Simulation time 30keV: number of event = 500000 User=6245.210000s Real=6246.508100s Sys=0.700000s [Cpu=100.0%]
+
+Basically equal run time - the higher threshold does not lower run time, meaning that that is not the reasoning
+behind the choice. 

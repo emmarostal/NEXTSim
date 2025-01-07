@@ -1,0 +1,16 @@
+Uniform energy distribution runs from 0.001MeV to 20MeV (single threading)
+
+FullSetupSweep.root uses the entire setup and a gain of 10:
+number of event = 5000000 User=85302.910000s Real=93635.295914s Sys=7.980000s [Cpu=91.1%]
+Extremely slow simulation. at times event rate was 5 evt/s. This increased gradually
+to a maximum of 53 evt/s over a full day.
+
+
+FullArraySweep.root uses only the detector array and still a gain of 10:
+number of event = 5000000 User=58568.900000s Real=58575.739954s Sys=3.870000s [Cpu=100.0%]
+With just the array we get a mean rate of about 95 evt/s, which is way higher than 
+with the full setup. 
+
+Maybe the amount of scatters is really high for the full sweep with the setup? 
+Could make sense due to high neutron energies and more material (=more possible scatters 
+before the neutron is finalized at 30keV).

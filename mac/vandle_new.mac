@@ -18,7 +18,7 @@
 /nDet/output/trace/setRisetime 1.48
 /nDet/output/trace/setFalltime 1.08
 /nDet/output/trace/setTimeSpread 10.8 #2.355*sigma*4 for dt distribution (FWHM)
-/nDet/output/trace/setGain 20
+/nDet/output/trace/setGain 10
 /nDet/output/trace/setBaseline 9.9
 /nDet/output/trace/setJitter 0.15
 /nDet/output/trace/setFunction 1 #Bør sættes eksplicit (1=VANDLE), ellers benyttes 0=expo.
@@ -28,8 +28,8 @@
 /nDet/output/trace/setTraceDelay 120
 #/nDet/output/trace/setTraceDelay 400
 #/nDet/output/trace/setTraceDelay 60
-#/nDet/output/trace/setTraceLength 800
-/nDet/output/trace/setTraceLength 496
+/nDet/output/trace/setTraceLength 3000
+#/nDet/output/trace/setTraceLength 496
 
 /nDet/output/trace/setBitRange 16
 
@@ -91,7 +91,7 @@
 
 #/nDet/source/spot 0
 #/nDet/source/spot 0
-/nDet/source/setUniformEnergy 0.001 5.0 
+/nDet/source/setUniformEnergy 0.001 20.0 
 # Set isotropic source (0=off, 1=psuedo, 2=realistic)
 /nDet/source/iso 2
 
@@ -99,4 +99,4 @@
 # RUN CONTROL #
 ###############
 
-/run/beamOn 500000
+/run/beamOn 5000000
