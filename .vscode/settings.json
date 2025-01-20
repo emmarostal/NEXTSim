@@ -80,6 +80,9 @@
         "allocator": "cpp",
         "forward_list": "cpp",
         "unordered_set": "cpp",
-        "span": "cpp"
+        "span": "cpp",
+        "h1": "cpp",
+        "h2": "cpp",
+        "h3": "cpp"
     }
 }

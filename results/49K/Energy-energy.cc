@@ -36,11 +36,11 @@ void drawHistogram(const char* filename) {
     }
 
     // Create a histogram
-    TH2F *COLZ = new TH2F("COLZ", "Calculated kinetic energy vs simulated energy", 100, 0.2, 20.01, 100, 0.2, 20.01);
+    TH2F *COLZ = new TH2F("COLZ", "Calculated kinetic energy vs simulated energy", 200, 0.2, 5.01, 200, 0.2, 5.01);
 
 
     // Fill the histogram from the branch
-    tree->Draw(Form("(0.5*939*(100/9)*(1.05/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "barTOFcorr > 0 && goodEvent", "COLZ");
+    tree->Draw(Form("(0.5*939*(100/8.988)*(1/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "barTOFcorr > 0 && goodEvent && nScatterScint", "COLZ");
     //tree->Draw(Form("%s:(1/(%s*%s)>>scatterplot", nInitEnergy, barTOF, barTOF), "goodEvent", "goff");
     // Get the X axis and Y axis objects
     TAxis *xAxis = COLZ->GetXaxis();

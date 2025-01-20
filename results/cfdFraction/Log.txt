@@ -1,0 +1,15 @@
+Test of parameters gain and CfdFraction.
+
+Uniform energy sweeps up to 20MeV
+cfd fraction runs were made with gain = 2
+gain runs were made with cfdFraction = 0.5
+A higher cfd fraction resulted in a much more linear energy-energy-spectrum.
+Different gain values did not affect the shape of the spectrum noticeably.
+
+
+The 49K run was made with cfdFraction = 0.9 and gain = 10
+
+
+Another important parameter to be aware of is the distance from the source to the bars. It is assumed
+to be 1m, but 1.05m is propably more accurate. Since this distance is also squared, when calculating
+the energy, it should be determined accurately.

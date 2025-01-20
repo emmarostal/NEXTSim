@@ -37,7 +37,7 @@ void drawTraces(const char* filename) {
     auto traceData = new nDetTraceStructure();
     double nInitEnergy;  // Declare the variable to store nInitEnergy
     tree->SetBranchAddress("trace", &traceData);
-    tree->SetBranchAddress("nInitEnergy", &nInitEnergy);  // Assuming nInitEnergy is a float
+    tree->SetBranchAddress("nInitEnergy", &nInitEnergy);  // Assuming nInitEnergy is a double
 
     // Get the number of entries in the tree
     Long64_t nEntries = tree->GetEntries();
