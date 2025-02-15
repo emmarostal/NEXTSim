@@ -40,7 +40,7 @@ void drawHistogram(const char* filename) {
 
 
     // Fill the histogram from the branch
-    tree->Draw(Form("(0.5*939*(100/8.988)*(1/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "multiplicity==1 && nScatterScint && barTOFcorr > 0 && goodEvent", "COLZ");
+    tree->Draw(Form("(0.5*939*(100/8.988)*(1.1025/(%s*%s))):%s>>COLZ", barTOFcorr, barTOFcorr, nInitEnergy), "multiplicity==1 && nScatterScint && barTOFcorr > 0 && goodEvent", "COLZ");
     //tree->Draw(Form("%s:(1/(%s*%s)>>scatterplot", nInitEnergy, barTOF, barTOF), "goodEvent", "goff");
     // Get the X axis and Y axis objects
     TAxis *xAxis = COLZ->GetXaxis();

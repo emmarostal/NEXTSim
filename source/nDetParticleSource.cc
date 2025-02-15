@@ -178,6 +178,8 @@ bool nDetParticleSource::SetSourceType(const G4String &str){
 		Set49K();
 	else if(typeName == "neutron")
 		SetNeutronBeam(beamEnergy);
+	else if(typeName == "b2bneutron")
+		SetB2bNeutronBeam(beamEnergy);
 	else if(typeName == "gamma")
 		SetGammaRayBeam(beamEnergy);
 	else if(typeName == "laser"){
@@ -358,6 +360,16 @@ void nDetParticleSource::SetNeutronBeam(const double &energy_){
 	Reset();
 	GetCurrentSource()->SetParticleDefinition(G4Neutron::NeutronDefinition());
 	SetBeamEnergy(energy_*MeV);
+}
+void nDetParticleSource::SetB2bNeutronBeam(const double &energy_){
+	Reset();
+	// Set the primary neutron source
+    GetCurrentSource()->SetParticleDefinition(G4Neutron::NeutronDefinition());
+    SetBeamEnergy(energy_ * MeV);
+
+    // Mark that back-to-back neutron emission is enabled
+    back2back = true;
+    std::cout << " nDetParticleSource: Back-to-back neutron emission enabled.\n";
 }
 
 void nDetParticleSource::SetAlphaBeam(const double &energy_){

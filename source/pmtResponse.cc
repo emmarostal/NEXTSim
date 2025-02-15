@@ -313,6 +313,7 @@ double pmtResponse::integratePulseFromMaximum(){
 
 /// Perform traditional CFD analysis on the waveform.
 double pmtResponse::analyzeCFD(const double &F_/*=0.5*/, const size_t &D_/*=1*/, const size_t &L_/*=1*/){
+
 	if(pulseLength == 0 || pulseArray.empty()) return -9999;
 	double cfdMinimum = 9999;
 	size_t cfdMinIndex = 0;

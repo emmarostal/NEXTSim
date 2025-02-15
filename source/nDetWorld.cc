@@ -130,8 +130,8 @@ void nDetWorld::BuildIS659setup8He(){
     //floor
     CERNFloor* cernFloor = new CERNFloor();
     G4RotationMatrix* floorRot = new G4RotationMatrix(0,0,0);
-    G4double floorYPos = -125*cm - 5*cm; //position is the middle of the placed object; floor has 10 cm thickness.
-    G4ThreeVector floorPosition = G4ThreeVector(0,floorYPos, 0.);
+    G4double floorYPos = -131*cm - 5*cm; //position is the middle of the placed object; floor has 10 cm thickness.
+    G4ThreeVector floorPosition = G4ThreeVector(0.,floorYPos, 0.);
     cernFloor->Place(floorRot, floorPosition, "cernFloor", logV);
 
     IS659Clovers *clovers = new IS659Clovers(physV, 0, 0, 0, 0);

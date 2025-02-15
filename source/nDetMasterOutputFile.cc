@@ -231,7 +231,7 @@ bool nDetMasterOutputFile::fillBranch(const nDetDataPack &pack){
 		}
 		totalTime += timer->GetRealElapsed();
 		if(displayTimeInterval > 0 && (totalTime - previousTime) >= displayTimeInterval){ // Display every 10 seconds.
-			std::cout << "Event ID: " << pack.getEventID() << ", TIME=" << totalTime << " s";
+			std::cout << "Event ID: " << pack.getEventID() << "Thread ID: " << pack.getThreadID() << ", TIME=" << totalTime << " s";
 			avgTimePerEvent = totalTime/pack.getEventID();
 			avgTimePerPhoton = totalTime/numPhotons;
 			avgTimePerDetection = totalTime/numPhotonsDet;

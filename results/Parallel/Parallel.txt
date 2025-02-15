@@ -1,0 +1,4 @@
+seq 16 | parallel nextSim -i vandle_new.mac {}
+does not work, thread 0 is forced, and we get 16 root files with identical contents...
+
+hadd merged.root vandle_barTOFtest-02* vandle_barTOFtest-01[4-9]*

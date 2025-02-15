@@ -438,8 +438,11 @@ bool nDetRunAction::processDetector(nDetDetector* det){
 	double offset = distribution(generator);
 	outData.barTOF = (debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset;
 	double x = abs(debugData.pulsePhase[0]-debugData.pulsePhase[1])*13.5/2;
-	if (x<120){
-		outData.barTOFcorr = ((debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset)/(sqrt(1+pow(x,2)/pow(100,2)));
+	if (x<65){
+		//double peakOffset = 2.25; //cfdFrac 0.1
+		double peakOffset = 6.65; //cfdFrac 0.5
+		//double peakOffset = 0; //without correction
+		outData.barTOFcorr = ((debugData.pulsePhase[0]+debugData.pulsePhase[1])/2.0-offset-peakOffset)/(sqrt(1+pow(x,2)/pow(105,2)));
 	}
 	else {
 		outData.barTOFcorr = -1;

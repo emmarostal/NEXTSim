@@ -37,6 +37,10 @@ class nDetDataPack{
 	  */
 	int getEventID() const ;
 
+	/** Get the ID of the current thread
+	  */
+	int getThreadID() const ;
+
 	/** Clear all variables and vectors
 	  */
 	void clear();

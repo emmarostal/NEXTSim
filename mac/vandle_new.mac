@@ -15,10 +15,13 @@
 /nDet/output/recordTrace false
 
 # Setup information about the PMT response
-/nDet/output/trace/setRisetime 1.48
-/nDet/output/trace/setFalltime 1.08
-/nDet/output/trace/setTimeSpread 10.8 #2.355*sigma*4 for dt distribution (FWHM)
-/nDet/output/trace/setGain 10
+#/nDet/output/trace/setRisetime 1.48
+#/nDet/output/trace/setFalltime 1.08
+/nDet/output/trace/setRisetime 0.1
+/nDet/output/trace/setFalltime 0.0675 #invers tid for vandle
+#/nDet/output/trace/setTimeSpread 10.8 #2.355*sigma*4 for photondt? distribution (FWHM) nok forkert
+/nDet/output/trace/setTimeSpread 1.2 #hamamatsu R7724 værdi
+/nDet/output/trace/setGain 4
 /nDet/output/trace/setBaseline 9.9
 /nDet/output/trace/setJitter 0.15
 /nDet/output/trace/setFunction 1 #Bør sættes eksplicit (1=VANDLE), ellers benyttes 0=expo.
@@ -28,12 +31,12 @@
 /nDet/output/trace/setTraceDelay 120
 #/nDet/output/trace/setTraceDelay 400
 #/nDet/output/trace/setTraceDelay 60
-/nDet/output/trace/setTraceLength 3000
+/nDet/output/trace/setTraceLength 2000
 #/nDet/output/trace/setTraceLength 496
 
 /nDet/output/trace/setBitRange 16
 
-/nDet/output/trace/setCfdFraction 0.9
+/nDet/output/trace/setCfdFraction 0.5
 /nDet/output/trace/setIntegralLow 5
 /nDet/output/trace/setIntegralHigh 10
 
@@ -85,13 +88,14 @@
 # Available source types: 137Cs 60Co 133Ba 241Am 90Sr 252Cf
 #/nDet/source/type 252Cf
 
-/nDet/source/type neutron 
-/nDet/source/type 49K
+#/nDet/source/type neutron 1
+/nDet/source/type b2bneutron 1
+#/nDet/source/type 49K
 #/nDet/source/type gamma 0.03
 
 #/nDet/source/spot 0
 #/nDet/source/spot 0
-#/nDet/source/setUniformEnergy 0.001 20.0 
+#/nDet/source/setUniformEnergy 0.001 5.0 
 # Set isotropic source (0=off, 1=psuedo, 2=realistic)
 /nDet/source/iso 2
 
@@ -99,4 +103,4 @@
 # RUN CONTROL #
 ###############
 
-/run/beamOn 100000
+#/run/beamOn 300000

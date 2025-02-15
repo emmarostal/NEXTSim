@@ -29,6 +29,9 @@ bool nDetDataPack::goodEvent() const {
 int nDetDataPack::getEventID() const {
 	return evtData->eventID;
 }
+int nDetDataPack::getThreadID() const {
+	return evtData->threadID;
+}
 
 void nDetDataPack::clear(){
 	evtData->Zero();
